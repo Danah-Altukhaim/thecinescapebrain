@@ -1,0 +1,30 @@
+import { S3Client, PutObjectCommand, GetObjectCommand } from "@aws-sdk/client-s3";
+import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+
+const endpoint = process.env.R2_ACCOUNT_ID
+  ? `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`
+  : undefined;
+
+const r2Config: any = { region: "auto" };
+if (endpoint) r2Config.endpoint = endpoint;
+if (process.env.R2_ACCESS_KEY_ID) {
+  r2Config.credentials = {
+    accessKeyId: process.env.R2_ACCESS_KEY_ID,
+    secretAccessKey: process.env.R2_SECRET_ACCESS_KEY!,
+  };
+}
+export const r2 = new S3Client(r2Config);
+
+const bucket = process.env.R2_BUCKET ?? "brain-media";
+
+export async function putObject(key: string, body: Buffer, contentType: string) {
+  await r2.send(
+    new PutObjectCommand({ Bucket: bucket, Key: key, Body: body, ContentType: contentType }),
+  );
+}
+
+export async function presignedGet(key: string, expiresIn = 3600) {
+  return getSignedUrl(r2, new GetObjectCommand({ Bucket: bucket, Key: key }), { expiresIn });
+}
+
+export { bucket as R2_BUCKET };

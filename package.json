@@ -1,0 +1,26 @@
+{
+  "name": "the-brain",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "eslint .",
+    "seed": "pnpm --filter @brain/api seed",
+    "migrate": "pnpm --filter @brain/api prisma migrate deploy"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "eslint": "^9.0.0",
+    "typescript-eslint": "^8.0.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0"
+  }
+}

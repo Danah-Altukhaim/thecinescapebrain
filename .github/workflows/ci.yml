@@ -1,0 +1,39 @@
+name: ci
+on:
+  push: { branches: [main] }
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: app_migrate
+          POSTGRES_PASSWORD: pw
+          POSTGRES_DB: brain
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+      redis:
+        image: redis:7-alpine
+        ports: ["6379:6379"]
+    env:
+      DATABASE_URL: postgresql://app_runtime:pw@localhost:5432/brain
+      DATABASE_MIGRATE_URL: postgresql://app_migrate:pw@localhost:5432/brain
+      REDIS_URL: redis://localhost:6379
+      JWT_ACCESS_SECRET: ci-access-secret-long-enough
+      JWT_REFRESH_SECRET: ci-refresh-secret-long-enough
+      NODE_ENV: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @brain/api prisma migrate deploy
+      - run: psql "$DATABASE_MIGRATE_URL" -f infra/migrations/0001_rls.sql
+      - run: pnpm seed
+      - run: pnpm typecheck
+      - run: pnpm test
