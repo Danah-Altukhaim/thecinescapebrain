@@ -637,7 +637,7 @@ function PromotionCard({
           </button>
           <button
             onClick={onDelete}
-            className="btn-ghost !px-2 !py-1 !text-[12px] text-apple-red hover:!bg-red-50"
+            className="btn-ghost !px-2 !py-1 !text-[12px] text-apple-red hover:!bg-red-50 hover:!text-red-700"
             aria-label="Delete promotion"
             title="Delete"
           >
@@ -710,7 +710,14 @@ function rowTitle(d: Record<string, unknown>): string {
   return stripIcons(fallback ?? "(untitled)");
 }
 
-const HIDDEN_TABLE_KEYS = new Set(["hours_ramadan", "status"]);
+const HIDDEN_TABLE_KEYS = new Set([
+  "hours_ramadan",
+  "status",
+  "intent_id",
+  "requires_crm",
+  "revenue_opportunity",
+  "escalation_check",
+]);
 
 function deriveColumns(
   entries: Entry[],
@@ -805,14 +812,6 @@ function BilingualCell({ enRaw, arRaw }: { enRaw: string; arRaw: string }) {
       >
         {primary}
       </div>
-      {enClean && arClean && (
-        <span
-          className="badge badge-gray !text-[10px] !px-1.5 !py-0 shrink-0"
-          title="Arabic translation available"
-        >
-          AR
-        </span>
-      )}
     </div>
   );
 }
@@ -975,25 +974,14 @@ function EntryTable({
                     className="px-3 py-3 align-middle whitespace-nowrap"
                     onClick={(ev) => ev.stopPropagation()}
                   >
-                    <div className="inline-flex items-center gap-1">
-                      <button
-                        onClick={() => onEdit(e)}
-                        className="btn-ghost !px-2 !py-1 !text-[12px]"
-                        aria-label="Edit entry"
-                        title="Edit"
-                      >
-                        <Icon name="pencil" size={12} />
-                        <span className="hidden md:inline">Edit</span>
-                      </button>
-                      <button
-                        onClick={() => onDelete(e)}
-                        className="btn-ghost !px-2 !py-1 !text-[12px] text-apple-red hover:!bg-red-50"
-                        aria-label="Delete entry"
-                        title="Delete"
-                      >
-                        <Icon name="trash" size={12} />
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => onDelete(e)}
+                      className="btn-ghost !px-2 !py-1 !text-[12px] text-apple-red hover:!bg-red-50 hover:!text-red-700"
+                      aria-label="Delete entry"
+                      title="Delete"
+                    >
+                      <Icon name="trash" size={12} />
+                    </button>
                   </td>
                 </tr>
               );
@@ -1183,10 +1171,10 @@ function EditEntryModal({
               <button
                 type="button"
                 onClick={() => navigator.clipboard.writeText(entry.id)}
-                className="text-[11px] text-apple-tertiary mt-0.5 font-mono truncate block max-w-full hover:text-apple-secondary transition-colors"
+                className="text-[10px] text-apple-tertiary mt-0.5 font-mono hover:text-apple-secondary transition-colors opacity-60 hover:opacity-100"
                 title="Click to copy ID"
               >
-                {entry.id.slice(0, 8)}...
+                {entry.id.slice(0, 6)}
               </button>
             )}
           </div>
@@ -1324,7 +1312,7 @@ function EditEntryModal({
             {!isNew && (
               <button
                 onClick={() => { onDelete(); onClose(); }}
-                className="btn-ghost !px-3 !py-2 !text-[13px] text-apple-red hover:!bg-red-50"
+                className="btn-ghost !px-3 !py-2 !text-[13px] text-apple-red hover:!bg-red-50 hover:!text-red-700"
                 disabled={busy}
                 title="Delete entry"
               >
@@ -1413,7 +1401,7 @@ function EscalationRuleCard({
           </button>
           <button
             onClick={onDelete}
-            className="btn-ghost !px-2 !py-1 !text-[12px] text-apple-red hover:!bg-red-50"
+            className="btn-ghost !px-2 !py-1 !text-[12px] text-apple-red hover:!bg-red-50 hover:!text-red-700"
             aria-label="Delete rule"
             title="Delete"
           >
@@ -1555,10 +1543,10 @@ function EscalationRuleEditModal({
               <button
                 type="button"
                 onClick={() => navigator.clipboard.writeText(entry.id)}
-                className="text-[11px] text-apple-tertiary mt-0.5 font-mono truncate block max-w-full hover:text-apple-secondary transition-colors"
+                className="text-[10px] text-apple-tertiary mt-0.5 font-mono hover:text-apple-secondary transition-colors opacity-60 hover:opacity-100"
                 title="Click to copy ID"
               >
-                {entry.id.slice(0, 8)}...
+                {entry.id.slice(0, 6)}
               </button>
             )}
           </div>
@@ -1614,7 +1602,7 @@ function EscalationRuleEditModal({
                   onDelete();
                   onClose();
                 }}
-                className="btn-ghost !px-3 !py-2 !text-[13px] text-apple-red hover:!bg-red-50"
+                className="btn-ghost !px-3 !py-2 !text-[13px] text-apple-red hover:!bg-red-50 hover:!text-red-700"
                 disabled={busy}
                 title="Delete rule"
               >

@@ -1,6 +1,6 @@
-// Auto-generated fixture data dumped from the local Postgres seed.
-// This is a static snapshot for the Vercel demo deploy; writes do not
-// persist. Regenerate by re-running the dump script in scripts/.
+// Static fixture data for the Vercel demo deploy; writes do not persist.
+// Kept in sync with infra/seed/index.ts, which round-trips this snapshot
+// into the local Postgres DB so `pnpm seed` produces the same content.
 
 export const MODULES = [
   {
@@ -157,9 +157,9 @@ export const MODULES = [
         "localized": false
       },
       {
-        "key": "template_ref",
-        "type": "text",
-        "label": "Template Ref",
+        "key": "ai_instructions",
+        "type": "textarea",
+        "label": "AI Instructions",
         "required": false,
         "localized": false
       },
@@ -318,7 +318,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Farwaniya",
         "hours_ramadan": "Daily: 10AM-2AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/avenues"
+        "google_maps_url": "https://www.google.com/maps/place/The+Avenues+Mall/@29.3024914,47.9360719,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -332,7 +332,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Hawalli",
         "hours_ramadan": "Daily: 10AM-1AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/360mall"
+        "google_maps_url": "https://www.google.com/maps/place/360+Mall/@29.2675753,47.9927896,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -346,7 +346,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Ahmadi",
         "hours_ramadan": "Daily: 10AM-1AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/alkout"
+        "google_maps_url": "https://www.google.com/maps/place/Al+Kout+Mall/@29.0783668,48.138673,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -360,7 +360,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Ahmadi",
         "hours_ramadan": "Daily: 10AM-1AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/marina"
+        "google_maps_url": "https://www.google.com/maps/place/Marina+Mall/@29.3392739,48.0656684,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -374,7 +374,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Farwaniya",
         "hours_ramadan": "Daily: 10AM-1AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/gatemall"
+        "google_maps_url": "https://www.google.com/maps/place/The+Gate+Mall/@29.174937,48.098186,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -388,7 +388,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Al-Asimah",
         "hours_ramadan": "Daily: 10AM-1AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/assima"
+        "google_maps_url": "https://www.google.com/maps/place/Assima+Mall/@29.3742245,47.9875623,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -402,7 +402,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Farwaniya",
         "hours_ramadan": "Daily: 10AM-12AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/murooj"
+        "google_maps_url": "https://www.google.com/maps/place/Al+Murouj+Complex/@29.2815,48.0010,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -416,7 +416,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Jahra",
         "hours_ramadan": "Daily: 10AM-12AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/jahra"
+        "google_maps_url": "https://www.google.com/maps/place/Al+Jahra/@29.336573,47.675529,15z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -430,7 +430,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Ahmadi",
         "hours_ramadan": "Daily: 3PM-12AM",
         "hours_regular": "Daily: 2PM-10PM\nFriday: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/sahara"
+        "google_maps_url": "https://www.google.com/maps/place/Sahara+Kuwait+Golf+Resort/@29.2650,47.9790,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -444,7 +444,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Farwaniya",
         "hours_ramadan": "Daily: 24 hours",
         "hours_regular": "Daily: 24 hours",
-        "google_maps_url": "https://maps.app.goo.gl/kwiairport"
+        "google_maps_url": "https://www.google.com/maps/place/Kuwait+International+Airport+Terminal+4/@29.252226,47.961565,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -458,7 +458,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Hawalli",
         "hours_ramadan": "Daily: 10AM-1AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/alfanar"
+        "google_maps_url": "https://www.google.com/maps/place/Al+Fanar+Mall/@29.341112,48.0737,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -470,9 +470,9 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "name_ar": "مجمع ديسكفري",
         "name_en": "Discovery Mall",
         "governorate": "Hawalli",
-        "hours_ramadan": "",
+        "hours_ramadan": "Temporarily closed; will reopen after renovation",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/discovery"
+        "google_maps_url": "https://www.google.com/maps/place/Discovery+Mall/@29.360807,47.9824,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -486,7 +486,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Hawalli",
         "hours_ramadan": "Daily: 10AM-1AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/salmiya"
+        "google_maps_url": "https://www.google.com/maps/place/Salmiya/@29.335873,48.071986,15z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -500,7 +500,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Jahra",
         "hours_ramadan": "Daily: 10AM-12AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/awtad"
+        "google_maps_url": "https://www.google.com/maps/place/Awtad+Mall+Jahra/@29.34796,47.67367,17z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -514,7 +514,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "governorate": "Ahmadi",
         "hours_ramadan": "Daily: 10AM-12AM",
         "hours_regular": "Sun-Wed: 10AM-10PM\nThu-Sat: 10AM-11PM",
-        "google_maps_url": "https://maps.app.goo.gl/abuhalifa"
+        "google_maps_url": "https://www.google.com/maps/place/Abu+Halifa/@29.127176,48.125024,15z"
       },
       "status": "active",
       "updatedAt": "2026-04-16T06:18:13.061Z"
@@ -526,7 +526,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
       "data": {
         "channel": "human_chat",
         "trigger": "Complaint - angry, upset, not working, broken. Escalate to Branch Manager. SLA: 2 hours. Auto: We're sorry for the inconvenience. Connecting you to a team member now.",
-        "webhook_url": ""
+        "webhook_url": "https://hooks.internal.futurekid.com/escalations/complaints"
       },
       "status": "active",
       "updatedAt": "2026-04-16T12:33:33.698Z"
@@ -536,7 +536,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
       "data": {
         "channel": "human_chat",
         "trigger": "Refund Request - refund, money back, charge. Escalate to Finance/CRM. SLA: 4 hours. Auto: Let me connect you with our team to assist with your refund request.",
-        "webhook_url": ""
+        "webhook_url": "https://hooks.internal.futurekid.com/escalations/refunds"
       },
       "status": "active",
       "updatedAt": "2026-04-16T12:33:33.698Z"
@@ -546,7 +546,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
       "data": {
         "channel": "human_chat",
         "trigger": "Safety / Injury - hurt, injured, accident, emergency. Escalate to Operations Manager. SLA: 30 min. Auto: Your safety is our priority. Connecting you immediately.",
-        "webhook_url": ""
+        "webhook_url": "https://hooks.internal.futurekid.com/escalations/safety"
       },
       "status": "active",
       "updatedAt": "2026-04-16T12:33:33.698Z"
@@ -556,7 +556,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
       "data": {
         "channel": "human_chat",
         "trigger": "Lost Child - lost, can't find, missing child. Escalate to Branch Manager. SLA: 15 min. Auto: Please stay calm. Connecting you to branch manager immediately.",
-        "webhook_url": ""
+        "webhook_url": "https://hooks.internal.futurekid.com/escalations/lost-child"
       },
       "status": "active",
       "updatedAt": "2026-04-16T12:33:33.698Z"
@@ -566,7 +566,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
       "data": {
         "channel": "human_chat",
         "trigger": "Technical Issue - website down, can't pay, error, app. Escalate to IT Support. SLA: 4 hours. Auto: We're aware of the issue and working on it. Apologies for the inconvenience.",
-        "webhook_url": ""
+        "webhook_url": "https://hooks.internal.futurekid.com/escalations/technical"
       },
       "status": "active",
       "updatedAt": "2026-04-16T12:33:33.698Z"
@@ -576,7 +576,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
       "data": {
         "channel": "whatsapp",
         "trigger": "General Inquiry - hours, location, prices, packages. Handled by PAIR AI. No escalation needed.",
-        "webhook_url": ""
+        "webhook_url": "https://hooks.internal.futurekid.com/routing/general"
       },
       "status": "active",
       "updatedAt": "2026-04-16T12:33:33.698Z"
@@ -586,7 +586,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
       "data": {
         "channel": "human_chat",
         "trigger": "Group / School Booking - school trip, group, company event. Escalate to Sales Team. SLA: 24 hours. Auto: Connecting you to our group bookings team at Future Kid.",
-        "webhook_url": ""
+        "webhook_url": "https://hooks.internal.futurekid.com/escalations/group-booking"
       },
       "status": "active",
       "updatedAt": "2026-04-16T12:33:33.698Z"
@@ -596,7 +596,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
       "data": {
         "channel": "human_chat",
         "trigger": "Lost Item - lost item, forgot, left behind, my bag, my phone. Escalate to Branch Manager. SLA: 2 hours. Auto: We understand how stressful that is. Connecting you to the Branch Manager.",
-        "webhook_url": ""
+        "webhook_url": "https://hooks.internal.futurekid.com/escalations/lost-item"
       },
       "status": "active",
       "updatedAt": "2026-04-16T12:33:33.698Z"
@@ -609,7 +609,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "General Info",
         "answer_ar": "خلال رمضان، الفروع تشتغل على فترتين: صباحية (قبل الإفطار) ومسائية (بعد الإفطار). الأوقات تختلف حسب الفرع. رد باسم الفرع وأرسل لك المواعيد + الموقع.",
         "answer_en": "During Ramadan, branches operate in split shifts: morning (pre-Iftar) and evening (post-Iftar). Hours vary by branch. Reply with your branch name and I'll send you the exact timings + location pin.",
-        "question_ar": "",
+        "question_ar": "ما هي ساعات عمل الفروع خلال رمضان؟",
         "question_en": "What are the Ramadan branch hours?"
       },
       "status": "active",
@@ -621,7 +621,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing / Promos",
         "answer_ar": "أغلب العوائل يختارون باقة 20 د.ك (32 رصيد) أو 50 د.ك (90 رصيد). مع خصم 50% على كل الألعاب، رصيدك يكمل ضعف!",
         "answer_en": "Most families go with the 20 KWD (->32 credit) or 50 KWD (->90 credit) packages. With 50% off all games, your credit lasts twice as long!",
-        "question_ar": "",
+        "question_ar": "أي باقة شحن رمضانية هي الأفضل؟",
         "question_en": "Which Ramadan top-up package is best?"
       },
       "status": "active",
@@ -633,7 +633,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "نعم، يتطلب حجز حفلة عيد الميلاد دفع عربون لتأكيد الحجز.",
         "answer_en": "Yes, birthday party bookings require a deposit to confirm the reservation.",
-        "question_ar": "",
+        "question_ar": "هل يتطلب حجز حفلة عيد الميلاد دفع عربون؟",
         "question_en": "Does a birthday party booking require a deposit?"
       },
       "status": "active",
@@ -645,7 +645,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing",
         "answer_ar": "لا، لا يوجد حد أدنى للشراء.",
         "answer_en": "No, there is no minimum purchase required.",
-        "question_ar": "",
+        "question_ar": "هل يوجد حد أدنى للشراء؟",
         "question_en": "Is there a minimum purchase required?"
       },
       "status": "active",
@@ -657,7 +657,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing",
         "answer_ar": "نعم، قد توجد رسوم لبعض مناطق الأطفال في بعض الفروع.",
         "answer_en": "Yes, certain kids' areas may have an entry fee at selected branches.",
-        "question_ar": "",
+        "question_ar": "هل توجد رسوم لمنطقة الأطفال؟",
         "question_en": "Is there a fee for the kids' area?"
       },
       "status": "active",
@@ -669,7 +669,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing",
         "answer_ar": "الأسعار ثابتة بشكل عام، وقد تختلف بعض الأسعار حسب اللعبة أو الفرع.",
         "answer_en": "Prices are generally fixed but may vary by game or branch.",
-        "question_ar": "",
+        "question_ar": "هل الأسعار ثابتة؟",
         "question_en": "Are prices fixed?"
       },
       "status": "active",
@@ -681,7 +681,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing",
         "answer_ar": "تتوفر عروض وباقات خاصة.",
         "answer_en": "Game pricing is the same for all ages. Special packages and offers are available.",
-        "question_ar": "",
+        "question_ar": "هل يحصل الأطفال على سعر خاص؟",
         "question_en": "Do children get a special price?"
       },
       "status": "active",
@@ -693,7 +693,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing",
         "answer_ar": "تختلف أسعار الألعاب حسب نوع اللعبة.",
         "answer_en": "Game prices vary depending on the type of game.",
-        "question_ar": "",
+        "question_ar": "ما هي أسعار الألعاب؟",
         "question_en": "What is the price of games?"
       },
       "status": "active",
@@ -705,7 +705,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing / Promos",
         "answer_ar": "نعم، تتوفر باقات وعروض مميزة للعائلات حسب الفرع والموسم.",
         "answer_en": "Yes, family packages and special offers are available depending on the branch and season.",
-        "question_ar": "",
+        "question_ar": "هل تتوفر باقات عائلية؟",
         "question_en": "Are family packages available?"
       },
       "status": "active",
@@ -717,7 +717,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Food / Facilities",
         "answer_ar": "توجد مطاعم في بعض الفروع حسب موقع الفرع داخل المجمع.",
         "answer_en": "Some branches are located within malls that have restaurants nearby.",
-        "question_ar": "",
+        "question_ar": "هل توجد مطاعم داخل الفروع؟",
         "question_en": "Are there restaurants inside the branches?"
       },
       "status": "active",
@@ -729,7 +729,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "General Info",
         "answer_ar": "تختلف ساعات العمل حسب الفرع والمجمع والموسم.",
         "answer_en": "Working hours may vary by branch, mall, and season.",
-        "question_ar": "",
+        "question_ar": "ما هي ساعات العمل؟",
         "question_en": "What are the working hours?"
       },
       "status": "active",
@@ -741,7 +741,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Facilities",
         "answer_ar": "جميع فروعنا توفر إمكانية الوصول إلى مواقف السيارات.",
         "answer_en": "All our branches have access to parking.",
-        "question_ar": "",
+        "question_ar": "هل تتوفر مواقف سيارات في جميع الفروع؟",
         "question_en": "Is parking available at all branches?"
       },
       "status": "active",
@@ -753,7 +753,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing / Promos",
         "answer_ar": "نعم! خلال رمضان 2026، جميع الألعاب (بما فيها ألعاب التذاكر) عليها خصم 50% طوال اليوم، طوال الشهر. رصيدك يلعبك دبل. باقات الشحن: 12->17 | 20->32 | 50->90 | 99->220.",
         "answer_en": "Yes! During Ramadan 2026, all games (including ticket games) are 50% off, all day, every day. Your play credit goes twice as far. Top-up packages: 12->17 | 20->32 | 50->90 | 99->220.",
-        "question_ar": "",
+        "question_ar": "هل يوجد عرض رمضاني؟",
         "question_en": "Is there a Ramadan promotion?"
       },
       "status": "active",
@@ -765,7 +765,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing / Promos",
         "answer_ar": "الخصم على الألعاب فقط. باقات الشحن مثل ما هي، لكن رصيدك يكمل أكثر لأن الألعاب عليها خصم 50%.",
         "answer_en": "The discount is on games only. Top-up packages stay the same, but your credit goes further because games are 50% off.",
-        "question_ar": "",
+        "question_ar": "هل يشمل خصم رمضان باقات الشحن؟",
         "question_en": "Does the Ramadan discount apply to recharge/top-up packages?"
       },
       "status": "active",
@@ -777,7 +777,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Credit / Card",
         "answer_ar": "حالياً، يتم استخدام بطاقة فعلية لشحن الرصيد واللعب.",
         "answer_en": "Currently, a physical card is used to load credit and play.",
-        "question_ar": "",
+        "question_ar": "هل البطاقة إلكترونية؟",
         "question_en": "Is the card digital?"
       },
       "status": "active",
@@ -789,7 +789,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "نعم، تشمل باقة عيد الميلاد وجبات ومشروبات لكل طفل.",
         "answer_en": "Yes, the birthday package includes meals and drinks for each child.",
-        "question_ar": "",
+        "question_ar": "هل يشمل باقة عيد الميلاد الطعام؟",
         "question_en": "Is food included in the birthday package?"
       },
       "status": "active",
@@ -801,7 +801,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "نعم، تتوفر شخصيات كرتونية تضيف متعة وتفاعلًا خاصًا للحفلة.",
         "answer_en": "Yes, mascot characters are available to add extra excitement and interaction to the party.",
-        "question_ar": "",
+        "question_ar": "هل تتوفر شخصيات كرتونية لحفلات أعياد الميلاد؟",
         "question_en": "Do you offer mascot characters for birthday parties?"
       },
       "status": "active",
@@ -813,7 +813,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Admin",
         "answer_ar": "نعم، يمكن إصدار فاتورة رسمية باسم المدرسة أو الجهة.",
         "answer_en": "Yes, an official invoice can be issued in the name of the school or organization.",
-        "question_ar": "",
+        "question_ar": "هل يمكن إصدار فاتورة رسمية للمدارس أو الجهات؟",
         "question_en": "Can an official invoice be issued for schools or organizations?"
       },
       "status": "active",
@@ -825,7 +825,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips",
         "answer_ar": "نعم، الحجز المسبق مطلوب لتنظيم الرحلة بالشكل الأمثل.",
         "answer_en": "Yes, advance booking is required to ensure proper coordination.",
-        "question_ar": "",
+        "question_ar": "هل تحتاج الرحلة إلى حجز مسبق؟",
         "question_en": "Does the trip need to be booked in advance?"
       },
       "status": "active",
@@ -837,7 +837,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips",
         "answer_ar": "نعم، يمكن تخصيص برنامج الرحلة بما يتناسب مع أعمار الأطفال.",
         "answer_en": "Yes, the trip program can be customized according to the children's age group.",
-        "question_ar": "",
+        "question_ar": "هل يمكن تخصيص برنامج الرحلة حسب الفئة العمرية؟",
         "question_en": "Can the trip program be customized by age group?"
       },
       "status": "active",
@@ -849,7 +849,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips",
         "answer_ar": "لا، لا تشمل برامج الرحلات الوجبات.",
         "answer_en": "No, meals are not included in trip programs.",
-        "question_ar": "",
+        "question_ar": "هل يشمل برنامج الرحلة الوجبات؟",
         "question_en": "Does the trip program include meals?"
       },
       "status": "active",
@@ -861,7 +861,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips",
         "answer_ar": "نعم، تشمل الرحلات ألعابًا جماعية وأنشطة مختارة.",
         "answer_en": "Yes, trip programs include group games and selected activities.",
-        "question_ar": "",
+        "question_ar": "هل يشمل برنامج الرحلة ألعاباً؟",
         "question_en": "Does the trip program include games?"
       },
       "status": "active",
@@ -873,7 +873,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Pricing",
         "answer_ar": "نعم، تتوفر خصومات خاصة للمجموعات والمدارس.",
         "answer_en": "Yes, special group discounts are available for schools.",
-        "question_ar": "",
+        "question_ar": "هل توجد خصومات خاصة للمدارس؟",
         "question_en": "Are there special discounts for schools?"
       },
       "status": "active",
@@ -885,7 +885,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Schools",
         "answer_ar": "تتراوح مدة الرحلة من ساعتين إلى ثلاث ساعات.",
         "answer_en": "Trip programs typically last between two and three hours.",
-        "question_ar": "",
+        "question_ar": "ما هي مدة برنامج الرحلة؟",
         "question_en": "What is the duration of the trip program?"
       },
       "status": "active",
@@ -897,7 +897,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Schools",
         "answer_ar": "الحد الأدنى لعدد الطلاب هو 10 طلاب.",
         "answer_en": "The minimum number of students required is 10.",
-        "question_ar": "",
+        "question_ar": "ما هو الحد الأدنى لعدد الطلاب المطلوب؟",
         "question_en": "What is the minimum number of students required?"
       },
       "status": "active",
@@ -909,7 +909,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Schools",
         "answer_ar": "نعم، نقدم برامج مخصصة للرحلات المدرسية.",
         "answer_en": "Yes, we offer dedicated programs designed specifically for school trips.",
-        "question_ar": "",
+        "question_ar": "هل تقدمون برامج مخصصة للرحلات المدرسية؟",
         "question_en": "Do you offer dedicated school trip programs?"
       },
       "status": "active",
@@ -921,7 +921,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership / Loyalty",
         "answer_ar": "نعم، يتوفر برنامج ولاء يقدّم مزايا وعروض للمشتركين حسب استخدامهم.",
         "answer_en": "Yes, a loyalty program is available and offers benefits and promotions for members based on usage.",
-        "question_ar": "",
+        "question_ar": "هل يوجد برنامج ولاء؟",
         "question_en": "Is there a loyalty program?"
       },
       "status": "active",
@@ -933,7 +933,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "نعم، يتم إعلام المشترك عند قرب انتهاء الاشتراك.",
         "answer_en": "Yes, members are notified when their membership is nearing expiration.",
-        "question_ar": "",
+        "question_ar": "هل سأُبلَّغ عند قرب انتهاء اشتراكي؟",
         "question_en": "Will I be notified when my membership expires?"
       },
       "status": "active",
@@ -945,7 +945,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "اشتراكات طفل المستقبل مخصصة لاستخدام العائلة ولا يمكن مشاركتها مع الآخرين.",
         "answer_en": "Future Kid memberships are for family use and cannot be shared.",
-        "question_ar": "",
+        "question_ar": "هل يمكن مشاركة الاشتراك؟",
         "question_en": "Can the membership be shared?"
       },
       "status": "active",
@@ -957,7 +957,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "تشمل باقة عيد الميلاد 15-25 طفلًا، بما فيهم طفل عيد الميلاد.",
         "answer_en": "The birthday package includes between 15-25 children, including the birthday child.",
-        "question_ar": "",
+        "question_ar": "كم عدد الأطفال المشمولين في باقة عيد الميلاد؟",
         "question_en": "How many children are included in a birthday package?"
       },
       "status": "active",
@@ -969,7 +969,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Payment",
         "answer_ar": "لا، لا تتوفر خدمة التقسيط حالياً.",
         "answer_en": "No, installment payment is not available.",
-        "question_ar": "",
+        "question_ar": "هل تتوفر خدمة الدفع بالتقسيط؟",
         "question_en": "Is installment payment available?"
       },
       "status": "active",
@@ -981,7 +981,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "نعم، يتوفر اشتراك سنوي.",
         "answer_en": "Yes, an annual membership is available.",
-        "question_ar": "",
+        "question_ar": "هل يوجد اشتراك سنوي؟",
         "question_en": "Is there an annual membership?"
       },
       "status": "active",
@@ -993,7 +993,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership / Refunds",
         "answer_ar": "لا، لا يمكن استبدال أو استرجاع الاشتراك بعد التفعيل.",
         "answer_en": "Memberships cannot be exchanged or refunded once activated.",
-        "question_ar": "",
+        "question_ar": "هل يمكن استبدال أو استرجاع الاشتراك؟",
         "question_en": "Can the membership be exchanged or refunded?"
       },
       "status": "active",
@@ -1005,7 +1005,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership / Birthday",
         "answer_ar": "نعم، يشمل الاشتراك خصومات على حفلات أعياد الميلاد في طفل المستقبل.",
         "answer_en": "Yes, the membership includes discounts on birthday parties at Future Kid.",
-        "question_ar": "",
+        "question_ar": "هل يشمل الاشتراك خصومات على حفلات أعياد الميلاد؟",
         "question_en": "Does the membership include birthday party discounts?"
       },
       "status": "active",
@@ -1017,7 +1017,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "الاشتراك متاح لجميع الأعمار.",
         "answer_en": "Memberships are suitable for all ages.",
-        "question_ar": "",
+        "question_ar": "ما هو العمر المناسب للاشتراك؟",
         "question_en": "What is the suitable age for membership?"
       },
       "status": "active",
@@ -1029,7 +1029,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "نعم، يحصل المشتركون على خصومات ومزايا حصرية.",
         "answer_en": "Yes, members enjoy exclusive discounts and benefits.",
-        "question_ar": "",
+        "question_ar": "هل توجد خصومات للمشتركين؟",
         "question_en": "Are there discounts for members?"
       },
       "status": "active",
@@ -1041,7 +1041,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "لا، الاشتراك غير قابل للتحويل.",
         "answer_en": "No, memberships are not transferable.",
-        "question_ar": "",
+        "question_ar": "هل الاشتراك قابل للتحويل؟",
         "question_en": "Is the membership transferable?"
       },
       "status": "active",
@@ -1053,7 +1053,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "نعم، يشمل الاشتراك مزايا مرتبطة بالألعاب حسب نوع الاشتراك.",
         "answer_en": "Yes, memberships include game-related benefits depending on the plan.",
-        "question_ar": "",
+        "question_ar": "هل يشمل الاشتراك ألعاباً؟",
         "question_en": "Does the membership include games?"
       },
       "status": "active",
@@ -1065,7 +1065,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "يمكن تجديد الاشتراك من خلال زيارة أقرب فرع.",
         "answer_en": "Memberships can be renewed by visiting the nearest branch.",
-        "question_ar": "",
+        "question_ar": "كيف يمكنني تجديد اشتراكي؟",
         "question_en": "How do I renew my membership?"
       },
       "status": "active",
@@ -1077,7 +1077,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "يتوفر حالياً نوع واحد من الاشتراكات ضمن برنامج الولاء.",
         "answer_en": "Currently, one type of membership is available under the loyalty program.",
-        "question_ar": "",
+        "question_ar": "ما هي أنواع الاشتراكات المتوفرة؟",
         "question_en": "What types of memberships are available?"
       },
       "status": "active",
@@ -1089,7 +1089,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "لا، يتوفر حالياً الاشتراك السنوي فقط.",
         "answer_en": "We only offer annual memberships at this time.",
-        "question_ar": "",
+        "question_ar": "هل تتوفر اشتراكات شهرية؟",
         "question_en": "Are monthly memberships available?"
       },
       "status": "active",
@@ -1101,7 +1101,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Refunds",
         "answer_ar": "لا، لا يمكن استرجاع الرصيد بعد الشحن.",
         "answer_en": "Loaded credit cannot be refunded.",
-        "question_ar": "",
+        "question_ar": "هل يمكن استرجاع الرصيد؟",
         "question_en": "Can the balance be refunded?"
       },
       "status": "active",
@@ -1113,7 +1113,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Credit / Card",
         "answer_ar": "نعم، يمكن شحن الرصيد مسبقاً.",
         "answer_en": "Yes, credit can be purchased in advance.",
-        "question_ar": "",
+        "question_ar": "هل يمكن شحن الرصيد مسبقاً؟",
         "question_en": "Can credit be purchased in advance?"
       },
       "status": "active",
@@ -1125,7 +1125,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Credit / Card",
         "answer_ar": "يمكن استخدام الرصيد في فروع طفل المستقبل.",
         "answer_en": "Credit can be used at all Future Kid branches.",
-        "question_ar": "",
+        "question_ar": "هل يمكن استخدام الرصيد في جميع الفروع؟",
         "question_en": "Can credit be used at all branches?"
       },
       "status": "active",
@@ -1137,7 +1137,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Facilities",
         "answer_ar": "نعم، يُسمح بدخول عربات الأطفال داخل الفروع، باستثناء مناطق الألعاب.",
         "answer_en": "Yes, strollers are allowed inside the branches, except within the play areas and on rides.",
-        "question_ar": "",
+        "question_ar": "هل يُسمح بدخول عربات الأطفال؟",
         "question_en": "Are strollers allowed?"
       },
       "status": "active",
@@ -1149,7 +1149,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Payment / Admin",
         "answer_ar": "نعم، يمكن الحصول على إيصال أو فاتورة من الفرع عند الدفع.",
         "answer_en": "Yes, a receipt or invoice can be provided at the branch upon payment or online once the customer checks out.",
-        "question_ar": "",
+        "question_ar": "هل يمكنني الحصول على فاتورة أو إيصال؟",
         "question_en": "Can I get an invoice or receipt?"
       },
       "status": "active",
@@ -1161,7 +1161,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "نعم، يمكن إضافة أطفال مقابل رسوم إضافية، حسب نوع بطاقة اللعب المختارة.",
         "answer_en": "Yes, additional children can be added for an extra fee, depending on the selected play card.",
-        "question_ar": "",
+        "question_ar": "هل يمكن إضافة أطفال إلى حفلة عيد الميلاد؟",
         "question_en": "Can I add extra children to a birthday party?"
       },
       "status": "active",
@@ -1173,7 +1173,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Groups",
         "answer_ar": "نعم، يمكن تنظيم رحلات خاصة للشركات والمجموعات العائلية الكبيرة.",
         "answer_en": "Yes, trips can be arranged for companies and large family groups.",
-        "question_ar": "",
+        "question_ar": "هل يمكن تنظيم رحلات للشركات أو المجموعات العائلية الكبيرة؟",
         "question_en": "Can trips be organized for companies or large family groups?"
       },
       "status": "active",
@@ -1185,7 +1185,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "General / Rules",
         "answer_ar": "لا نستخدم نظام التذاكر. يمكن استخدام كرت واحد للعائلة لشحن الرصيد واللعب.",
         "answer_en": "We do not use tickets. One Future Kid card can be topped up and used by family members.",
-        "question_ar": "",
+        "question_ar": "هل التذاكر قابلة للتحويل؟",
         "question_en": "Are tickets transferable?"
       },
       "status": "active",
@@ -1197,7 +1197,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "نعم، تتضمن الحفلة برنامجًا ترفيهيًا متكاملًا يشمل مقدم حفلة، ألعاب، ومسابقات.",
         "answer_en": "Yes, the birthday party includes a full entertainment program with a host, games, and competitions.",
-        "question_ar": "",
+        "question_ar": "هل يوجد مقدم حفلة أو برنامج ترفيهي في حفلات أعياد الميلاد؟",
         "question_en": "Is there a host or entertainment program at birthday parties?"
       },
       "status": "active",
@@ -1209,7 +1209,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "مدة حفلة عيد الميلاد ساعتان، وهي مدة مثالية للاستمتاع بالأنشطة والاحتفال بدون استعجال.",
         "answer_en": "Birthday parties last two hours, giving kids plenty of time to enjoy the celebration and activities.",
-        "question_ar": "",
+        "question_ar": "ما هي مدة حفلة عيد الميلاد؟",
         "question_en": "What is the duration of the birthday party?"
       },
       "status": "active",
@@ -1221,7 +1221,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Facilities",
         "answer_ar": "لا تتوفر خزائن لحفظ الأغراض، حيث يحتفظ الزوار عادةً بمقتنياتهم الشخصية معهم أثناء الزيارة.",
         "answer_en": "Lockers are not provided. Guests typically keep personal items with them during their visit.",
-        "question_ar": "",
+        "question_ar": "هل تتوفر خزائن؟",
         "question_en": "Are lockers available?"
       },
       "status": "active",
@@ -1233,7 +1233,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "يتم تفعيل الاشتراك فور إتمام عملية الاشتراك واستلام قيمة الاشتراك كاملة.",
         "answer_en": "The membership is activated immediately upon completion of the subscription and receipt of full payment.",
-        "question_ar": "",
+        "question_ar": "متى يتم تفعيل الاشتراك؟",
         "question_en": "When is the membership activated?"
       },
       "status": "active",
@@ -1245,7 +1245,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Facilities",
         "answer_ar": "لا تتوفر شبكة Wi-Fi داخل الفروع، وقد تتوفر خدمة الإنترنت من خلال المجمع حسب الموقع.",
         "answer_en": "Wi-Fi is not provided inside Future Kid branches. In some locations, mall Wi-Fi may be available.",
-        "question_ar": "",
+        "question_ar": "هل تتوفر شبكة واي فاي؟",
         "question_en": "Is Wi-Fi available?"
       },
       "status": "active",
@@ -1257,7 +1257,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "نعم، تشمل باقة عيد الميلاد ديكورات أساسية وبالونات تضفي أجواء احتفالية جميلة.",
         "answer_en": "Yes, birthday packages include basic decorations and balloons to create a festive atmosphere.",
-        "question_ar": "",
+        "question_ar": "هل تشمل باقات عيد الميلاد ديكورات؟",
         "question_en": "Are decorations included in birthday packages?"
       },
       "status": "active",
@@ -1269,7 +1269,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Groups",
         "answer_ar": "نعم، تتوفر مساحات داخل الفروع لتجمع الطلاب وتنظيم المجموعات.",
         "answer_en": "Yes, designated gathering areas are available within the branches for group coordination.",
-        "question_ar": "",
+        "question_ar": "هل توجد مساحة مخصصة لتجمع الطلاب؟",
         "question_en": "Is a designated space provided for students to gather?"
       },
       "status": "active",
@@ -1281,7 +1281,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "تتوفر خدمات رقمية مرتبطة بالاشتراك حسب النظام المعتمد في الفرع.",
         "answer_en": "Digital services related to the membership may be available depending on the system used at the branch.",
-        "question_ar": "",
+        "question_ar": "هل يمكن ربط الاشتراك بالتطبيق؟",
         "question_en": "Can the membership be linked to the app?"
       },
       "status": "active",
@@ -1293,7 +1293,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Groups",
         "answer_ar": "نعم، يمكن دمج الرحلة مع ورش عمل تعليمية حسب البرنامج المختار.",
         "answer_en": "Yes, trips can be combined with educational workshops depending on the selected program.",
-        "question_ar": "",
+        "question_ar": "هل يمكن دمج الرحلة مع ورش عمل تعليمية؟",
         "question_en": "Can the trip be combined with educational workshops?"
       },
       "status": "active",
@@ -1305,7 +1305,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing / Online",
         "answer_ar": "نعم، يمكن شراء الباقات أو شحن الرصيد إلكترونياً عبر القنوات المتاحة.",
         "answer_en": "Yes, packages or credit can be purchased online through available digital channels.",
-        "question_ar": "",
+        "question_ar": "هل يمكن شراء التذاكر أو الباقات إلكترونياً؟",
         "question_en": "Can tickets or packages be purchased online?"
       },
       "status": "active",
@@ -1317,7 +1317,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "General Info",
         "answer_ar": "تتواجد فروع طفل المستقبل في مجمعات وجمعيات رئيسية في مختلف مناطق الكويت.",
         "answer_en": "Future Kid branches are located in major malls and co-ops across Kuwait.",
-        "question_ar": "",
+        "question_ar": "أين تقع فروعكم؟",
         "question_en": "Where are your branches located?"
       },
       "status": "active",
@@ -1329,7 +1329,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing",
         "answer_ar": "نعم، الدخول مجاني، ويتم الدفع مقابل الألعاب عن طريق شحن كرت طفل المستقبل.",
         "answer_en": "Yes, entry is free. Games are played by topping up a Future Kid card and paying per play swipe.",
-        "question_ar": "",
+        "question_ar": "هل الدخول مجاني؟",
         "question_en": "Is entry free?"
       },
       "status": "active",
@@ -1341,7 +1341,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "نعم، تشمل الحفلة ألعابًا جماعية وأنشطة ترفيهية، بالإضافة إلى وقت لعب مخصص.",
         "answer_en": "Yes, the party includes group games, entertainment activities, and dedicated playtime.",
-        "question_ar": "",
+        "question_ar": "هل تشمل حفلة عيد الميلاد ألعاباً؟",
         "question_en": "Are games included in the birthday party?"
       },
       "status": "active",
@@ -1353,7 +1353,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Food / Pricing",
         "answer_ar": "تعتمد العروض على الفرع والموقع، ويمكن الاستفسار من فريق الفرع أثناء الزيارة.",
         "answer_en": "Food offers depend on the branch and location. Please check with the branch team during your visit.",
-        "question_ar": "",
+        "question_ar": "هل توجد عروض على الطعام؟",
         "question_en": "Are there offers on food?"
       },
       "status": "active",
@@ -1365,7 +1365,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "يتم دفع العربون أثناء عملية الحجز لتأكيد موعد حفلة عيد الميلاد.",
         "answer_en": "The deposit is paid at the time of booking to confirm the birthday party reservation.",
-        "question_ar": "",
+        "question_ar": "متى يُدفع العربون لحجز حفلة عيد الميلاد؟",
         "question_en": "When is the deposit paid for a birthday party booking?"
       },
       "status": "active",
@@ -1377,7 +1377,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing",
         "answer_ar": "نقدم باقات وعروض داخل الفروع، بالإضافة إلى عروض أونلاين متجددة.",
         "answer_en": "We offer in-branch packages as well as online promotions that are updated regularly.",
-        "question_ar": "",
+        "question_ar": "ما هي أنواع الباقات التي تقدمونها؟",
         "question_en": "What types of packages do you offer?"
       },
       "status": "active",
@@ -1389,7 +1389,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Payment",
         "answer_ar": "تتوفر عدة طرق للدفع، تشمل الدفع النقدي، بطاقات البنك، والدفع الإلكتروني داخل الفروع أو عبر القنوات الرقمية المتاحة.",
         "answer_en": "Multiple payment methods are available, including cash, bank cards, and electronic payments at the branches or through available digital channels.",
-        "question_ar": "",
+        "question_ar": "ما هي طرق الدفع المتوفرة؟",
         "question_en": "What payment methods are available?"
       },
       "status": "active",
@@ -1401,7 +1401,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing",
         "answer_ar": "لا نقدم تذكرة شاملة، ولكن تتوفر باقات وعروض خاصة حسب الفرع والموسم.",
         "answer_en": "We do not offer an all-inclusive ticket, but special packages and promotions are available depending on the branch and season.",
-        "question_ar": "",
+        "question_ar": "هل تقدمون تذكرة شاملة؟",
         "question_en": "Do you offer an all-inclusive ticket?"
       },
       "status": "active",
@@ -1413,7 +1413,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Groups",
         "answer_ar": "يكون الإشراف الأساسي من مسؤولي المجموعة، مع دعم وتوجيه من فريق الفرع.",
         "answer_en": "Primary supervision is provided by the group's own supervisors, with support and guidance from the branch team.",
-        "question_ar": "",
+        "question_ar": "هل تتوفر مشرفون أو مرشدون خلال الرحلة؟",
         "question_en": "Do you provide supervisors or guides during the trip?"
       },
       "status": "active",
@@ -1425,7 +1425,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "لا، لا تتوفر حالياً إمكانية ترقية الاشتراك، حيث يتوفر نوع واحد فقط من الاشتراكات في الوقت الحالي.",
         "answer_en": "Membership upgrades are not available; we only offer one membership package at this time.",
-        "question_ar": "",
+        "question_ar": "هل يمكن ترقية الاشتراك؟",
         "question_en": "Can the membership be upgraded?"
       },
       "status": "active",
@@ -1437,7 +1437,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Facilities",
         "answer_ar": "لا تتوفر متاجر هدايا، ولكن توجد منطقة استبدال الجوائز حيث يمكن للأطفال استبدال النقاط بهدايا.",
         "answer_en": "There are no gift shops, but redemption counters are available where children can exchange points for prizes.",
-        "question_ar": "",
+        "question_ar": "هل توجد متاجر هدايا؟",
         "question_en": "Are there gift shops?"
       },
       "status": "active",
@@ -1449,7 +1449,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "نعم، يمكن للعملاء إحضار كيكة خاصة بهم، كما يتم توفير كيكة ضمن الباقة من Ceasar's أو BreadTalk.",
         "answer_en": "Yes, customers are welcome to bring their own cake. A cake is also provided as part of the package from Caesar's or BreadTalk.",
-        "question_ar": "",
+        "question_ar": "هل يمكننا إحضار كيكة خاصة بنا؟",
         "question_en": "Can we bring our own cake?"
       },
       "status": "active",
@@ -1461,7 +1461,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "نعم، يمكن تخصيص بعض تفاصيل الحفلة حسب الباقة المختارة، مع توفر إضافات اختيارية مقابل رسوم.",
         "answer_en": "Yes, certain party elements can be customized based on the selected package, with optional add-ons available for an additional fee.",
-        "question_ar": "",
+        "question_ar": "هل يمكن تخصيص حفلة عيد الميلاد؟",
         "question_en": "Can the birthday party be customized?"
       },
       "status": "active",
@@ -1473,7 +1473,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Facilities",
         "answer_ar": "نعم، تتوفر أماكن جلوس في بعض الفروع بالقرب من الألعاب، لراحة الأهل ومتابعة الأطفال أثناء اللعب.",
         "answer_en": "Yes, some branches offer seating areas near the games so parents can relax while watching their children play.",
-        "question_ar": "",
+        "question_ar": "هل توجد أماكن جلوس بالقرب من الألعاب؟",
         "question_en": "Are there seating areas near the games?"
       },
       "status": "active",
@@ -1485,7 +1485,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Facilities / Rules",
         "answer_ar": "مسموح إدخال الأكل من الخارج في فروع طفل المستقبل، ولكن يمنع إدخاله داخل مناطق الألعاب حفاظًا على النظافة والسلامة.",
         "answer_en": "Outside food is allowed in Future Kid branches, just not inside the play areas for cleanliness purposes.",
-        "question_ar": "",
+        "question_ar": "هل يُسمح بإدخال الطعام من الخارج؟",
         "question_en": "Can outside food be brought in?"
       },
       "status": "active",
@@ -1497,7 +1497,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Groups",
         "answer_ar": "تُستخدم الأساور فقط في رحلات المجموعات الكبيرة مثل المدارس والجهات، ولا تُستخدم في الزيارات الفردية داخل فروع طفل المستقبل.",
         "answer_en": "Future Kid only uses wristbands for large group trips including schools and organizations. They are not used for individual visits.",
-        "question_ar": "",
+        "question_ar": "هل تُستخدم الأساور؟",
         "question_en": "Are wristbands used?"
       },
       "status": "active",
@@ -1509,7 +1509,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Payment",
         "answer_ar": "نعم، نقبل الدفع عبر المحافظ الإلكترونية مثل Apple Pay وGoogle Pay والمحافظ المدعومة من البنوك المحلية داخل فروع طفل المستقبل.",
         "answer_en": "Yes, we accept e-wallet payments such as Apple Pay, Google Pay, and supported local bank wallets at Future Kid branches.",
-        "question_ar": "",
+        "question_ar": "هل تقبلون المحافظ الإلكترونية؟",
         "question_en": "Do you accept e-wallets?"
       },
       "status": "active",
@@ -1521,7 +1521,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday / Refunds",
         "answer_ar": "نعم، يكون العربون قابلًا للاسترجاع في حال تم إلغاء حفلة عيد الميلاد قبل موعدها بـ 48 ساعة على الأقل.",
         "answer_en": "Yes, the deposit is refundable if the birthday party is cancelled at least 48 hours before the scheduled date.",
-        "question_ar": "",
+        "question_ar": "هل يمكن استرجاع العربون عند إلغاء حفلة عيد الميلاد؟",
         "question_en": "Is the deposit refundable if the birthday party is cancelled?"
       },
       "status": "active",
@@ -1533,7 +1533,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Payment",
         "answer_ar": "نعم، يمكن الدفع باستخدام بطاقات البنوك المحلية داخل فروعنا أو عبر الموقع الإلكتروني، بما في ذلك كي-نت، فيزا، وماستر كارد.",
         "answer_en": "Yes, payment can be made using local bank cards at our branches or online including K-NET, Visa, and Mastercard.",
-        "question_ar": "",
+        "question_ar": "هل يمكن الدفع ببطاقات البنوك؟",
         "question_en": "Can payment be made by bank cards?"
       },
       "status": "active",
@@ -1545,7 +1545,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "General / Rules",
         "answer_ar": "نعم، يمكن الخروج والعودة في نفس اليوم، حيث يعتمد النظام على الدفع مقابل اللعب باستخدام كرت طفل المستقبل.",
         "answer_en": "Yes, you may exit and re-enter on the same day, as play is based on a swipe-per-play system using your Future Kid card.",
-        "question_ar": "",
+        "question_ar": "هل يمكنني الخروج والعودة في نفس اليوم؟",
         "question_en": "Can I exit and re-enter on the same day?"
       },
       "status": "active",
@@ -1557,7 +1557,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing / Groups",
         "answer_ar": "نعم، تتوفر خصومات للمجموعات من خلال الرحلات والحجوزات الجماعية، مثل المدارس والمؤسسات أو الحفلات والعائلات الكبيرة.",
         "answer_en": "Yes, group discounts are available through our trips and group bookings, such as schools, organizations, or larger parties and families.",
-        "question_ar": "",
+        "question_ar": "هل تقدمون خصومات للمجموعات؟",
         "question_en": "Do you offer group discounts?"
       },
       "status": "active",
@@ -1569,7 +1569,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "الاشتراك صالح في معظم فروع طفل المستقبل، وقد تُستثنى بعض المواقع أو الفعاليات الخاصة.",
         "answer_en": "Memberships are valid at all Future Kid branches. Certain locations or special events may be excluded.",
-        "question_ar": "",
+        "question_ar": "هل الاشتراك صالح في جميع الفروع؟",
         "question_en": "Is the membership valid at all branches?"
       },
       "status": "active",
@@ -1581,7 +1581,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "تتوفر حفلات أعياد الميلاد في فروع مختارة. حالياً، تتوفر قاعة مخصصة لأعياد الميلاد في فرع طفل المستقبل - جمعية شرق.",
         "answer_en": "Birthday parties are available at selected branches. Currently, a dedicated birthday room is available at Future Kid's Sharq Co-Op branch.",
-        "question_ar": "",
+        "question_ar": "أين تتوفر حفلات أعياد الميلاد؟",
         "question_en": "Where are birthday parties available?"
       },
       "status": "active",
@@ -1593,7 +1593,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "General Info",
         "answer_ar": "طفل المستقبل علامة ترفيهية رائدة في الكويت، تقدم مراكز ترفيه عائلية تضم ألعابًا وأنشطة وتجارب ممتعة للأطفال والعائلات في بيئة آمنة ونظيفة.",
         "answer_en": "Future Kid operates family entertainment centers across Kuwait, offering games, rides, birthday parties, school trips, and seasonal events in a safe and welcoming environment.",
-        "question_ar": "",
+        "question_ar": "معلومات عامة عن طفل المستقبل؟",
         "question_en": "General information about Future Kid?"
       },
       "status": "active",
@@ -1605,7 +1605,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Services / Add-ons",
         "answer_ar": "نعم، تتوفر خدمات إضافية مثل الرسم على الوجه، العلوم المرحة، عروض الساحر، والتصوير، مقابل رسوم إضافية.",
         "answer_en": "Yes, optional add-on services such as face painting, science fairs, magician shows, and photography are available for an additional fee.",
-        "question_ar": "",
+        "question_ar": "هل تتوفر خدمات إضافية؟",
         "question_en": "Are there additional services available?"
       },
       "status": "active",
@@ -1617,7 +1617,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Refunds / Credit",
         "answer_ar": "لا يمكن استبدال أو استرجاع الرصيد بعد الشحن. لكنها لا تنتهي صلاحيتها إذا لم تزر الفرع لمدة 12 شهرًا.",
         "answer_en": "Top-up credit cannot be exchanged or refunded once loaded onto the card. However, credit does not expire if you don't visit a branch for 12 months.",
-        "question_ar": "",
+        "question_ar": "هل يمكن استبدال أو استرجاع التذاكر أو الرصيد؟",
         "question_en": "Can tickets or credit be exchanged or refunded?"
       },
       "status": "active",
@@ -1629,7 +1629,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Facilities / Rules",
         "answer_ar": "لا، حفاظًا على السلامة والنظافة، لا يُسمح بالأكل أو الشرب داخل مناطق الألعاب. ويُسمح بها في الفروع في الأماكن المخصصة.",
         "answer_en": "For safety and cleanliness, eating and drinking are not allowed inside play areas. They are allowed within the branches in designated spots.",
-        "question_ar": "",
+        "question_ar": "هل يُسمح بالأكل داخل مناطق الألعاب؟",
         "question_en": "Is eating allowed inside the play areas?"
       },
       "status": "active",
@@ -1641,7 +1641,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "يمكن حجز حفلات أعياد الميلاد في الوقت الذي يناسبكم، وتستمر الحفلة لمدة ساعتين، ويتم تأكيد الموعد بالتنسيق مع الفرع.",
         "answer_en": "Birthday parties can be booked at a time that suits you. Each party runs for two hours, with the final time confirmed in coordination with the branch manager.",
-        "question_ar": "",
+        "question_ar": "ما هي الأوقات المتاحة لحجز حفلات أعياد الميلاد؟",
         "question_en": "What time slots are available for birthday parties?"
       },
       "status": "active",
@@ -1653,7 +1653,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Facilities",
         "answer_ar": "لا تتوفر حضانة أو غرفة رعاية مستقلة للأطفال. يبقى الأهل مسؤولين عن أطفالهم، مع توفر أماكن جلوس عائلية ومساحات راحة بالقرب من مناطق الألعاب.",
         "answer_en": "We do not operate a childcare nursery. Parents remain responsible for their children, and family seating and rest areas are available near the play zones.",
-        "question_ar": "",
+        "question_ar": "هل توجد غرفة رعاية أطفال؟",
         "question_en": "Is there a childcare room?"
       },
       "status": "active",
@@ -1665,7 +1665,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Support",
         "answer_ar": "يمكنك التواصل مع فريق الدعم من خلال فريق الفرع، أو عبر الخط الساخن 1881919، أو من خلال قنوات التواصل الرسمية لطفل المستقبل.",
         "answer_en": "You can contact support through branch staff during your visit, via the hotline 1881919, or through Future Kid's official social media channels.",
-        "question_ar": "",
+        "question_ar": "كيف يمكنني التواصل مع الدعم؟",
         "question_en": "How can I contact support?"
       },
       "status": "active",
@@ -1677,7 +1677,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Support",
         "answer_ar": "لا يوجد مكتب مخصص لخدمة العملاء داخل الفروع. يقوم فريق الفرع بمساعدة العملاء، كما تتوفر خدمة العملاء عبر الخط الساخن 1881919.",
         "answer_en": "No dedicated customer service desk at branches. Branch staff assist with all inquiries. Customer care is also available via hotline 1881919.",
-        "question_ar": "",
+        "question_ar": "هل يوجد مكتب لخدمة العملاء؟",
         "question_en": "Is there a customer service desk?"
       },
       "status": "active",
@@ -1689,7 +1689,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Membership",
         "answer_ar": "الاشتراك السنوي يتم دفعه بالكامل عند بداية العقد ولا يتم تجديده تلقائياً، فلا يمكن إيقافه مؤقتاً.",
         "answer_en": "The annual membership is paid in full at the start and is not auto-renewed, so it cannot be paused.",
-        "question_ar": "",
+        "question_ar": "هل يمكن إيقاف الاشتراك مؤقتاً؟",
         "question_en": "Can the membership be paused?"
       },
       "status": "active",
@@ -1701,7 +1701,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Safety",
         "answer_ar": "يتم تطبيق إجراءات سلامة واضحة، تشمل الالتزام بقواعد الألعاب، الإشراف المستمر، والتنسيق مع مشرفي المجموعة لضمان سلامة الأطفال.",
         "answer_en": "Clear safety procedures are followed, including adherence to ride rules, continuous supervision, and coordination with group supervisors to ensure children's safety.",
-        "question_ar": "",
+        "question_ar": "ما هي إجراءات السلامة المتبعة في الرحلات الجماعية؟",
         "question_en": "What safety procedures are followed for group trips?"
       },
       "status": "active",
@@ -1713,7 +1713,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Trips / Groups",
         "answer_ar": "تتوفر الرحلات خلال جميع أيام الأسبوع، ويتم تحديد التوقيت بالتنسيق مع مديرة الرحلات في طفل المستقبل لضمان تنظيم التجربة بالشكل الأمثل.",
         "answer_en": "Trips are available throughout the week, with timings confirmed in coordination with Future Kid's Trips Manager to ensure a smooth experience.",
-        "question_ar": "",
+        "question_ar": "ما هي أوقات الرحلات المتاحة خلال الأسبوع؟",
         "question_en": "What are the available trip times during the week?"
       },
       "status": "active",
@@ -1725,7 +1725,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Accessibility",
         "answer_ar": "نعم، نحرص على توفير تجربة مريحة وآمنة للأطفال من ذوي الإعاقة. تتوفر تسهيلات حسب الحالة ونوع اللعبة مع مراعاة السلامة. بعض الألعاب قد لا تكون مناسبة للجميع. لأي ترتيب خاص، يُفضل التواصل مع الفرع مباشرة.",
         "answer_en": "Yes, we aim to provide a safe and comfortable experience for guests with disabilities. Accommodations vary by attraction, with safety first. Some rides may have restrictions. For specific arrangements, contact the branch directly.",
-        "question_ar": "",
+        "question_ar": "هل تتوفر ترتيبات خاصة لذوي الإعاقة؟",
         "question_en": "Special accommodations for guests with disabilities?"
       },
       "status": "active",
@@ -1737,7 +1737,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Facilities",
         "answer_ar": "إذا كان الفرع في جمعية، فالمواقف مجانية. أما فروع طفل المستقبل في المجمعات التجارية، فيتم تحديد رسوم المواقف من قبل إدارة المجمع، وقد تكون رسوم بسيطة أو مجانية.",
         "answer_en": "At co-op branches, parking is free. For mall branches, parking fees are set by the mall operator, usually a small fee or free.",
-        "question_ar": "",
+        "question_ar": "هل توجد رسوم للمواقف؟",
         "question_en": "Is there a parking fee?"
       },
       "status": "active",
@@ -1749,7 +1749,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Pricing / Games",
         "answer_ar": "نعم، بعض الألعاب قد تتطلب رسومًا إضافية أو متطلبات خاصة حسب نوع اللعبة. على سبيل المثال، ألعاب السوفت بلاي بما في ذلك الترامبولين تتطلب من العملاء ارتداء جوارب، وإذا لم يكن لديهم واحدة يمكنهم شراؤها من الفرع.",
         "answer_en": "Yes, some games may have different pricing or additional requirements. For example, softplay games including trampolines require customers to wear socks; if they don't have any, they can purchase them at the branch.",
-        "question_ar": "",
+        "question_ar": "هل تتطلب بعض الألعاب رسوماً إضافية؟",
         "question_en": "Do some games require additional fees?"
       },
       "status": "active",
@@ -1761,7 +1761,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "تتوفر باقتان لحفلات أعياد الميلاد: الباقة الفضية (15 ضيف) والباقة الذهبية (25 ضيف) كلا الباقتين لديها خيار لإضافة ضيوف إضافيين مقابل رسوم بسيطة.",
         "answer_en": "Two birthday packages are available: Silver package (15 guests), Gold package (25 guests). Both allow extra guests for a small fee.",
-        "question_ar": "",
+        "question_ar": "ما هي باقات حفلات أعياد الميلاد المتوفرة؟",
         "question_en": "What birthday packages are available?"
       },
       "status": "active",
@@ -1773,7 +1773,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "Birthday",
         "answer_ar": "نعم، نقدم حفلات أعياد ميلاد متكاملة داخل فروع مختارة، تشمل الألعاب، الأنشطة الترفيهية، والطعام، لتجربة احتفال سهلة وممتعة للأطفال والأهل.",
         "answer_en": "Yes, we offer fully organized birthday parties at selected branches, including games, entertainment, and food for a fun and stress-free celebration.",
-        "question_ar": "",
+        "question_ar": "هل تقدمون حفلات أعياد الميلاد؟",
         "question_en": "Do you offer birthday parties?"
       },
       "status": "active",
@@ -1785,7 +1785,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "category": "General Info",
         "answer_ar": "طفل المستقبل شركة كويتية رائدة في مجال الترفيه العائلي، توفر مراكز ترفيه داخلية تجمع بين اللعب، المتعة، والذكريات الجميلة للأطفال والعائلات.",
         "answer_en": "Future Kid is Kuwait's home-grown family entertainment brand, offering indoor amusement centers where kids play, laugh, and create unforgettable memories in a safe and enjoyable environment.",
-        "question_ar": "",
+        "question_ar": "ما هو طفل المستقبل؟",
         "question_en": "What is Future Kid?"
       },
       "status": "active",
@@ -1800,7 +1800,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-057",
         "description": "Asking for branch location / Ramadan hours",
         "requires_crm": false,
-        "template_ref": "→ TPL-033 (Branch + Timings)",
+        "ai_instructions": "Respond using TPL-033 (Branch + Timings). Confirm which branch the customer wants, then send the branch pin and Ramadan opening hours for that branch. If the customer has not named a branch, ask which branch first. Do not quote regular (non-Ramadan) hours.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -1814,7 +1814,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-056",
         "description": "Customer sends 12/20/50/99 to select a package",
         "requires_crm": false,
-        "template_ref": "→ Bot Logic: ask branch → send pin + timings",
+        "ai_instructions": "Run the Ramadan top-up flow: ask which branch, then send the package pin and Ramadan timings. Treat 12, 20, 50, 99 as the package selection keyword. Confirm the selection back to the customer before closing. Revenue opportunity, so do not skip the branch question or the pin.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -1828,7 +1828,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-055",
         "description": "Asking if discount applies to recharge/top-up or games only",
         "requires_crm": false,
-        "template_ref": "→ TPL-032 (Ramadan Discount Scope)",
+        "ai_instructions": "Respond using TPL-032 (Ramadan Discount Scope). Clarify that the Ramadan discount applies to games only and not to recharge or top-up. Keep the response short and factual; do not offer alternatives or a workaround.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -1842,7 +1842,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-054",
         "description": "Asking about Ramadan discount, 50% off games, Ramadan packages",
         "requires_crm": false,
-        "template_ref": "→ TPL-031 (Ramadan Broadcast)",
+        "ai_instructions": "Respond using TPL-031 (Ramadan Broadcast). Summarize the active Ramadan promo, the 50% off games offer, and the package lineup. Revenue opportunity: surface the top-up flow once by suggesting the customer pick a package. Do not invent promo dates or scope; stick to TPL-031.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -1856,7 +1856,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-053",
         "description": "Asking if card is digital or physical",
         "requires_crm": false,
-        "template_ref": "→ FAQ #70",
+        "ai_instructions": "Respond using FAQ #70. State clearly whether the card is digital, physical, or both, and mention how the customer receives or uses each. Do not add delivery or pricing info that is not in FAQ #70.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -1870,7 +1870,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-052",
         "description": "Asking if strollers are allowed",
         "requires_crm": false,
-        "template_ref": "→ FAQ #55",
+        "ai_instructions": "Respond using FAQ #55. State whether strollers are allowed inside and where they can be parked or left. Keep the reply short. Escalate only if the customer asks about a medical stroller use-case not covered by the FAQ.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -1884,7 +1884,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-051",
         "description": "Asking about mascot/cartoon characters at parties",
         "requires_crm": false,
-        "template_ref": "→ FAQ #83",
+        "ai_instructions": "Respond using FAQ #83. Describe which mascot or cartoon characters appear at parties and any add-on pricing quoted in the FAQ. Revenue opportunity: mention it as an upsell for birthday packages once, without pressure.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -1898,7 +1898,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-050",
         "description": "Asking for complaint reference number or status",
         "requires_crm": false,
-        "template_ref": "→ Escalation Logic",
+        "ai_instructions": "Escalate to a human agent. Do not attempt to look up a ticket or reference number yourself. Acknowledge the customer, tell them a CS agent will pull the ticket status, and stop responding on that thread. Do not promise SLAs or resolutions.",
         "escalation_check": true,
         "revenue_opportunity": false
       },
@@ -1912,7 +1912,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-049",
         "description": "Asking about lost items",
         "requires_crm": false,
-        "template_ref": "→ ESCALATE (no policy yet)",
+        "ai_instructions": "Escalate to a human agent. There is no lost-and-found policy in the knowledge base yet. Apologize briefly, collect the item description, the branch, and the approximate time it was lost, then hand the thread over. Do not improvise a policy.",
         "escalation_check": true,
         "revenue_opportunity": false
       },
@@ -1926,7 +1926,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-048",
         "description": "Asking about allergies, latex, medical conditions",
         "requires_crm": false,
-        "template_ref": "→ ESCALATE (data gap)",
+        "ai_instructions": "Escalate to a human agent. Allergy, latex and medical-condition data is not in the knowledge base. Do not guess, do not list ingredients, and do not claim anything is allergen-free. Capture the allergy details and the branch, then hand over.",
         "escalation_check": true,
         "revenue_opportunity": false
       },
@@ -1940,7 +1940,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-047",
         "description": "Asking about height/age/weight limits for rides",
         "requires_crm": false,
-        "template_ref": "→ ESCALATE (data gap)",
+        "ai_instructions": "Escalate to a human agent. Height, age and weight limits per ride are not yet in the knowledge base. Do not quote limits from memory or from other branches. Ask which branch and which ride, then hand over to CS to fetch the figures.",
         "escalation_check": true,
         "revenue_opportunity": false
       },
@@ -1954,7 +1954,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-046",
         "description": "Asking about school-specific trip programs",
         "requires_crm": false,
-        "template_ref": "→ FAQ #74-82 / Escalation",
+        "ai_instructions": "Answer using FAQ #74-82 for general school-trip information. Escalate to a human agent if the customer asks to book, wants pricing for a specific school size, or needs custom timing. Revenue opportunity: do not over-promise capacity; let the CS team confirm.",
         "escalation_check": true,
         "revenue_opportunity": true
       },
@@ -1968,7 +1968,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-045",
         "description": "Asking about loyalty program details",
         "requires_crm": false,
-        "template_ref": "→ FAQ #73 / Promos",
+        "ai_instructions": "Respond using FAQ #73 and the active entry in the Promotions module. Explain how the loyalty program works, how points are earned, and any current bonus. Revenue opportunity: mention the sign-up step once at the end.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -1982,7 +1982,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-044",
         "description": "Asking about member discounts or benefits",
         "requires_crm": false,
-        "template_ref": "→ FAQ #62,64,65",
+        "ai_instructions": "Respond using FAQ #62, #64 and #65. Cover member discounts, included perks and branch coverage. Revenue opportunity: if the customer is not yet a member, close with a one-line upsell to the membership page.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -1996,7 +1996,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-043",
         "description": "Asking if membership can be transferred",
         "requires_crm": false,
-        "template_ref": "→ FAQ #63 / Policy",
+        "ai_instructions": "Respond using FAQ #63 and the transfer policy. Confirm whether the membership is transferable and, if not, restate the policy reason. Do not offer workarounds that contradict policy.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2010,7 +2010,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-042",
         "description": "Asking how to renew membership",
         "requires_crm": false,
-        "template_ref": "→ FAQ #61",
+        "ai_instructions": "Respond using FAQ #61. Walk the customer through the renewal steps, any required documents, and where renewal happens (branch, online, app). Keep it stepwise.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2024,7 +2024,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-041",
         "description": "Asking when membership starts",
         "requires_crm": false,
-        "template_ref": "→ FAQ #38",
+        "ai_instructions": "Respond using FAQ #38. State clearly when the membership activates (purchase date vs first use vs registration) and from when the benefits apply.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2038,7 +2038,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-040",
         "description": "Asking about organizing trips for companies or large families",
         "requires_crm": false,
-        "template_ref": "→ FAQ #52 / Escalation",
+        "ai_instructions": "Start with FAQ #52 for the general corporate and large-family package outline. Escalate to a human agent as soon as the customer shares group size, date or budget, since the CS team negotiates custom pricing. Revenue opportunity: confirm interest but do not quote rates yourself.",
         "escalation_check": true,
         "revenue_opportunity": true
       },
@@ -2052,7 +2052,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-039",
         "description": "Asking about combining trips with learning activities",
         "requires_crm": false,
-        "template_ref": "→ FAQ #43",
+        "ai_instructions": "Respond using FAQ #43 for what educational workshops cover and target ages. Escalate to a human agent if the customer wants to book a workshop, combine it with a trip, or needs a custom curriculum. Revenue opportunity: confirm interest, do not quote per-student rates.",
         "escalation_check": true,
         "revenue_opportunity": true
       },
@@ -2066,7 +2066,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-038",
         "description": "Asking about food deals or promotions",
         "requires_crm": false,
-        "template_ref": "→ FAQ #48",
+        "ai_instructions": "Respond using FAQ #48. List the currently documented food deals and any cross-promo with tickets. Do not add limited-time offers that are not in the FAQ.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2080,7 +2080,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-037",
         "description": "Asking for receipt or invoice",
         "requires_crm": false,
-        "template_ref": "→ FAQ #54",
+        "ai_instructions": "Respond using FAQ #54. Tell the customer how to get a receipt or tax invoice, what info is needed (name, CR number, email), and the turnaround. If the request is for a branch the FAQ does not cover, escalate.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2094,7 +2094,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-036",
         "description": "Asking if cards or tickets are transferable",
         "requires_crm": false,
-        "template_ref": "→ FAQ #50",
+        "ai_instructions": "Respond using FAQ #50. State whether cards or tickets are transferable between people, and any exceptions for memberships. Keep it short and authoritative.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2108,7 +2108,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-035",
         "description": "Asking about buying packages or credit online",
         "requires_crm": false,
-        "template_ref": "→ FAQ #44",
+        "ai_instructions": "Respond using FAQ #44. Explain where and how to buy packages or credit online, the payment channels, and how credit lands on the card. Revenue opportunity: include the online-store link once.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -2122,7 +2122,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-034",
         "description": "Asking where branches are located",
         "requires_crm": false,
-        "template_ref": "→ FAQ #45 / Branch Hours",
+        "ai_instructions": "Respond using FAQ #45 together with the Branches module. List the active branches, a short location line per branch, and offer to send a map pin if the customer names a specific one. Skip closed branches.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2136,7 +2136,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-033",
         "description": "Asking if there's an entrance fee",
         "requires_crm": false,
-        "template_ref": "→ FAQ #46",
+        "ai_instructions": "Respond using FAQ #46. State clearly whether entry is free or paid, and under what conditions it is waived (accompanying adult, members). Do not improvise fee amounts.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2150,7 +2150,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-032",
         "description": "Asking about party host, program, duration",
         "requires_crm": false,
-        "template_ref": "→ FAQ #35-36",
+        "ai_instructions": "Respond using FAQ #35 and #36. Describe the party host, the entertainment program, and total duration. Revenue opportunity: mention the add-ons (cake, characters) as a soft upsell once.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -2164,7 +2164,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-031",
         "description": "Asking about unlimited/all-in-one ticket",
         "requires_crm": false,
-        "template_ref": "→ FAQ #34",
+        "ai_instructions": "Respond using FAQ #34. Confirm what the all-inclusive / unlimited ticket covers, any time limits, and exclusions. Do not invent inclusions that are not in the FAQ.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2178,7 +2178,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-030",
         "description": "Asking about upgrading membership tier",
         "requires_crm": false,
-        "template_ref": "→ FAQ #32 / Policy",
+        "ai_instructions": "Respond using FAQ #32 and the membership-upgrade policy. Explain how a tier upgrade works, whether the price is prorated, and when the upgrade takes effect. Follow policy exactly; do not offer exception-based deals.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2192,7 +2192,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-029",
         "description": "Asking about customizing party or bringing own cake",
         "requires_crm": false,
-        "template_ref": "→ FAQ #29-30",
+        "ai_instructions": "Respond using FAQ #29 and #30. Cover what the customer can customize (theme, cake, add-ons) and what is fixed. Revenue opportunity: surface the customization add-ons once without pressuring.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -2206,7 +2206,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-028",
         "description": "Asking about bringing food from outside",
         "requires_crm": false,
-        "template_ref": "→ FAQ #27",
+        "ai_instructions": "Respond using FAQ #27. State clearly whether outside food is allowed, any exceptions (baby food, medical), and the rationale in one short line. Do not offer to bend the policy.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2220,7 +2220,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-027",
         "description": "Asking about wristbands",
         "requires_crm": false,
-        "template_ref": "→ FAQ #26",
+        "ai_instructions": "Respond using FAQ #26. Explain the wristband's purpose, how it is issued, and what a lost wristband means. Keep it factual and short.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2234,7 +2234,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-026",
         "description": "Asking about Apple Pay, Google Pay acceptance",
         "requires_crm": false,
-        "template_ref": "→ FAQ #25",
+        "ai_instructions": "Respond using FAQ #25. Confirm whether Apple Pay, Google Pay and similar wallets are accepted, and at which points of sale. Do not promise wallets that are not listed.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2248,7 +2248,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-025",
         "description": "Asking about childcare rooms or nursery",
         "requires_crm": false,
-        "template_ref": "→ FAQ #13",
+        "ai_instructions": "Respond using FAQ #13. Confirm whether childcare or nursery services exist, the age range, and any supervision notes. If the customer asks about unaccompanied children, escalate.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2262,7 +2262,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-024",
         "description": "Asking about face painting, magician, photography",
         "requires_crm": false,
-        "template_ref": "→ FAQ #17",
+        "ai_instructions": "Respond using FAQ #17. List the available add-ons (face painting, magician, photography) and whether prices are fixed or custom. Revenue opportunity: include the add-on catalogue link once; do not push.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -2276,7 +2276,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-023",
         "description": "Asking about eating inside play areas",
         "requires_crm": false,
-        "template_ref": "→ FAQ #15",
+        "ai_instructions": "Respond using FAQ #15. State clearly where eating is allowed inside the play area (food court vs ride area) and any drink rules. Keep it short.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2290,7 +2290,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-022",
         "description": "Asking about exit and re-entry same day",
         "requires_crm": false,
-        "template_ref": "→ FAQ #22",
+        "ai_instructions": "Respond using FAQ #22. Confirm whether same-day exit and re-entry are allowed, whether the wristband or ticket is checked, and any time-window. Do not add a rule that is not in the FAQ.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2304,7 +2304,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-021",
         "description": "Asking if birthday deposit is refundable",
         "requires_crm": false,
-        "template_ref": "→ FAQ #24 / Policy",
+        "ai_instructions": "Respond using FAQ #24 and the birthday-deposit policy. State whether the deposit is refundable, under what conditions, and the cutoff window. Do not promise a goodwill refund outside policy.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2318,7 +2318,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-020",
         "description": "Asking about refunding or exchanging loaded credit",
         "requires_crm": false,
-        "template_ref": "→ FAQ #16 / Policy",
+        "ai_instructions": "Start with FAQ #16 and the credit-refund policy to explain what is eligible. Escalate to a human agent for the actual refund or exchange once the customer confirms they want to proceed. Do not process the refund yourself and do not commit timelines.",
         "escalation_check": true,
         "revenue_opportunity": false
       },
@@ -2332,7 +2332,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-019",
         "description": "Asking what payment is accepted (cash, card, K-NET)",
         "requires_crm": false,
-        "template_ref": "→ FAQ #18,23",
+        "ai_instructions": "Respond using FAQ #18 and #23. List accepted payment methods (cash, card, K-NET) at each point of sale. If the customer asks about a specific wallet not listed, redirect to INT-026.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2346,7 +2346,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-018",
         "description": "Asking about pausing or canceling membership",
         "requires_crm": false,
-        "template_ref": "→ FAQ #10 / Policy",
+        "ai_instructions": "Respond using FAQ #10 and the membership-pause/cancel policy. Explain how a customer can pause or cancel, the minimum notice, and any retained fees. Follow policy; do not improvise an exception.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2360,7 +2360,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-017",
         "description": "Asking about additional game fees, socks, etc.",
         "requires_crm": false,
-        "template_ref": "→ FAQ #5",
+        "ai_instructions": "Respond using FAQ #5. Cover any additional in-game fees (socks, lockers) and required gear per game. Do not merge with ride-restriction questions, which route to INT-047.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2374,7 +2374,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-016",
         "description": "Asking how to reach customer service",
         "requires_crm": false,
-        "template_ref": "→ FAQ #11-12",
+        "ai_instructions": "Respond using FAQ #11 and #12. Provide the customer-service channels (phone, WhatsApp, email) and operating hours. Do not give out personal staff contacts.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2388,7 +2388,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-015",
         "description": "Asking about school trip times, safety, booking",
         "requires_crm": false,
-        "template_ref": "→ FAQ #8-9 / Escalation",
+        "ai_instructions": "Start with FAQ #8 and #9 for general school and group trip safety, timing and booking basics. Escalate to a human agent the moment the customer asks to book or wants group pricing. Revenue opportunity: confirm interest, do not quote custom rates yourself.",
         "escalation_check": true,
         "revenue_opportunity": true
       },
@@ -2402,7 +2402,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-014",
         "description": "Asking about accommodations for guests with disabilities",
         "requires_crm": false,
-        "template_ref": "→ FAQ #7",
+        "ai_instructions": "Respond using FAQ #7. Cover documented accommodations for guests with disabilities, accessible branches, and how to request assistance. Escalate if the customer asks about a condition not listed in the FAQ.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2416,7 +2416,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-013",
         "description": "Asking about parking fees or availability",
         "requires_crm": false,
-        "template_ref": "→ FAQ #6",
+        "ai_instructions": "Respond using FAQ #6. State whether parking is free or paid, typical availability, and any validation rules. Keep it short.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2430,7 +2430,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-012",
         "description": "Asking about birthday packages, pricing, or booking",
         "requires_crm": false,
-        "template_ref": "→ FAQ #3-4",
+        "ai_instructions": "Respond using FAQ #3 and #4. Summarize birthday package tiers, pricing band, and what is included. Revenue opportunity: close with a one-line nudge to the booking form; do not push.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -2444,7 +2444,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-011",
         "description": "Asking about membership card, benefits, pricing, or how to get one",
         "requires_crm": false,
-        "template_ref": "→ Promotions (Membership)",
+        "ai_instructions": "Respond using the active entry in the Promotions module under Membership. Explain what the card is, the tiers, the headline benefit, and how to get one. Revenue opportunity: surface the sign-up step once at the end.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -2458,7 +2458,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-010",
         "description": "Website/app problems",
         "requires_crm": false,
-        "template_ref": "Escalation script",
+        "ai_instructions": "Escalate to a human agent. Apologize briefly, capture the device, browser or app version, a short description of the problem, and a screenshot if the customer can send one. Do not attempt to troubleshoot the platform yourself.",
         "escalation_check": true,
         "revenue_opportunity": false
       },
@@ -2472,7 +2472,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-009",
         "description": "Asking about Ramadan schedule",
         "requires_crm": false,
-        "template_ref": "→ Ramadan Hours sheet",
+        "ai_instructions": "Respond using the Ramadan Hours entries in the Branches module. Send the Ramadan hours for the branch the customer named; if no branch was named, ask which branch first. Do not quote regular (non-Ramadan) hours.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2486,7 +2486,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-008",
         "description": "Asking how to get to a branch",
         "requires_crm": false,
-        "template_ref": "→ Branch data",
+        "ai_instructions": "Respond using the Branches module. Send the map pin for the branch the customer named plus a short landmark line. If the customer did not name a branch, ask which one or list the active branches.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2500,7 +2500,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-007",
         "description": "School trip or group event inquiry",
         "requires_crm": false,
-        "template_ref": "Escalation script",
+        "ai_instructions": "Escalate to a human agent. Group and school-trip bookings are handled by the CS team. Capture group size, target date and any special requirements, then hand over. Revenue opportunity: confirm interest, do not quote rates.",
         "escalation_check": true,
         "revenue_opportunity": true
       },
@@ -2514,7 +2514,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-006",
         "description": "Requesting money back",
         "requires_crm": true,
-        "template_ref": "Escalation script",
+        "ai_instructions": "Escalate to a human agent. Refunds require CRM access, so pull up the customer record via CRM before escalating. Do not promise a refund amount or timeline; collect the original transaction reference and hand over.",
         "escalation_check": true,
         "revenue_opportunity": false
       },
@@ -2528,7 +2528,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-005",
         "description": "Expressing dissatisfaction",
         "requires_crm": false,
-        "template_ref": "Escalation script",
+        "ai_instructions": "Escalate to a human agent. Acknowledge the customer's frustration in one sentence, apologize briefly, and route the thread to CS. Do not promise refunds, compensation, or specific timelines.",
         "escalation_check": true,
         "revenue_opportunity": false
       },
@@ -2542,7 +2542,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-004",
         "description": "Asking about bank card discounts",
         "requires_crm": false,
-        "template_ref": "→ Promotions (Banks)",
+        "ai_instructions": "Respond using the active entry in the Promotions module under Banks. List the partner banks with a live discount, the discount value and the dates. Revenue opportunity: mention that the customer must use their partner card at checkout. Do not cite expired offers.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -2556,7 +2556,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-003",
         "description": "Asking about current promotions or discounts",
         "requires_crm": false,
-        "template_ref": "→ Promotions sheet",
+        "ai_instructions": "Respond using the active entries in the Promotions module. Summarize the currently live promos with dates. Revenue opportunity: offer to send the full list or a link; do not push. Do not quote expired promos.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -2570,7 +2570,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-002",
         "description": "Asking about top-up packages or ride costs",
         "requires_crm": false,
-        "template_ref": "→ Promotions sheet",
+        "ai_instructions": "Respond using the Promotions module and the packages catalogue. Quote the standard top-up packages and ride costs. Revenue opportunity: if a matching promo is live, mention it once. Do not invent pricing.",
         "escalation_check": false,
         "revenue_opportunity": true
       },
@@ -2584,7 +2584,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-001",
         "description": "Customer asking about opening/closing times",
         "requires_crm": false,
-        "template_ref": "→ Branch Hours sheet",
+        "ai_instructions": "Respond using the Branches module. Send the regular opening and closing hours for the branch the customer named. If no branch was named, ask which branch first. For Ramadan hours, route to INT-009 instead.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2598,7 +2598,7 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
         "intent_id": "INT-001",
         "description": "test",
         "requires_crm": false,
-        "template_ref": "ref",
+        "ai_instructions": "Respond using the Branches module. Send the regular opening and closing hours for the branch the customer named. If no branch was named, ask which branch first. For Ramadan hours, route to INT-009 instead.",
         "escalation_check": false,
         "revenue_opportunity": false
       },
@@ -2639,37 +2639,17 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
       },
       "status": "active",
       "updatedAt": "2026-04-14T18:49:05.831Z"
-    },
-    {
-      "id": "54a191c4-c3bf-4601-85d2-4567a7df3884",
-      "data": {
-        "name": "TestP2",
-        "type": "Bank",
-        "notes_ar": "hi",
-        "notes_en": "hello"
-      },
-      "status": "active",
-      "updatedAt": "2026-04-14T18:48:57.396Z"
-    },
-    {
-      "id": "adc4cbe7-5567-40dd-ae68-f53c0edcb1af",
-      "data": {
-        "name": "TestP",
-        "type": "Bank"
-      },
-      "status": "active",
-      "updatedAt": "2026-04-14T18:48:57.359Z"
     }
   ],
   "policy_matrix": [
     {
       "id": "ea5d5a10-950e-421d-aac8-204fdd74b8cf",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ممكن يكون فيه رسوم دخول في بعض مناطق الأطفال في فروع معينة. حسب الفرع.",
         "policy_en": "Some kids' areas may have entry fee at selected branches. Branch-dependent.",
-        "scenario_ar": "",
+        "scenario_ar": "رسوم منطقة الأطفال",
         "scenario_en": "Kids Area Fee",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2678,11 +2658,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "8001eb21-b5c7-49c2-9606-384ba3fd7974",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما فيه حد أدنى للشراء.",
         "policy_en": "No minimum purchase required.",
-        "scenario_ar": "",
+        "scenario_ar": "بدون حد أدنى للشراء",
         "scenario_en": "No Min Purchase",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2691,11 +2671,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "e084e6c6-e74a-4771-b9f8-b748a573dfe3",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "خصم 50% على كل الألعاب الكبيرة كل يوم اثنين في كل الفروع. عرض أسبوعي.",
         "policy_en": "50% off all large games every Monday at all branches. Weekly promo.",
-        "scenario_ar": "",
+        "scenario_ar": "اثنين المرح",
         "scenario_en": "Monday Fun Day",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2704,11 +2684,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "aebd8ed9-e72f-4237-8b37-147de4985440",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الأكل والمشروبات لكل طفل داخلة بالسعر.",
         "policy_en": "Meals and drinks for each child included.",
-        "scenario_ar": "",
+        "scenario_ar": "عيد ميلاد - الأكل داخل",
         "scenario_en": "Birthday - Food Included",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2717,11 +2697,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "c38a6ab0-e82f-4a8b-a73a-74c594893e39",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "فيه تمائم ومسليين عشان جو الحفلة أحلى. خدمة إضافية.",
         "policy_en": "Mascot characters available for extra party fun. Add-on.",
-        "scenario_ar": "",
+        "scenario_ar": "عيد ميلاد - تميمة",
         "scenario_en": "Birthday - Mascot",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2730,11 +2710,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "ef799182-d796-46ad-8ad0-b74ab3dd0961",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "تقدر تطلب فاتورة رسمية باسم المدرسة أو الجهة.",
         "policy_en": "Official invoice can be issued for school/org.",
-        "scenario_ar": "",
+        "scenario_ar": "فاتورة مدرسة",
         "scenario_en": "School Invoice",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2743,11 +2723,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "1f481b58-2622-4ffc-8f5f-fb040af93e5b",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الحجز المسبق لازم لكل الرحلات.",
         "policy_en": "Advance booking required for all trips.",
-        "scenario_ar": "",
+        "scenario_ar": "رحلات - حجز مسبق",
         "scenario_en": "Trips - Advance Booking",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2756,11 +2736,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "53e2f82e-b814-4c99-bdb6-068ef720003f",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "تقدر تفصّل البرامج حسب الفئة العمرية.",
         "policy_en": "Programs can be customized by age group.",
-        "scenario_ar": "",
+        "scenario_ar": "رحلات - حسب العمر",
         "scenario_en": "Trips - Age Customizable",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2769,11 +2749,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "fa9d03df-14a0-4ff3-9f85-10fa3aa405c7",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الوجبات مو داخلة في برامج الرحلات. وضّح من الأول.",
         "policy_en": "Meals NOT included in trip programs. Clarify upfront.",
-        "scenario_ar": "",
+        "scenario_ar": "رحلات - بدون وجبات",
         "scenario_en": "Trips - No Meals",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2782,11 +2762,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "927c5722-080a-4d76-8fad-f705587cf147",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الألعاب الجماعية وأنشطة معينة داخلة بالسعر.",
         "policy_en": "Group games and selected activities included.",
-        "scenario_ar": "",
+        "scenario_ar": "رحلات - الألعاب داخلة",
         "scenario_en": "Trips - Games Included",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2795,11 +2775,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "fbc61da8-6f3d-4223-a642-5d7c48b575c3",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "فيه خصومات خاصة للمجموعات المدرسية.",
         "policy_en": "Special group discounts available for schools.",
-        "scenario_ar": "",
+        "scenario_ar": "خصومات المدارس",
         "scenario_en": "School Discounts",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2808,11 +2788,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "e76737d3-2b8f-41c4-851b-bb77d6708b4d",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "كل برنامج رحلة من ساعتين لثلاث ساعات.",
         "policy_en": "2-3 hours per trip program.",
-        "scenario_ar": "",
+        "scenario_ar": "مدة الرحلة",
         "scenario_en": "Trip Duration",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2821,11 +2801,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "d51d4f43-38c7-4f97-9b66-e93af73c5c5d",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الحد الأدنى 10 طلاب لرحلة المدرسة.",
         "policy_en": "Minimum 10 students for school trip.",
-        "scenario_ar": "",
+        "scenario_ar": "رحلات مدارس - أقل شي 10",
         "scenario_en": "School Trips - Min 10",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2834,11 +2814,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "c2000b9e-85a4-4a2c-bab9-b2d1472c3624",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "البطاقة فيزيائية، مو رقمية (حالياً). ممكن يتغير.",
         "policy_en": "Card is physical, not digital (currently). May change.",
-        "scenario_ar": "",
+        "scenario_ar": "بطاقة فيزيائية بس",
         "scenario_en": "Physical Card Only",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2847,11 +2827,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "7a9414dd-7517-4e88-9921-be15872e4de4",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "التقسيط مو متوفر.",
         "policy_en": "Installment payments not available.",
-        "scenario_ar": "",
+        "scenario_ar": "بدون تقسيط",
         "scenario_en": "No Installment",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2860,11 +2840,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "29fc975c-9aa0-4528-9aad-7549964197ee",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "يشمل خصومات على حفلات أعياد الميلاد.",
         "policy_en": "Includes discounts on birthday parties.",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - خصم حفلات عيد ميلاد",
         "scenario_en": "Membership - Birthday Discount",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2873,11 +2853,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "3460ad52-e26d-4e1f-b547-86f9b61d7c80",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "نرسل للمشتركين تنبيه لما اشتراكهم قرب يخلص.",
         "policy_en": "Members notified when nearing expiration.",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - تنبيه انتهاء",
         "scenario_en": "Membership - Expiry Notification",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2886,11 +2866,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "39316d01-8f0c-4c4c-99e3-84a1f5185866",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الاشتراك للعائلة بس، ما يصير يتشارك.",
         "policy_en": "For family use only, cannot be shared.",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - للعائلة بس",
         "scenario_en": "Membership - Family Only",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2899,11 +2879,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "d13079b5-223d-4f83-a67c-d5c823468061",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما يصير استبداله ولا استرجاعه بعد التفعيل.",
         "policy_en": "Cannot be exchanged or refunded once activated.",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - بدون استرجاع",
         "scenario_en": "Membership - No Refund",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2912,11 +2892,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "a135814d-0fbb-4084-ae09-63c725e0c018",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "تقدر تجدّد بزيارة أقرب فرع.",
         "policy_en": "Renew by visiting nearest branch.",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - تجديد",
         "scenario_en": "Membership - Renewal",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2925,11 +2905,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "10396b5b-a69e-45cd-8544-190844aad89e",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما يصير تحويله لشخص ثاني.",
         "policy_en": "Cannot be transferred to another person.",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - غير قابل للتحويل",
         "scenario_en": "Membership - Not Transferable",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2938,11 +2918,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "0a71109f-1973-48f7-8719-a2bb92759161",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "العربون لازم وقت الحجز عشان يتأكد الموعد.",
         "policy_en": "Deposit required at booking to confirm.",
-        "scenario_ar": "",
+        "scenario_ar": "عيد ميلاد - عربون مطلوب",
         "scenario_en": "Birthday - Deposit Required",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2951,11 +2931,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "8fb3d4f3-7c0b-47d9-9553-0cb6dad2c738",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "من 15 إلى 25 طفل داخلين (مع طفل عيد الميلاد). الفضي=15، الذهبي=25.",
         "policy_en": "15-25 children included (incl. birthday child). Silver=15, Gold=25.",
-        "scenario_ar": "",
+        "scenario_ar": "عيد ميلاد - عدد الضيوف",
         "scenario_en": "Birthday - Guest Count",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2964,11 +2944,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "b3b0253e-2c53-4058-92fc-273e7efe36f3",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "متوفرة في الفرع عند الدفع أو أونلاين وقت إتمام الشراء.",
         "policy_en": "Available at branch upon payment or online at checkout.",
-        "scenario_ar": "",
+        "scenario_ar": "فواتير / إيصالات",
         "scenario_en": "Invoices / Receipts",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2977,11 +2957,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "b94f19ba-9d6f-428a-a22e-e76a9971b91f",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "برنامج كامل داخل: مقدم، ألعاب، ومسابقات. المدة: ساعتين.",
         "policy_en": "Full program included: host, games, competitions. Duration: 2 hours.",
-        "scenario_ar": "",
+        "scenario_ar": "ترفيه حفلة عيد الميلاد",
         "scenario_en": "Birthday Entertainment",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -2990,11 +2970,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "4d4cfc22-6027-46fe-a865-1da492e897f9",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "مو متوفرة. الضيوف يخلون أغراضهم الشخصية معاهم.",
         "policy_en": "Not provided. Guests keep personal items with them.",
-        "scenario_ar": "",
+        "scenario_ar": "خزائن",
         "scenario_en": "Lockers",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3003,11 +2983,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "2ba639e4-872d-45b7-b885-d8e039bf78ea",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "يتفعل مباشرة بعد ما تدفع كامل المبلغ.",
         "policy_en": "Activated immediately upon full payment.",
-        "scenario_ar": "",
+        "scenario_ar": "تفعيل الاشتراك",
         "scenario_en": "Membership Activation",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3016,11 +2996,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "74dd44c9-b2df-45c7-9656-887b32df0b8f",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما نوفره من عندنا. ممكن يكون فيه واي فاي من المجمع في بعض المواقع.",
         "policy_en": "Not provided by FK. Mall Wi-Fi may be available at some locations.",
-        "scenario_ar": "",
+        "scenario_ar": "واي فاي",
         "scenario_en": "Wi-Fi",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3029,11 +3009,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "2ecaa3d4-6c5d-4dab-8ff2-cd90c5b29413",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الزينة الأساسية والبلونات داخلة في كل باقات أعياد الميلاد.",
         "policy_en": "Basic decorations and balloons included in all birthday packages.",
-        "scenario_ar": "",
+        "scenario_ar": "زينة عيد الميلاد",
         "scenario_en": "Birthday Decorations",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3042,11 +3022,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "9cae253d-2475-43e9-86ef-472baf6eba64",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ممكن تكون الخدمات الرقمية متوفرة حسب نظام الفرع.",
         "policy_en": "Digital services may be available depending on branch system.",
-        "scenario_ar": "",
+        "scenario_ar": "ربط الاشتراك بالتطبيق",
         "scenario_en": "Membership App Link",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3055,11 +3035,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "66e03710-e5f3-494f-9293-91c019b5354d",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "تقدر تدمج الرحلات مع ورش تعليمية حسب البرنامج اللي تختاره.",
         "policy_en": "Trips can be combined with educational workshops per selected program.",
-        "scenario_ar": "",
+        "scenario_ar": "ورش تعليمية",
         "scenario_en": "Educational Workshops",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3068,11 +3048,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "b99bab3a-86ea-4294-b5e3-cd51a17579aa",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "تقدر تشتري الباقات والرصيد أونلاين عبر القنوات الرقمية.",
         "policy_en": "Packages and credit can be purchased online via digital channels.",
-        "scenario_ar": "",
+        "scenario_ar": "شراء أونلاين",
         "scenario_en": "Online Purchases",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3081,11 +3061,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "e17eba2e-b9c7-4d32-adcd-3e08e787021b",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الدخول مجاني. الدفع عن كل لعبة بتمرير بطاقة فيوتشر كيد.",
         "policy_en": "Entry is FREE. Payment is per-play swipe via Future Kid card.",
-        "scenario_ar": "",
+        "scenario_ar": "رسوم الدخول",
         "scenario_en": "Entry Fee",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3094,11 +3074,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "f0c6af41-3a1c-46b2-a9b7-b06276a2751f",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما فيه نظام تذاكر. بطاقة FK وحدة تقدر تستخدمها العائلة كلها.",
         "policy_en": "No ticket system. One FK card can be used by family members.",
-        "scenario_ar": "",
+        "scenario_ar": "مشاركة البطاقة",
         "scenario_en": "Card Sharing",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3107,11 +3087,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "d1cafe8c-0562-4926-9d83-e323168ce121",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "العربون يندفع وقت الحجز عشان يتأكد الموعد.",
         "policy_en": "Deposit paid at time of booking to confirm reservation.",
-        "scenario_ar": "",
+        "scenario_ar": "توقيت عربون عيد الميلاد",
         "scenario_en": "Birthday Deposit Timing",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3120,11 +3100,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "0ced865c-ce90-4724-b864-25d7b9359c97",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "عندنا رحلات مخصصة للشركات والعوائل الكبيرة.",
         "policy_en": "Custom trips available for companies and large family groups.",
-        "scenario_ar": "",
+        "scenario_ar": "رحلات شركات / عوائل",
         "scenario_en": "Corporate / Family Trips",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3133,11 +3113,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "90b4f424-113d-405a-a13b-f84924b69da5",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "تقدر تضيفهم برسوم إضافية حسب بطاقة اللعب اللي اخترتها.",
         "policy_en": "Can be added for extra fee depending on selected play card.",
-        "scenario_ar": "",
+        "scenario_ar": "أطفال إضافيين (عيد ميلاد)",
         "scenario_en": "Extra Children (Birthday)",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3146,11 +3126,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "72d2ccdf-f9c0-4475-ace6-03b2b1842061",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "مسموحة في الفروع، بس مو في مناطق الألعاب ولا على الألعاب.",
         "policy_en": "Allowed in branches, NOT in play areas or on rides.",
-        "scenario_ar": "",
+        "scenario_ar": "عربات أطفال",
         "scenario_en": "Strollers",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3159,11 +3139,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "bdc5ba9b-9eeb-4267-bd64-b0950a100d5c",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الرصيد يشتغل في كل فروع فيوتشر كيد.",
         "policy_en": "Credit usable at all FK branches.",
-        "scenario_ar": "",
+        "scenario_ar": "رصيد - كل الفروع",
         "scenario_en": "Credit - All Branches",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3172,11 +3152,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "a43347f3-164f-46fe-8be9-67436f513072",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "تقدر تشحن الرصيد مقدّم.",
         "policy_en": "Can be purchased in advance.",
-        "scenario_ar": "",
+        "scenario_ar": "رصيد - شراء مسبق",
         "scenario_en": "Credit - Advance Purchase",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3185,11 +3165,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "66ec1358-8633-4493-9392-8192a55751f0",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الرصيد المشحون ما يرجع. شكوى متكررة، يبي رد واضح.",
         "policy_en": "Loaded credit CANNOT be refunded. Frequent complaint, clear script needed.",
-        "scenario_ar": "",
+        "scenario_ar": "استرجاع الرصيد",
         "scenario_en": "Balance Refund",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3198,11 +3178,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "b1989f1d-58da-4601-afcd-9a8308fd85f0",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما فيه اشتراك شهري. اشتراك سنوي بس.",
         "policy_en": "No monthly option. Annual membership only.",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - سنوي بس",
         "scenario_en": "Membership - Annual Only",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3211,11 +3191,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "01f1f4ee-87c4-4ada-8989-7e79191c79e6",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "فيه نوع واحد بس من الاشتراك تحت برنامج الولاء.",
         "policy_en": "Only one membership type under loyalty program.",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - فئة وحدة",
         "scenario_en": "Membership - One Tier",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3224,11 +3204,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "94068e00-44c4-44eb-a263-101875a8bd51",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "قواعد الألعاب، إشراف مستمر، وتنسيق مع مشرفي المجموعة.",
         "policy_en": "Ride rules, continuous supervision, coordination with group supervisors.",
-        "scenario_ar": "",
+        "scenario_ar": "سلامة رحلات المجموعات",
         "scenario_en": "Group Trip Safety",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3237,11 +3217,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "4395115b-cf80-48ec-b15c-6f5dd8575f56",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "العملاء يقدرون يطلعون ويرجعون نفس اليوم. النظام دفع عن كل لعبة ببطاقة FK.",
         "policy_en": "Customers can exit and re-enter same day. System is swipe-per-play using FK card.",
-        "scenario_ar": "",
+        "scenario_ar": "إعادة دخول بنفس اليوم",
         "scenario_en": "Re-entry Same Day",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3250,11 +3230,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "3c9933a4-fd35-475e-bc53-87c89c4242a1",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "نقبل كاش، كي-نت، فيزا، وماستركارد في الفروع وأونلاين.",
         "policy_en": "Cash, K-NET, Visa, Mastercard accepted at branches and online.",
-        "scenario_ar": "",
+        "scenario_ar": "طرق الدفع",
         "scenario_en": "Payment Methods",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3263,11 +3243,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "e68ea170-248c-4ccd-bd00-4c54d4c20478",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "العربون يرجع إذا ألغيت قبل الموعد بـ 48 ساعة على الأقل.",
         "policy_en": "Deposit is refundable if cancelled at least 48 hours before scheduled date.",
-        "scenario_ar": "",
+        "scenario_ar": "استرجاع عربون عيد الميلاد",
         "scenario_en": "Birthday Deposit Refund",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3276,11 +3256,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "adb27e25-b008-481c-b76e-ae392d86326a",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "كل حفلة عيد ميلاد تستمر ساعتين. الموعد يتأكد مع مدير الفرع.",
         "policy_en": "Each birthday party runs for 2 hours. Time confirmed with branch manager.",
-        "scenario_ar": "",
+        "scenario_ar": "مدة حفلة عيد الميلاد",
         "scenario_en": "Birthday Party Duration",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3289,11 +3269,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "f23f9a4a-7814-4e95-ab40-bbb46a307ba1",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "غرفة عيد ميلاد مخصصة متوفرة حالياً في فرع جمعية شرق. ممكن تتوسع.",
         "policy_en": "Dedicated birthday room currently available at Sharq Co-Op branch. May expand.",
-        "scenario_ar": "",
+        "scenario_ar": "موقع غرفة عيد الميلاد",
         "scenario_en": "Birthday Room Location",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3302,11 +3282,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "a25b777a-dd34-4de4-a155-1ecfa65d8450",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "رسم وجوه، علوم مرحة، عروض ساحر، وتصوير برسوم إضافية.",
         "policy_en": "Face painting, science fairs, magician shows, photography, additional fee.",
-        "scenario_ar": "",
+        "scenario_ar": "خدمات إضافية",
         "scenario_en": "Add-on Services",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3315,11 +3295,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "fbc168ad-96b1-4e1b-af83-bc31be95a082",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "صالح في كل الفروع. ممكن بعض المواقع أو الفعاليات تكون مستثناة.",
         "policy_en": "Valid at all branches. Certain locations or special events may be excluded.",
-        "scenario_ar": "",
+        "scenario_ar": "صلاحية الاشتراك",
         "scenario_en": "Membership Validity",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3328,11 +3308,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "e556b345-1c64-47ce-af92-57c49e91a73c",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "نقبل آبل باي وجوجل باي ومحافظ البنوك المحلية في كل الفروع.",
         "policy_en": "Apple Pay, Google Pay, and local bank wallets accepted at all branches.",
-        "scenario_ar": "",
+        "scenario_ar": "محافظ إلكترونية",
         "scenario_en": "E-Wallets",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3341,11 +3321,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "fbaae51d-94a4-4fe2-ac7f-5ded89c26ef9",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "تستخدم بس لرحلات المجموعات الكبيرة (مدارس وجهات). مو للزيارات الفردية.",
         "policy_en": "Used only for large group trips (schools, organizations). Not for individual visits.",
-        "scenario_ar": "",
+        "scenario_ar": "أساور",
         "scenario_en": "Wristbands",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3354,11 +3334,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "79d220b3-8fa9-4611-b4ad-287124322621",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "مسموح في الفرع، بس مو في مناطق الألعاب. قاعدة نظافة وسلامة.",
         "policy_en": "Allowed in branch, but NOT inside play areas. Cleanliness/safety rule.",
-        "scenario_ar": "",
+        "scenario_ar": "أكل خارجي",
         "scenario_en": "Outside Food",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3367,11 +3347,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "40c351fc-5313-462d-9022-3fa261c0138a",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الكيكة داخلة بالباقة (سيزر أو بريد توك). والعملاء يقدرون يجيبون كيكتهم إذا حبوا.",
         "policy_en": "Cake included in package (Caesar's or BreadTalk). Customers may also bring their own.",
-        "scenario_ar": "",
+        "scenario_ar": "كيكة عيد الميلاد",
         "scenario_en": "Birthday Cake",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3380,11 +3360,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "ef9584fd-c257-4105-b041-8b0c4e47c6db",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "تقدر تفصّل عناصر الحفلة حسب الباقة. فيه إضافات اختيارية برسوم إضافية.",
         "policy_en": "Party elements can be customized per package. Add-ons available for extra fee.",
-        "scenario_ar": "",
+        "scenario_ar": "تخصيص حفلة عيد الميلاد",
         "scenario_en": "Birthday Customization",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3393,11 +3373,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "a2443d95-6cc0-436a-8300-fb85c2d34f29",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما فيه محلات هدايا. فيه كاونترات استبدال حق تبديل النقاط بجوائز.",
         "policy_en": "No gift shops. Redemption counters available for exchanging points for prizes.",
-        "scenario_ar": "",
+        "scenario_ar": "محل هدايا",
         "scenario_en": "Gift Shop",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3406,11 +3386,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "808adc84-1f30-44a8-8193-507b12202b64",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "مو متوفرة حالياً؛ فيه فئة اشتراك وحدة بس.",
         "policy_en": "Not available; only one membership tier exists currently.",
-        "scenario_ar": "",
+        "scenario_ar": "ترقية الاشتراك",
         "scenario_en": "Membership Upgrade",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3419,11 +3399,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "c59e7298-fddd-429e-8824-5e3a3581d30c",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما نقدمها. الباقات والعروض الخاصة تختلف حسب الفرع والموسم.",
         "policy_en": "Not offered. Special packages and promos vary by branch and season.",
-        "scenario_ar": "",
+        "scenario_ar": "تذكرة شاملة",
         "scenario_en": "All-Inclusive Ticket",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3432,11 +3412,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "82df728c-a636-4d66-94b9-5bfe25842a38",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الإشراف الأساسي من مشرفي المجموعة. فريق الفرع يقدم الدعم.",
         "policy_en": "Primary supervision by group's own supervisors. Branch team provides support.",
-        "scenario_ar": "",
+        "scenario_ar": "إشراف الرحلة",
         "scenario_en": "Trip Supervision",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3445,11 +3425,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "7f1977b2-3e78-4094-a198-18e786fabb92",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الرصيد المشحون ما يصير استبداله ولا استرجاعه بعد الشحن. الرصيد ما يخلص حتى بعد 12 شهر.",
         "policy_en": "Top-up credit cannot be exchanged or refunded once loaded. Credit does NOT expire even after 12 months.",
-        "scenario_ar": "",
+        "scenario_ar": "سياسة استرجاع الرصيد",
         "scenario_en": "Credit Refund Policy",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3458,11 +3438,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "1ad5c220-308f-452d-a6c1-7f9b71441201",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما يصير أكل ولا شرب في مناطق الألعاب. مسموح في الأماكن المخصصة داخل الفرع.",
         "policy_en": "No eating/drinking inside play areas. Allowed in designated spots within branch.",
-        "scenario_ar": "",
+        "scenario_ar": "أكل في مناطق الألعاب",
         "scenario_en": "Food in Play Areas",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3471,11 +3451,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "474be8f0-c5ed-49d2-8120-e514ab314f16",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما فيه غرفة حضانة. الأهل مسؤولين عن أطفالهم طول الوقت. فيه جلسات عائلية.",
         "policy_en": "No childcare room. Parents remain responsible for children at all times. Family seating available.",
-        "scenario_ar": "",
+        "scenario_ar": "حضانة / رعاية أطفال",
         "scenario_en": "Childcare / Nursery",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3484,11 +3464,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "0013fdf2-3000-49b9-a8a2-69d9fb39cf2a",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما فيه مكتب مخصص في الفروع. فريق الفرع يتعامل مع الاستفسارات. الخط الساخن: 1881919.",
         "policy_en": "No dedicated desk at branches. Branch staff handle inquiries. Hotline: 1881919.",
-        "scenario_ar": "",
+        "scenario_ar": "مكتب خدمة العملاء",
         "scenario_en": "Customer Service Desk",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3497,11 +3477,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "9bbae10d-8483-4421-97e8-80fe02674bb0",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "كل حالة لحدها. بعض الألعاب فيها تقييد. فريق الفرع يرشد الأهل. يفضل تتواصل مع الفرع مباشرة.",
         "policy_en": "Case-by-case. Some rides restricted. Branch team guides parents. Contact branch directly.",
-        "scenario_ar": "",
+        "scenario_ar": "ترتيبات ذوي الإعاقة",
         "scenario_en": "Disability Accommodations",
-        "exception_ar": "",
+        "exception_ar": "نعم - تعامل بحذر",
         "exception_en": "Yes - handle sensitively"
       },
       "status": "active",
@@ -3510,11 +3490,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "24f66329-126d-48e4-8ee6-653f5fa90500",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "العملاء لازم يلبسون جرابات. الجرابات تنباع في الفرع. متطلب سلامة.",
         "policy_en": "Customers must wear socks. Socks available for purchase at branch. Safety requirement.",
-        "scenario_ar": "",
+        "scenario_ar": "سوفت بلاي / ترامبولين",
         "scenario_en": "Softplay / Trampoline",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3523,11 +3503,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "af739389-eadf-4918-92e2-b1c9e01d3d03",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "فروع الجمعيات: مجاني. فروع المجمعات: إدارة المجمع تحددها (رسوم بسيطة أو مجاني).",
         "policy_en": "Co-op branches: free. Mall branches: set by mall operator (small fee or free).",
-        "scenario_ar": "",
+        "scenario_ar": "مواقف",
         "scenario_en": "Parking",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3536,11 +3516,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "9e0498f9-9ae4-453f-b545-d3087666fde9",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "المشتركين ياخذون 200 تذكرة استبدال مجانية عند الاشتراك. مرة وحدة بس.",
         "policy_en": "Members receive 200 free redemption tickets upon signup. One-time benefit.",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - تذاكر استبدال",
         "scenario_en": "Membership - Redemption Tickets",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3549,11 +3529,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "a6804623-8f4c-46b0-9e25-f79716671250",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "المشتركين ياخذون 2 د.ك رموز ألعاب جماعية كل أسبوع لمدة سنة (52 أسبوع).",
         "policy_en": "Members receive 2 KWD in group game tokens every week for 1 year (52 weeks).",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - رموز أسبوعية",
         "scenario_en": "Membership - Weekly Tokens",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3562,11 +3542,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "916776a4-9361-4cfd-9bff-f3bb50796b6e",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "المشتركين ياخذون خصم 10% على حجوزات حفلات أعياد الميلاد.",
         "policy_en": "Members get 10% off birthday party bookings.",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - خصم عيد ميلاد",
         "scenario_en": "Membership - Birthday Discount",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3575,11 +3555,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "2612795f-26d6-478c-9e00-3050c210d71c",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "المشتركين ياخذون خصم 20% على كل الألعاب في كل الفروع تلقائياً. يطبق عبر بطاقة الاشتراك.",
         "policy_en": "Members get 20% off all games at all branches automatically. Applied via membership card.",
-        "scenario_ar": "",
+        "scenario_ar": "اشتراك - خصم 20% على الألعاب",
         "scenario_en": "Membership - 20% Game Discount",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3588,11 +3568,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "fa9e9bad-fd0e-425f-823e-4810e31888de",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "ما فيه قاعدة محددة موثقة.",
         "policy_en": "No specific rule documented",
-        "scenario_ar": "",
+        "scenario_ar": "تذاكر طفل مفقودة",
         "scenario_en": "Child Lost Tickets",
-        "exception_ar": "",
+        "exception_ar": "نعم - صعّدها",
         "exception_en": "Yes - escalate"
       },
       "status": "active",
@@ -3601,11 +3581,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "f78c1c6d-214c-4809-9230-b0b4922e55a9",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "بطاقة البدل تكلف 0.250 د.ك (250 فلس).",
         "policy_en": "Replacement card costs 0.250 KWD (250 fils).",
-        "scenario_ar": "",
+        "scenario_ar": "بطاقة اشتراك - ضايعة",
         "scenario_en": "Membership Card - Lost",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3614,11 +3594,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "d2187ac1-0fe7-4b9a-b549-60179f9aad58",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "البطاقة الجديدة تكلف 0.250 د.ك (250 فلس). متوفرة في كل الفروع.",
         "policy_en": "New card costs 0.250 KWD (250 fils). Available at all branches.",
-        "scenario_ar": "",
+        "scenario_ar": "بطاقة اشتراك - جديدة",
         "scenario_en": "Membership Card - New",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3627,11 +3607,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "3ce97274-f18d-4899-8224-4600996e0b24",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "أبلغ العميل، ما تصير أي معاملات. راجع الإعلانات.",
         "policy_en": "Inform customer, no transactions possible. See Announcements",
-        "scenario_ar": "",
+        "scenario_ar": "الموقع معطل",
         "scenario_en": "Website Down",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3640,11 +3620,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "d1fea623-0d42-4dad-9a2c-faca9b2eb234",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "صعّدها فوراً لمدير العمليات.",
         "policy_en": "Immediate escalation to Operations Manager",
-        "scenario_ar": "",
+        "scenario_ar": "حوادث السلامة",
         "scenario_en": "Safety Incidents",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3653,11 +3633,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "87b5d151-54c9-4552-a3c6-fa565fe14134",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "صعّدها للمالية / CRM.",
         "policy_en": "Escalate to Finance/CRM",
-        "scenario_ar": "",
+        "scenario_ar": "استرجاعات",
         "scenario_en": "Refunds",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3666,11 +3646,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "a8394042-fc63-4871-9aad-af4e404bf758",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "صعّدها لموظف بشري.",
         "policy_en": "Escalate to human agent",
-        "scenario_ar": "",
+        "scenario_ar": "شكاوى العملاء",
         "scenario_en": "Customer Complaints",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3679,11 +3659,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "0221e17d-d7f4-4c6b-b99b-781b1e52baa6",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "خصومات خاصة للمجموعات (الحد الأدنى 10 أشخاص)، برامج من ساعتين إلى ثلاث ساعات. الحجز: 66992766.",
         "policy_en": "Special discounts for groups (min 10 people), 2-3 hour programs. Booking: 66992766",
-        "scenario_ar": "",
+        "scenario_ar": "رحلات المجموعات والمدارس",
         "scenario_en": "Group Trips / School Trips",
-        "exception_ar": "",
+        "exception_ar": "لا، لا تُشارَك الأرقام عبر الذكاء الاصطناعي",
         "exception_en": "No - Do NOT share phone # via AI"
       },
       "status": "active",
@@ -3692,11 +3672,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "27a4f785-4e94-4341-b10b-7222ae782203",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "يمكنني التحويل إلى موظف لمزيد من التفاصيل، لكن لا تتوفر لدي هذه المعلومة.",
         "policy_en": "I can connect to an agent to get more details but I don't have that info.",
-        "scenario_ar": "",
+        "scenario_ar": "تكلفة اللعبة",
         "scenario_en": "Cost of Ride",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3705,11 +3685,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "cf56e86a-9514-471f-93a5-470183e59da7",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "متوفرة طوال الأسبوع. يتم تحديد المواعيد عبر مديرة الرحلات.",
         "policy_en": "Available all week. Timings via Trips Manager.",
-        "scenario_ar": "",
+        "scenario_ar": "جدولة رحلات المجموعات",
         "scenario_en": "Group Trip Scheduling",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3718,11 +3698,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "494c788a-34a4-48a8-a8b8-efedc8038e04",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "الفضية (15 ضيفاً) والذهبية (25 ضيفاً). ضيوف إضافيون مقابل رسوم. في فروع مختارة.",
         "policy_en": "Silver (15 guests) and Gold (25 guests). Extra guests for a fee. Selected branches.",
-        "scenario_ar": "",
+        "scenario_ar": "باقات عيد الميلاد",
         "scenario_en": "Birthday Packages",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
@@ -3731,11 +3711,11 @@ export const ENTRIES_BY_SLUG: Record<string, Array<{
     {
       "id": "c877e499-2cd9-4c90-8903-8eeab9b3fe51",
       "data": {
-        "policy_ar": "",
+        "policy_ar": "لا يمكن إيقافه مؤقتاً. يُدفع كاملاً عند البداية، ولا يُجدَّد تلقائياً.",
         "policy_en": "Cannot be paused. Paid in full at start, not auto-renewed.",
-        "scenario_ar": "",
+        "scenario_ar": "الاشتراك، الإيقاف المؤقت",
         "scenario_en": "Membership - Pause",
-        "exception_ar": "",
+        "exception_ar": "لا",
         "exception_en": "No"
       },
       "status": "active",
