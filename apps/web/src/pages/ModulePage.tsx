@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, useCallback } from "react";
-import { Link, useParams, useOutletContext } from "react-router-dom";
+import { Link, useParams, useOutletContext, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api.js";
 import { useAutoTranslation } from "../lib/translate.js";
 import { Icon } from "../components/Icon.js";
@@ -538,6 +538,7 @@ function pickField(data: Record<string, unknown>, candidates: readonly string[])
 export function ModulePage() {
   const { slug = "" } = useParams();
   const { title: pageTitle } = useOutletContext<{ title?: string }>() ?? {};
+  const [searchParams, setSearchParams] = useSearchParams();
   const [entries, setEntries] = useState<Entry[]>([]);
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(true);
@@ -634,6 +635,23 @@ export function ModulePage() {
     reload();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
+
+  useEffect(() => {
+    const targetId = searchParams.get("entry");
+    if (!targetId || loading) return;
+    const match = entries.find((e) => e.id === targetId);
+    if (match) {
+      setEditing(match);
+      setSearchParams(
+        (prev) => {
+          const next = new URLSearchParams(prev);
+          next.delete("entry");
+          return next;
+        },
+        { replace: true },
+      );
+    }
+  }, [entries, loading, searchParams, setSearchParams]);
 
   const keys = useMemo(
     () => (entries[0] ? orderKeys(Object.keys(entries[0].data)) : []),

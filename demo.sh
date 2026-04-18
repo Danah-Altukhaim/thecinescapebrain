@@ -37,7 +37,7 @@ echo "→ applying RLS policies"
 docker exec -i the-brain-postgres-1 psql -U app_migrate -d brain -q < infra/migrations/0001_rls.sql >/dev/null
 docker exec -i the-brain-postgres-1 psql -U app_migrate -d brain -q < infra/migrations/0002_admin_bypass.sql >/dev/null
 
-echo "→ seeding two tenants (future-kid, test-co)"
+echo "→ seeding future-kid tenant"
 pnpm seed
 
 cat <<'BANNER'

@@ -1,4 +1,5 @@
 import type { FastifyPluginAsync, FastifyRequest } from "fastify";
+import { Prisma } from "@prisma/client";
 import { z } from "zod";
 import { AnalyticsEvent } from "@brain/shared";
 import {
@@ -9,6 +10,8 @@ import {
 } from "../services/cache.js";
 import { prisma } from "../lib/prisma.js";
 import { notFound, forbidden } from "../lib/errors.js";
+
+const SearchQuery = z.object({ q: z.string().min(1).max(200) });
 
 /**
  * Public bot-facing API. Auth via API key. Cached in Redis with versioned keys.
@@ -77,26 +80,25 @@ const routes: FastifyPluginAsync = async (app) => {
   });
 
   app.get("/search", async (req) => {
-    const q = z.object({ q: z.string().min(1) }).parse(req.query);
+    const { q } = SearchQuery.parse(req.query);
     if (!req.apiKeyScopes?.includes("read:kb")) throw forbidden();
     const results = await req.withTenant(async (tx) => {
-      return tx.$queryRawUnsafe<Array<{ id: string; module_id: string; data: unknown }>>(
-        `SELECT id, module_id, data
-         FROM entries
-         WHERE status = 'active'
-           AND (
-             (data->>'name') % $1
-             OR (data->>'name_en') % $1
-             OR (data->>'name_ar') % $1
-           )
-         ORDER BY GREATEST(
-           similarity(coalesce(data->>'name',''), $1),
-           similarity(coalesce(data->>'name_en',''), $1),
-           similarity(coalesce(data->>'name_ar',''), $1)
-         ) DESC
-         LIMIT 20`,
-        q.q,
-      );
+      return tx.$queryRaw<Array<{ id: string; module_id: string; data: unknown }>>(Prisma.sql`
+        SELECT id, module_id, data
+        FROM entries
+        WHERE status = 'active'
+          AND (
+            (data->>'name') % ${q}
+            OR (data->>'name_en') % ${q}
+            OR (data->>'name_ar') % ${q}
+          )
+        ORDER BY GREATEST(
+          similarity(coalesce(data->>'name',''), ${q}),
+          similarity(coalesce(data->>'name_en',''), ${q}),
+          similarity(coalesce(data->>'name_ar',''), ${q})
+        ) DESC
+        LIMIT 20
+      `);
     });
     return { success: true, data: results };
   });

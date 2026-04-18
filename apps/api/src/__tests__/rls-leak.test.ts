@@ -24,13 +24,50 @@ describe("RLS cross-tenant isolation", () => {
 
   beforeAll(async () => {
     const a = await adminPrisma.tenant.findUnique({ where: { slug: "future-kid" } });
-    const b = await adminPrisma.tenant.findUnique({ where: { slug: "test-co" } });
-    if (!a || !b) throw new Error("Run `pnpm seed` first");
+    if (!a) throw new Error("Run `pnpm seed` first");
     tenantA = a.id;
+
+    const b = await adminPrisma.tenant.upsert({
+      where: { slug: "rls-test-peer" },
+      create: { slug: "rls-test-peer", name: "RLS Test Peer", timezone: "Asia/Kuwait" },
+      update: {},
+    });
     tenantB = b.id;
+    const editor = await adminPrisma.user.upsert({
+      where: { tenantId_email: { tenantId: tenantB, email: "rls-peer@example.com" } },
+      create: {
+        tenantId: tenantB,
+        email: "rls-peer@example.com",
+        name: "RLS Peer",
+        role: "CLIENT_EDITOR",
+        passwordHash: "$2b$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ012",
+      },
+      update: {},
+    });
+    const mod = await adminPrisma.module.upsert({
+      where: { tenantId_slug: { tenantId: tenantB, slug: "faqs" } },
+      create: { tenantId: tenantB, slug: "faqs", label: "FAQs", icon: "help-circle", fieldDefinitions: [] },
+      update: {},
+    });
+    await adminPrisma.entry.upsert({
+      where: { tenantId_moduleId_externalId: { tenantId: tenantB, moduleId: mod.id, externalId: "rls-probe" } },
+      create: {
+        tenantId: tenantB,
+        moduleId: mod.id,
+        externalId: "rls-probe",
+        createdBy: editor.id,
+        status: "active",
+        data: { question_en: "probe", answer_en: "probe" },
+      },
+      update: {},
+    });
   });
 
   afterAll(async () => {
+    await adminPrisma.entry.deleteMany({ where: { tenantId: tenantB } });
+    await adminPrisma.module.deleteMany({ where: { tenantId: tenantB } });
+    await adminPrisma.user.deleteMany({ where: { tenantId: tenantB } });
+    await adminPrisma.tenant.deleteMany({ where: { id: tenantB } });
     await Promise.all([adminPrisma.$disconnect(), runtimePrisma.$disconnect()]);
   });
 

@@ -32,7 +32,7 @@ const routes: FastifyPluginAsync = async (app) => {
          FROM entries e
          JOIN modules m ON m.id = e.module_id
          WHERE e.status = 'active'
-           AND e.data::text ILIKE $1
+           AND regexp_replace(e.data::text, '"[^"]+":', '', 'g') ILIKE $1
          ORDER BY e.updated_at DESC
          LIMIT $2`,
         pattern,

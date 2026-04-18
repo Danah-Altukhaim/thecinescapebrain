@@ -1,5 +1,6 @@
 import Fastify from "fastify";
 import cors from "@fastify/cors";
+import helmet from "@fastify/helmet";
 import rateLimit from "@fastify/rate-limit";
 import { nanoid } from "nanoid";
 import { env } from "./lib/env.js";
@@ -28,13 +29,33 @@ export async function buildApp() {
     genReqId: () => nanoid(12),
     disableRequestLogging: false,
     bodyLimit: 1_048_576,
+    connectionTimeout: env.REQUEST_TIMEOUT_MS,
+    requestTimeout: env.REQUEST_TIMEOUT_MS,
   });
 
   app.addHook("onRequest", async (req, reply) => {
     reply.header("x-request-id", req.id);
   });
 
-  const allowedOrigins = env.CORS_ORIGIN.split(",").map((o) => o.trim());
+  const allowedOrigins = env.CORS_ORIGIN.split(",").map((o) => o.trim()).filter(Boolean);
+  await app.register(helmet, {
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        baseUri: ["'self'"],
+        frameAncestors: ["'none'"],
+        imgSrc: ["'self'", "data:", "https:"],
+        scriptSrc: ["'self'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        connectSrc: ["'self'", ...allowedOrigins],
+        objectSrc: ["'none'"],
+        upgradeInsecureRequests: [],
+      },
+    },
+    hsts: { maxAge: 31_536_000, includeSubDomains: true, preload: true },
+    referrerPolicy: { policy: "strict-origin-when-cross-origin" },
+    crossOriginResourcePolicy: { policy: "same-site" },
+  });
   await app.register(cors, { origin: allowedOrigins, credentials: true });
   await app.register(rateLimit, {
     max: 200,
