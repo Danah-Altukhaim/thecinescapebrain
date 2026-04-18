@@ -13,7 +13,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return tx.module.findMany({
       where: { isActive: true },
       select: { id: true, slug: true, label: true, icon: true },
-      orderBy: { sortOrder: "asc" },
+      orderBy: { createdAt: "asc" },
     });
   }, auth.isAdmin);
 

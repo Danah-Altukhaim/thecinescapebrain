@@ -1,4 +1,3 @@
-// Use require to avoid Vercel TS compiler issues with Prisma generated types
 const { PrismaClient } = require("@prisma/client");
 
 const globalForPrisma = globalThis as unknown as { prisma?: any };
@@ -14,9 +13,7 @@ export async function withTenant<T>(
     if (isAdmin) {
       await tx.$executeRawUnsafe(`SET LOCAL app.is_admin = 'true'`);
     }
-    if (tenantId) {
-      await tx.$executeRawUnsafe(`SELECT set_config('app.tenant_id', '${tenantId}', true)`);
-    }
+    await tx.$queryRawUnsafe(`SELECT set_config('app.tenant_id', $1, true)`, tenantId);
     return fn(tx);
   });
 }
