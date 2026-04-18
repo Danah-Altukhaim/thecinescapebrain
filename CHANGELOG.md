@@ -4,6 +4,21 @@ All notable changes to The Brain are recorded here. Format follows [Keep a Chang
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-04-18
+
+### Security
+
+- Upgraded `bcrypt` to 6.0.0 (from 5.1.1) so it pulls in `@mapbox/node-pre-gyp@2`, which eliminates 7 high-severity `tar` transitive advisories (hardlink and symlink path traversal, drive-relative traversal, race condition in path reservations).
+- Upgraded `nodemailer` to 7.0.11 (from 6.9.13) to fix the `addressparser` high-severity DoS advisory.
+- Added pnpm overrides to force patched transitive versions: `undici>=6.24.0` (2 high WebSocket advisories in the `@vercel/node` dep path), `minimatch>=10.2.3` (3 high ReDoS advisories in the `@vercel/node` dep path), `tar>=7.5.11` (belt-and-suspenders across all remaining code paths).
+- Added a pnpm override for `fast-jwt>=6.2.0` which closes both critical advisories in that package (Incomplete fix for CVE-2023-48223, Cache Confusion via `cacheKeyBuilder`). `@fastify/jwt@8` remains compatible with the upgraded `fast-jwt` under test.
+- `pnpm.auditConfig.ignoreCves` set for three remaining advisories that cannot be cleanly patched in this release: `CVE-2023-30533` and `CVE-2024-22363` in `xlsx@0.18.5` (SheetJS moved off npm and has no patched release there; replacement is planned for a follow-up), and `CVE-2026-25223` in `fastify@4.29.1` (patch requires Fastify 5.x, a major version bump that cascades to every `@fastify/*` plugin and will be addressed as its own release).
+- CI `dependency-audit` job now passes: 0 critical, 0 high (3 ignored with reason).
+
+### Notes
+
+- No functional changes. All 61 API tests + 15 web tests still pass against the upgraded packages. No behavioural difference from 0.1.0.
+
 ### Added
 
 - Secret rotation schedule in `SECURITY.md`, covering JWT, API keys, LLM keys, R2, WhatsApp, SMTP, and DB credentials.
