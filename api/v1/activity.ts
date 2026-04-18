@@ -32,9 +32,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       tx.module.findMany({ select: { id: true, slug: true, label: true } }),
       tx.user.findMany({ select: { id: true, name: true } }),
     ]);
-    const moduleById = new Map(modules.map((m: any) => [m.id, m]));
-    const moduleBySlug = new Map(modules.map((m: any) => [m.slug, m]));
-    const userById = new Map(users.map((u: any) => [u.id, u]));
+    const moduleById = new Map<string, any>(modules.map((m: any) => [m.id, m]));
+    const moduleBySlug = new Map<string, any>(modules.map((m: any) => [m.slug, m]));
+    const userById = new Map<string, any>(users.map((u: any) => [u.id, u]));
 
     const moduleFilterId = moduleSlug ? moduleBySlug.get(moduleSlug)?.id : undefined;
     if (moduleSlug && !moduleFilterId) return [];
