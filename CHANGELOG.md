@@ -4,6 +4,18 @@ All notable changes to The Brain are recorded here. Format follows [Keep a Chang
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-04-18
+
+### Added
+
+- `api/v1/[...path].ts`: Vercel catch-all that routes unmatched `/api/v1/*` requests into the hardened Fastify app at `apps/api/src/server.ts`. This exposes the endpoints the new test suites cover (admin, kb, knowledge-base, search, voice, media, translate, analytics/event, kb-health, import) through Vercel without needing per-route stubs.
+
+### Notes
+
+- Demo stubs at `api/v1/health.ts`, `api/v1/auth/*`, `api/v1/chat/*`, `api/v1/entries/*`, `api/v1/me/*`, `api/v1/modules.ts`, `api/v1/modules-with-counts.ts`, and `api/v1/activity.ts` are more specific than the catch-all and continue to serve their paths. Migration from demo to Fastify on a per-path basis is now just a matter of removing the demo stub file.
+- Delegation uses `fastify.inject()` rather than streaming the raw HTTP request. Vercel's `@vercel/node` runtime parses the body into `req.body` before the handler runs, which makes stream-based delegation unreliable; `inject()` accepts an already-materialised payload and round-trips cleanly for JSON and small binary bodies. Large multipart uploads are explicitly out of scope on Vercel (4.5 MB body cap) and should use a Docker-hosted Fastify instance.
+- Fastify is built once per cold-started serverless instance and cached for warm invocations. `env.superRefine` in `apps/api/src/lib/env.ts` fails boot with a clear Zod error if any required prod secret (`ANTHROPIC_API_KEY`, `SMTP_URL`, `WHATSAPP_TOKEN`, `WHATSAPP_PHONE_ID`, `R2_*`) is missing, so misconfiguration is visible on the first request rather than silently no-op.
+
 ## [0.1.2] - 2026-04-18
 
 ### Fixed
