@@ -4,6 +4,7 @@ import { api } from "../lib/api.js";
 import { useAuth } from "../state/auth.js";
 import { Walkthrough } from "./Walkthrough.js";
 import { Icon } from "./Icon.js";
+import { CommandPalette } from "./CommandPalette.js";
 
 type Module = { id: string; slug: string; label: string; icon?: string };
 
@@ -45,6 +46,7 @@ export function Layout() {
     return window.localStorage.getItem("sidebarCollapsed") === "1";
   });
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [paletteOpen, setPaletteOpen] = useState(false);
   const isMobile = useIsMobile();
   const tenant = useAuth((s) => s.tenant);
   const user = useAuth((s) => s.user);
@@ -55,6 +57,19 @@ export function Layout() {
   useEffect(() => {
     setMobileOpen(false);
   }, [location.pathname]);
+
+  // Global ⌘K / Ctrl+K shortcut opens the command palette
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const isK = e.key === "k" || e.key === "K";
+      if (isK && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        setPaletteOpen((o) => !o);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -222,21 +237,31 @@ export function Layout() {
           )}
           <div className="flex-1" />
 
-          {/* Search + account (hidden on module pages) */}
+          {/* Command palette trigger (hidden on module pages) */}
           {!location.pathname.startsWith("/modules/") && (
             <div className="flex items-center gap-2 text-apple-secondary">
-              <div className="relative hidden sm:block">
-                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-apple-tertiary">
-                  <Icon name="search" size={14} />
+              <button
+                type="button"
+                onClick={() => setPaletteOpen(true)}
+                aria-label="Open command palette"
+                title="Search (⌘K)"
+                className="hidden sm:inline-flex items-center gap-2 rounded-apple border border-apple-separator bg-[#F9F9F9] hover:bg-white hover:border-pair/40 transition-colors py-1.5 pl-3 pr-2 text-apple-secondary"
+              >
+                <Icon name="search" size={14} />
+                <span className="text-[13px]">Search knowledge...</span>
+                <span className="ml-6 inline-flex items-center gap-0.5 rounded border border-apple-separator bg-white px-1.5 py-0.5 text-[10px] font-mono text-apple-tertiary">
+                  <span>⌘</span>
+                  <span>K</span>
                 </span>
-                <input
-                  type="text"
-                  placeholder="Search knowledge..."
-                  className="input-apple !py-1.5 !pl-9 !pr-3 w-48 md:w-64"
-                />
-              </div>
-              {/* Mobile search icon */}
-              <button className="sm:hidden inline-flex items-center justify-center rounded-apple p-2 text-apple-secondary hover:bg-black/[0.05] transition-colors" title="Search">
+              </button>
+              {/* Mobile trigger */}
+              <button
+                type="button"
+                onClick={() => setPaletteOpen(true)}
+                className="sm:hidden inline-flex items-center justify-center rounded-apple p-2 text-apple-secondary hover:bg-black/[0.05] transition-colors"
+                aria-label="Open command palette"
+                title="Search"
+              >
                 <Icon name="search" size={18} />
               </button>
             </div>
@@ -250,6 +275,11 @@ export function Layout() {
         </div>
       </main>
       <Walkthrough />
+      <CommandPalette
+        open={paletteOpen}
+        onClose={() => setPaletteOpen(false)}
+        modules={modules}
+      />
     </div>
   );
 }

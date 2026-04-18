@@ -778,7 +778,6 @@ export function ModulePage() {
           loading={loading}
           langGroups={langGroups}
           onEdit={(e) => setEditing(e)}
-          onDelete={(e) => deleteEntry(e)}
         />
       )}
 
@@ -1105,14 +1104,12 @@ function EntryTable({
   loading,
   langGroups,
   onEdit,
-  onDelete,
 }: {
   entries: Entry[];
   totalCount: number;
   loading: boolean;
   langGroups: LangGroup[];
   onEdit: (e: Entry) => void;
-  onDelete: (e: Entry) => void;
 }) {
   const cols = useMemo(
     () => deriveColumns(entries, langGroups),
@@ -1157,8 +1154,11 @@ function EntryTable({
                   {c.label}
                 </th>
               ))}
-              <th scope="col" className="px-3 py-2.5 w-[1%]">
-                <span className="sr-only">Actions</span>
+              <th
+                scope="col"
+                className="px-3 py-2.5 text-[11px] uppercase tracking-[0.06em] font-medium text-apple-tertiary whitespace-nowrap w-[1%] text-right"
+              >
+                Status
               </th>
             </tr>
           </thead>
@@ -1191,18 +1191,10 @@ function EntryTable({
                       <ShapeCell col={c} d={d} />
                     </td>
                   ))}
-                  <td
-                    className="px-3 py-3 align-middle whitespace-nowrap"
-                    onClick={(ev) => ev.stopPropagation()}
-                  >
-                    <button
-                      onClick={() => onDelete(e)}
-                      className="btn-ghost !px-2 !py-1 !text-[12px] text-apple-red hover:!bg-red-50 hover:!text-red-700"
-                      aria-label="Delete entry"
-                      title="Delete"
-                    >
-                      <Icon name="trash" size={12} />
-                    </button>
+                  <td className="px-3 py-3 align-middle whitespace-nowrap text-right">
+                    <span className={`badge ${badgeFor(e.status)}`}>
+                      {e.status || "active"}
+                    </span>
                   </td>
                 </tr>
               );

@@ -1,11 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "pnpm install --frozen-lockfile --filter=@brain/web...",
-  "buildCommand": "pnpm -C apps/web build",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "cd apps/api && npx prisma generate && cd ../.. && pnpm -C apps/web build",
   "outputDirectory": "apps/web/dist",
   "functions": {
     "api/**/*.ts": {
-      "maxDuration": 10
+      "maxDuration": 30,
+      "includeFiles": "apps/api/**,packages/**,infra/**,node_modules/.prisma/**,node_modules/@prisma/client/**"
     }
   },
   "rewrites": [

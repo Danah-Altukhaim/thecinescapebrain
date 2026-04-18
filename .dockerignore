@@ -1,0 +1,8 @@
+node_modules
+.git
+.vercel
+apps/web/node_modules
+apps/web/dist
+*.md
+.env
+.env.*

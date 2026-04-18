@@ -45,6 +45,10 @@ function relTime(iso: string): string {
   return "just now";
 }
 
+function timeLabel(iso: string): string {
+  return new Date(iso).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+}
+
 function dayBucket(iso: string): { key: string; label: string } {
   const d = new Date(iso);
   d.setHours(0, 0, 0, 0);
@@ -62,11 +66,7 @@ function dayBucket(iso: string): { key: string; label: string } {
 
 function initials(name?: string | null): string {
   if (!name) return "·";
-  return name
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((p) => p[0]?.toUpperCase() ?? "")
-    .join("");
+  return name.trim()[0]?.toUpperCase() ?? "·";
 }
 
 export function Activity() {
@@ -225,6 +225,7 @@ function ActivityRow({ event }: { event: Event }) {
   const meta = ACTION_META[event.action];
   const title = event.entry?.title ?? "(unknown entry)";
   const linkTarget = event.module ? `/modules/${event.module.slug}` : null;
+  const userName = event.user?.name ?? "System";
 
   const titleNode = (
     <span className="text-[13px] font-medium text-apple-text truncate group-hover:text-pair transition-colors">
@@ -233,48 +234,59 @@ function ActivityRow({ event }: { event: Event }) {
   );
 
   return (
-    <li className="group flex items-start gap-2.5 sm:gap-3 px-3 sm:px-4 py-3 hover:bg-surface-secondary/50 transition-colors">
+    <li
+      className="group grid items-center gap-x-3 gap-y-1 px-3 sm:px-5 py-3 hover:bg-surface-secondary/50 transition-colors
+        grid-cols-[28px_92px_1fr_56px]
+        sm:grid-cols-[32px_104px_180px_1fr_96px_64px]"
+    >
       <div
-        className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-pair-light text-pair flex items-center justify-center text-[10px] sm:text-[11px] font-semibold shrink-0 mt-0.5"
-        title={event.user?.name ?? "System"}
+        className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-pair-light text-pair flex items-center justify-center text-[10px] sm:text-[11px] font-semibold"
+        title={userName}
       >
         {initials(event.user?.name)}
       </div>
 
-      <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-          <span className={`badge ${meta.chip} shrink-0`}>
-            <Icon name={meta.icon} size={11} />
-            {meta.label}
-          </span>
-          <span className="text-[12px] sm:text-[13px] text-apple-secondary">
-            <span className="font-medium text-apple-text">{event.user?.name ?? "System"}</span>{" "}
-            {meta.verb}
-          </span>
-          {linkTarget ? (
-            <Link to={linkTarget} className="group/title inline-flex items-center gap-0.5 min-w-0 max-w-full">
-              {titleNode}
-              <Icon name="arrow-right-up" size={12} className="text-apple-tertiary group-hover/title:text-pair shrink-0" />
-            </Link>
-          ) : (
-            titleNode
-          )}
-          {event.module && (
-            <span className="badge badge-gray shrink-0 hidden sm:inline-flex">{event.module.label}</span>
-          )}
-        </div>
-        {event.detail && (
-          <div className="text-[11px] sm:text-[12px] text-apple-tertiary mt-1 truncate" title={event.detail}>
-            {event.detail}
-          </div>
+      <span className={`badge ${meta.chip} justify-self-start`}>
+        <Icon name={meta.icon} size={11} />
+        {meta.label}
+      </span>
+
+      <span className="hidden sm:block text-[13px] text-apple-secondary truncate">
+        <span className="font-medium text-apple-text">{userName}</span> {meta.verb}
+      </span>
+
+      <div className="min-w-0">
+        {linkTarget ? (
+          <Link to={linkTarget} className="group/title inline-flex items-center gap-0.5 min-w-0 max-w-full">
+            {titleNode}
+            <Icon name="arrow-right-up" size={12} className="text-apple-tertiary group-hover/title:text-pair shrink-0" />
+          </Link>
+        ) : (
+          titleNode
         )}
-        <span className="text-[10px] text-apple-tertiary mt-1 sm:hidden block">
-          {relTime(event.timestamp)}
-        </span>
       </div>
 
-      <span className="text-[11px] text-apple-tertiary whitespace-nowrap pt-1.5 hidden sm:block">
-        {relTime(event.timestamp)}
+      <div className="justify-self-start hidden sm:flex min-w-0">
+        {event.module && (
+          <span className="badge badge-gray truncate">{event.module.label}</span>
+        )}
+      </div>
+
+      <span className="text-[11px] text-apple-tertiary tabular-nums whitespace-nowrap justify-self-end">
+        {timeLabel(event.timestamp)}
+      </span>
+
+      {event.detail && (
+        <div
+          className="col-span-full text-[11px] sm:text-[12px] text-apple-tertiary truncate pl-[40px] sm:pl-[152px]"
+          title={event.detail}
+        >
+          {event.detail}
+        </div>
+      )}
+
+      <span className="col-span-full text-[10px] text-apple-tertiary sm:hidden pl-[40px]">
+        {userName} {meta.verb}
       </span>
     </li>
   );

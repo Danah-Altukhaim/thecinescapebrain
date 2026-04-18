@@ -7,6 +7,41 @@ import { bumpVersion } from "../services/cache.js";
 const routes: FastifyPluginAsync = async (app) => {
   app.addHook("onRequest", app.authenticate);
 
+  app.get("/search", async (req) => {
+    const { q, limit } = z
+      .object({
+        q: z.string().min(1).max(200),
+        limit: z.coerce.number().int().min(1).max(50).optional(),
+      })
+      .parse(req.query);
+    const take = limit ?? 25;
+    const pattern = `%${q.replace(/[\\%_]/g, (c) => `\\${c}`)}%`;
+    const results = await req.withTenant(async (tx) => {
+      return tx.$queryRawUnsafe<
+        Array<{
+          id: string;
+          module_id: string;
+          module_slug: string;
+          module_label: string;
+          data: unknown;
+          updated_at: Date;
+        }>
+      >(
+        `SELECT e.id, e.module_id, m.slug AS module_slug, m.label AS module_label,
+                e.data, e.updated_at
+         FROM entries e
+         JOIN modules m ON m.id = e.module_id
+         WHERE e.status = 'active'
+           AND e.data::text ILIKE $1
+         ORDER BY e.updated_at DESC
+         LIMIT $2`,
+        pattern,
+        take,
+      );
+    });
+    return { success: true, data: results };
+  });
+
   app.get("/:moduleSlug", async (req) => {
     const { moduleSlug } = req.params as { moduleSlug: string };
     const entries = await req.withTenant(async (tx) => {
