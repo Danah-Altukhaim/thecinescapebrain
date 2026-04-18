@@ -1,14 +1,13 @@
-import { PrismaClient } from "@prisma/client";
+// Use require to avoid Vercel TS compiler issues with Prisma generated types
+const { PrismaClient } = require("@prisma/client");
 
-// Singleton Prisma client for Vercel serverless functions.
-// Reused across warm invocations.
-const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
+const globalForPrisma = globalThis as unknown as { prisma?: any };
 export const prisma = globalForPrisma.prisma ?? new PrismaClient();
 if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
 
 export async function withTenant<T>(
   tenantId: string,
-  fn: (tx: Parameters<Parameters<PrismaClient["$transaction"]>[0]>[0]) => Promise<T>,
+  fn: (tx: any) => Promise<T>,
   isAdmin = false,
 ): Promise<T> {
   return prisma.$transaction(async (tx: any) => {
@@ -16,7 +15,7 @@ export async function withTenant<T>(
       await tx.$executeRawUnsafe(`SET LOCAL app.is_admin = 'true'`);
     }
     if (tenantId) {
-      await tx.$executeRaw`SELECT set_config('app.tenant_id', ${tenantId}, true)`;
+      await tx.$executeRawUnsafe(`SELECT set_config('app.tenant_id', '${tenantId}', true)`);
     }
     return fn(tx);
   });
