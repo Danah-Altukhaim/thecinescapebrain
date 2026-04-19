@@ -83,7 +83,7 @@ All green on local Docker (PG 16 + Redis 7). Evidence:
 | `pnpm seed`: 2 tenants, 3 modules, API keys printed | ✓ |
 | Vitest `rls-leak.test.ts` (two-client: BYPASSRLS admin + app_runtime) | ✓ 3/3 |
 | API boot + `/health` | ✓ 200 |
-| `POST /auth/login` (sara + admin) | ✓ JWT issued |
+| `POST /auth/login` (ibrahim + admin) | ✓ JWT issued |
 | JWT-authed `GET /modules`, `/entries/:slug`, create entry | ✓ |
 | Non-admin JWT → `/admin/*` | ✓ 401 |
 | Admin `POST /admin/api-keys` → `tb_live_…` returned | ✓ |
@@ -119,7 +119,7 @@ pnpm seed
 pnpm dev                     # API :3000, web :5173
 ```
 
-Login: `cinescape` / `sara@example.com` / `password1`.
+Login: `cinescape` / `ibrahim@example.com` / `password1`.
 
 ## CI gates (`.github/workflows/ci.yml`)
 

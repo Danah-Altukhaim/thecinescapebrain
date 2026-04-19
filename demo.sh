@@ -50,7 +50,7 @@ cat <<'BANNER'
 ║   API:   http://localhost:3100                                 ║
 ║                                                                ║
 ║   Click "Enter Demo →" on the login screen.                    ║
-║   (Manual login: cinescape / sara@example.com / password1)     ║
+║   (Manual login: cinescape / ibrahim@example.com / password1)  ║
 ║                                                                ║
 ╚════════════════════════════════════════════════════════════════╝
 

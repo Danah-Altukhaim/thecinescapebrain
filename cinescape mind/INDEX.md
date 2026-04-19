@@ -33,7 +33,7 @@ cinescape/
 | `content/terms_and_conditions.md` | Bilingual (EN / AR) T&C approved 2026/01/19. Covers booking rules, age classifications, seat classifications, food orders, cancellation, 4DX safety, Skyline, private shows, guest obligations, promotions (social posts, popcorn ads, flyers, booth activations, photoshoots, digital screen rental), bank promotions. | Policy questions the agent must answer correctly — especially refunds (2hr cancel window, electronic balance, no cash-back), age rules (MOI decisions 30/2016 and 3/2025), food order "Prepare Your Order" lock-in, 4DX restrictions. |
 | `content/privacy.md` | Bilingual Privacy Policy — data collected, data use, retention, user rights, opt-out, account deletion. | Privacy / data questions. |
 | `content/contact_volume.md` + `.csv` | Monthly phone + WhatsApp contact volume, May 2025 – Apr 2026. Total: 73,728 contacts. | Deflection target sizing. WhatsApp is growing fast (0 → 1,549/month); overall volume is trending down. |
-| `content/faq.md` | **Reconstructed** from public search indexes (the live page blocks automated fetches). Covers booking, cancellation/refund routing, account recovery, Club Card recharge, accessibility, 4DX rules, age rules, promotions. Includes a section flagging stale COVID-era content that should not be surfaced. | Customer-facing questions about account and booking flow. Cross-reference with T&C for anything safety/legally critical. |
+| `content/faq.md` | **Authoritative** — captured from the live page on 2026-04-19. Covers general rules, age ratings (Law 4/2025), cinematic experiences with ticket prices (Standard 3.5 KWD → VIP/4DX 8 KWD), account benefits, booking cancellation by channel, release cadence (new movies Thursdays, bookings open Mon/Tue), and private event bookings from 168 KWD. | Customer-facing questions about booking flow, pricing, experiences, and account management. |
 
 ## Key facts the agent should know
 
@@ -80,6 +80,27 @@ cinescape/
 - Conditional: children must be over 4 years old AND at least 100 cm tall.
 - Hot beverages not allowed inside 4DX theaters.
 
+**Ticket pricing (from FAQ)**
+
+All prices in KWD. Premium = larger leather seat with USB port and back recliner.
+
+- **Standard** (2D/3D Digital/Laser): 3.5 / 4.0 Premium
+- **ELEVEN** (Barco Laser + Dolby Atmos): 3.5 / 4.0 Premium
+- **IMAX**: 4.0 / 4.5 Premium
+- **Dolby Cinema** (Premium seats only): 4.5
+- **ScreenX** (270° viewing): 4.5
+- **4DX** (moving seats, 20 effects): 8.0
+- **4DXScreen** (4DX + ScreenX — first in ME): 8.0
+- **VIP** (leg+back recliner, private cafeteria): 8.0
+- Monday 50% discount applies to all except VIP and Skyline (from T&C).
+- Private theater rental: from 168 KWD.
+
+**Release cadence (from FAQ)**
+
+- New movies release every **Thursday**, year-round.
+- Bookings open every **Monday/Tuesday** on app/website/box office.
+- Cinemas close for the **last 10 days of Ramadan**.
+
 **Data collected (from Privacy Policy)**
 
 Name, email, mobile, DOB, city, location preferences, seating preferences, experience preferences, movie rating preferences, booking and transaction info. Not shared with third parties. Users can delete their account and opt out of marketing from in-app settings.
@@ -91,7 +112,7 @@ These carry over from the Notion board gap analysis and remain unresolved in thi
 1. **Seat map / interactive seat selection.** API lists `seatlayout` and `reserveseats` endpoints but no sample response is included — the agent can't preview or render an actual seat map.
 2. **Movie recommendation logic.** No endpoint or flow for preference-based filtering ("what should I watch?"). Privacy policy confirms preferences are collected (movie rating, experience, seating) but no consuming API is documented.
 3. **Accepted payment methods.** Neither the API doc nor the T&C enumerates which methods are accepted (KNET, Visa, Mastercard, Apple Pay, Cinescape gift cards, loyalty wallet). Third-party sources mention KNET + cards + gift cards, but this needs official confirmation.
-4. **FAQ reconstructed, not scraped.** Site CDN blocks automated fetches. Content in `content/faq.md` was compiled from search-engine snippets and cross-referenced across mirror sites — it should be verified against the live page when convenient. The live page also still contains COVID-era policy text that should likely be removed from production.
+4. **MOI legal reference mismatch.** T&C (approved 2026/01/19) cites MOI Decisions **30/2016** and **3/2025**. FAQ cites MOI **Law 4 of 2025**. These should be reconciled — the AI agent should not arbitrate between the two.
 5. **Arabic text in the T&C PDF** is from a scanned document; it was transcribed manually into `terms_and_conditions.md`. If you need a verified ground-truth copy, cross-check against a re-issued digital version from legal.
 
 ## How to use this with Claude Code

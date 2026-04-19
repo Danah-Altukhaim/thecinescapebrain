@@ -21,8 +21,8 @@ export type VercelRes = {
 export const TENANT = { id: "demo-tenant", slug: "cinescape", name: "Cinescape" };
 export const USER = {
   id: "demo-user",
-  email: "sara@example.com",
-  name: "Sara (Editor)",
+  email: "ibrahim@example.com",
+  name: "Ibrahim (Editor)",
   role: "CLIENT_EDITOR",
 };
 

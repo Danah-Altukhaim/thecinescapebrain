@@ -10,7 +10,7 @@
  *  - marketplace install creates/updates modules on a tenant
  *
  * Seed dependency: `pnpm seed`; uses `cinescape` tenant, `admin@pairai.com`
- * (PAIR_ADMIN) and `sara@example.com` (CLIENT_EDITOR).
+ * (PAIR_ADMIN) and `ibrahim@example.com` (CLIENT_EDITOR).
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { createHash } from "node:crypto";
@@ -20,7 +20,7 @@ import { buildApp } from "../server.js";
 
 const TENANT_SLUG = "cinescape";
 const ADMIN_EMAIL = "admin@pairai.com";
-const EDITOR_EMAIL = "sara@example.com";
+const EDITOR_EMAIL = "ibrahim@example.com";
 const PASSWORD = "password1";
 
 async function login(app: FastifyInstance, email: string): Promise<string> {

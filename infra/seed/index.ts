@@ -20,11 +20,11 @@ type EntryStatus = "draft" | "scheduled" | "active" | "expired" | "archived";
 
 async function upsertTenantUsers(tenantId: string) {
   const editor = await prisma.user.upsert({
-    where: { tenantId_email: { tenantId, email: "sara@example.com" } },
+    where: { tenantId_email: { tenantId, email: "ibrahim@example.com" } },
     create: {
       tenantId,
-      email: "sara@example.com",
-      name: "Sara (Editor)",
+      email: "ibrahim@example.com",
+      name: "Ibrahim (Editor)",
       role: "CLIENT_EDITOR",
       passwordHash: await bcrypt.hash("password1", 10),
     },

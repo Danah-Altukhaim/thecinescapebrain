@@ -184,7 +184,7 @@ export async function parseUtterance(input: ParserInput): Promise<ParserResult> 
   // Cache-heavy blocks ordered static → dynamic:
   // 1) system instructions (cached)
   // 2) module schemas (cached)
-  // 3) brand glossary + FK tone (cached)
+  // 3) brand glossary + Cinescape tone (cached)
   // 4) recent entries + session summary (dynamic)
   const systemBlocks = [
     {

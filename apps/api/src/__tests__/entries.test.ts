@@ -12,14 +12,14 @@
  *  - unknown module slug returns 404
  *
  * Seed dependency: `pnpm seed` must have run; uses the `cinescape` tenant,
- * `sara@example.com` / `password1`, and the `faqs` module.
+ * `ibrahim@example.com` / `password1`, and the `faqs` module.
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import type { FastifyInstance } from "fastify";
 import { buildApp } from "../server.js";
 
 const TENANT = "cinescape";
-const EMAIL = "sara@example.com";
+const EMAIL = "ibrahim@example.com";
 const PASSWORD = "password1";
 const MODULE = "faqs";
 

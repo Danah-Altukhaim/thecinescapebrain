@@ -3,7 +3,9 @@
 // into the local Postgres DB so `pnpm seed` produces the same content.
 //
 // Domain: Cinescape (Kuwait National Cinema Company / KNCC) — sourced from
-// cinescape/content/{api,terms_and_conditions,privacy,faq,contact_volume}.md.
+// `cinescape mind/content/{api,terms_and_conditions,privacy,faq,contact_volume}.md`.
+// The FAQ module mirrors the authoritative live-site FAQ (scraped 2026-04-19) and
+// is supplemented with T&C-sourced entries for policy questions the live FAQ omits.
 
 export const MODULES = [
   {
@@ -487,7 +489,7 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
       "id": "e2a01008-2222-4222-8222-000000000008",
       "data": {
         "channel": "human_chat",
-        "trigger": "Accessibility / disability — wheelchair access, lifetime free membership claim, special needs entry. Escalate to Customer Care. SLA: 2 hours. Auto: All Cinescape locations have wheelchair spaces, and wheelchair users are eligible for lifetime free membership. Connecting you to Customer Care.",
+        "trigger": "Accessibility / disability — wheelchair access, free-entry claim with disability card, special needs entry. Escalate to Customer Care. SLA: 2 hours. Auto: Wheelchair accessibility is available at all Cinescape cinemas; head to any location for help booking a wheelchair-specified spot. Free entry applies on presentation of a valid PAD disability card where a designated space is available. Connecting you to Customer Care.",
         "webhook_url": "https://hooks.cinescape.com.kw/escalations/accessibility"
       },
       "status": "active",
@@ -498,11 +500,11 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
     {
       "id": "f3a01001-3333-4333-8333-000000000001",
       "data": {
-        "category": "Booking",
-        "question_en": "When can I book tickets for new movies?",
-        "question_ar": "متى يمكنني حجز تذاكر الأفلام الجديدة؟",
-        "answer_en": "Starting from Wednesday of every week, you may book any movie released throughout that week.",
-        "answer_ar": "ابتداءً من يوم الأربعاء من كل أسبوع، يمكنك حجز أي فيلم يُعرض خلال ذلك الأسبوع."
+        "category": "General",
+        "question_en": "What rules to conform to when visiting Cinescape cinemas?",
+        "question_ar": "ما القواعد الواجب الالتزام بها عند زيارة سينما سينسكيب؟",
+        "answer_en": "The following to be considered prior to booking:\n. Booking a ticket is required to all individuals attending (All ages included)\n. Suitable seating type and category\n. Suitable age rating as set by Kuwait's Ministry of Information\n. Conforming to all other KNCC rules (https://www.cinescape.com.kw/FAQs/entryrules)",
+        "answer_ar": "يجب مراعاة التالي قبل الحجز:\n. حجز تذكرة مطلوب لكل الحضور (جميع الأعمار)\n. اختيار نوع وفئة المقعد المناسبة\n. التصنيف العمري المناسب وفق ما تحدده وزارة الإعلام الكويتية\n. الالتزام بكافة قواعد KNCC الأخرى (https://www.cinescape.com.kw/FAQs/entryrules)"
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -510,11 +512,11 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
     {
       "id": "f3a01002-3333-4333-8333-000000000002",
       "data": {
-        "category": "Booking",
-        "question_en": "How do I book online?",
-        "question_ar": "كيف أحجز عبر الإنترنت؟",
-        "answer_en": "After creating your Cinescape account, you can book tickets online using your registered Cinescape Club Card or a bank card.",
-        "answer_ar": "بعد إنشاء حسابك في سينسكيب، يمكنك حجز التذاكر عبر الإنترنت باستخدام بطاقة الولاء أو بطاقتك البنكية."
+        "category": "General",
+        "question_en": "What age ratings are there for Kuwait cinemas?",
+        "question_ar": "ما هي التصنيفات العمرية المعتمدة في سينما الكويت؟",
+        "answer_en": "In accordance with Kuwait's Ministry of Information Law (4 of the year 2025), the following age ratings are set for movies showing in cinema theaters and visitors are required to verify their age where applicable:\n\nG (Everyone - All ages are allowed entry). PG 12 (Parental Guidance - Ages below 12 are required to be accompanied by a parent or an adult of age 18 and above). PG 15 (Parental Guidance - Ages below 15 are required to be accompanied by a parent or an adult of age 18 and above). R 15 (Only ages 15 and above are allowed entry). R 18 (Adults - Only ages 18 and above are allowed entry).",
+        "answer_ar": "وفقاً لقانون وزارة الإعلام الكويتية رقم 4 لسنة 2025، اعتُمدت التصنيفات العمرية التالية للأفلام المعروضة في دور السينما، وعلى الزائر إثبات عمره عند الحاجة:\n\nG (للجميع - يُسمح بالدخول لجميع الأعمار). PG 12 (إرشاد الوالدين - من هم دون 12 سنة يجب أن يُرافقهم ولي أمر أو بالغ 18+). PG 15 (إرشاد الوالدين - من هم دون 15 سنة يجب أن يُرافقهم ولي أمر أو بالغ 18+). R 15 (الدخول لمن هم 15 سنة فأكثر فقط). R 18 (للبالغين - الدخول لمن هم 18 سنة فأكثر فقط)."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -522,11 +524,11 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
     {
       "id": "f3a01003-3333-4333-8333-000000000003",
       "data": {
-        "category": "Booking",
-        "question_en": "How many tickets can I book at once?",
-        "question_ar": "كم عدد التذاكر التي يمكنني حجزها في المرة الواحدة؟",
-        "answer_en": "You can book up to 10 tickets per transaction.",
-        "answer_ar": "يمكنك حجز ما يصل إلى 10 تذاكر في كل عملية حجز."
+        "category": "General",
+        "question_en": "What are the cinematic experiences available at Cinescape and the prices for each of them?",
+        "question_ar": "ما هي التجارب السينمائية المتاحة لدى سينسكيب وأسعار كل منها؟",
+        "answer_en": "Standard (2D/3D Digital/Laser): the cinema as we all know it, with standard or Premium seats (Larger leather seats equipped with a USB port and a back recliner feature) – Price: 3.5 KD Standard seats – 4 KD Premium seats\n\nELEVEN (2D/3D Laser): Introducing Barco Laser projection and Dolby Atmos sound system, with standard or Premium seats (Larger leather seats equipped with a USB port and a back recliner feature) – Price: 3.5 KD Standard seats – 4 KD Premium seats\n\nIMAX (2D/3D Laser): The largest screen and aspect ratio, providing 26% more images compared to a standard screen, with standard or Premium seats (Larger leather seats equipped with a USB port and a back recliner feature) – Price: 4 KD Standard seats – 4.5 Premium seats\n\nDolby Cinema (2D/3D Laser): the latest theater experiences in Kuwait, with Dolby Vision feature that provide more vivid colors, and the Dolby Atmos sound system known for its history and quality, with Premium seats (Larger leather seats equipped with a USB port and a back recliner feature) – Price: 4.5 KD\n\nScreenX (2D Digital): Enjoy 270 degrees angle of vision with 3 projectors instead of 1! with standard seats – Price: 4.5 KD\n\n4DX (2D/3D Digital/Laser): The most immersive experience in cinema, with moving seats interactively with the movie scenes along with 20 realistic effect like water drop and smoke! Price: 8 KD\n\n4DXScreen (2D/3D Laser): Combining two existing experiences (4DX & ScreenX), this is the latest addition to Cinescape at for the 1st time in the middle east – Price: 8 KD\n\nVIP (2D/3D Digital/Laser): Where luxury meets comfort, enjoy our VIP experience with VIP seats designed for maximum comfort with back and leg recliner feature, and a special concession cafeteria to the ticket holders – Price: 8 KD",
+        "answer_ar": "Standard (2D/3D رقمي/ليزر): السينما التقليدية كما نعرفها، مع مقاعد عادية أو بريميوم (مقاعد جلدية أكبر مزوّدة بمنفذ USB وخاصية إمالة الظهر) — السعر: 3.5 د.ك للمقعد العادي — 4 د.ك للمقعد بريميوم\n\nELEVEN (2D/3D ليزر): نقدم عرض Barco Laser ونظام الصوت Dolby Atmos، مع مقاعد عادية أو بريميوم (مقاعد جلدية أكبر مزوّدة بمنفذ USB وخاصية إمالة الظهر) — السعر: 3.5 د.ك للمقعد العادي — 4 د.ك للمقعد بريميوم\n\nIMAX (2D/3D ليزر): أكبر شاشة ونسبة عرض، توفر صورة أكبر بنسبة 26% مقارنة بالشاشة العادية، مع مقاعد عادية أو بريميوم (مقاعد جلدية أكبر مزوّدة بمنفذ USB وخاصية إمالة الظهر) — السعر: 4 د.ك للمقعد العادي — 4.5 د.ك للمقعد بريميوم\n\nDolby Cinema (2D/3D ليزر): أحدث تجارب العرض في الكويت، بتقنية Dolby Vision لألوان أكثر حيوية، ونظام Dolby Atmos الصوتي المعروف بجودته، مع مقاعد بريميوم (مقاعد جلدية أكبر مزوّدة بمنفذ USB وخاصية إمالة الظهر) — السعر: 4.5 د.ك\n\nScreenX (2D رقمي): استمتع بزاوية رؤية 270 درجة عبر 3 أجهزة عرض بدلاً من جهاز واحد! مع مقاعد عادية — السعر: 4.5 د.ك\n\n4DX (2D/3D رقمي/ليزر): التجربة الأكثر انغماساً في السينما، بمقاعد متحركة تتفاعل مع مشاهد الفيلم إلى جانب 20 تأثيراً واقعياً مثل رذاذ الماء والدخان! السعر: 8 د.ك\n\n4DXScreen (2D/3D ليزر): الجمع بين تجربتَي 4DX و ScreenX، أحدث إضافة إلى سينسكيب ولأول مرة في الشرق الأوسط — السعر: 8 د.ك\n\nVIP (2D/3D رقمي/ليزر): حيث تلتقي الفخامة بالراحة، استمتع بتجربة VIP مع مقاعد مصممة لأقصى درجات الراحة بخاصية إمالة الظهر والأرجل، وكافتيريا مأكولات خاصة لحاملي التذاكر — السعر: 8 د.ك"
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -534,11 +536,11 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
     {
       "id": "f3a01004-3333-4333-8333-000000000004",
       "data": {
-        "category": "Booking",
-        "question_en": "How do I collect my tickets after booking?",
-        "question_ar": "كيف أستلم تذاكري بعد الحجز؟",
-        "answer_en": "Head to the kiosk machine at your booked cinema, follow the on-screen instructions, and enter your booking code — your tickets will be printed.",
-        "answer_ar": "توجّه إلى جهاز الكشك في فرع الحجز، اتبع التعليمات على الشاشة، وأدخل رمز الحجز — وستتم طباعة تذاكرك."
+        "category": "General",
+        "question_en": "Do the cinemas have accessibility for wheelchairs?",
+        "question_ar": "هل تتوفر في دور العرض إمكانية وصول للكراسي المتحركة؟",
+        "answer_en": "Yes, Wheelchair accessibility is available in all cinemas and visitors can head to any location for further assistance on booking a wheelchair specified spot to enjoy their favorite movie.",
+        "answer_ar": "نعم، تتوفر إمكانية وصول الكراسي المتحركة في جميع دور العرض، ويمكن للزائر التوجّه إلى أي فرع للحصول على مزيد من المساعدة في حجز مكان مخصّص للكرسي المتحرك للاستمتاع بفيلمه المفضل."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -546,11 +548,11 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
     {
       "id": "f3a01005-3333-4333-8333-000000000005",
       "data": {
-        "category": "Booking",
-        "question_en": "How do I confirm my booking succeeded?",
-        "question_ar": "كيف أتأكد من نجاح الحجز؟",
-        "answer_en": "Once your reservation succeeds, a confirmation message is shown on your device. Cinescape also sends SMS and email confirmation to the contact info on your profile.",
-        "answer_ar": "عند نجاح الحجز تظهر رسالة تأكيد على جهازك. كما يرسل سينسكيب رسالة SMS وبريداً إلكترونياً على بيانات التواصل المسجلة في حسابك."
+        "category": "Cinescape Account & Booking",
+        "question_en": "What are the benefits of having a Cinescape account in the app/website?",
+        "question_ar": "ما فوائد امتلاك حساب سينسكيب في التطبيق/الموقع؟",
+        "answer_en": "Having an account will allow you to have access to all your booking history, you may also cancel your booking (at least 2 hrs. prior to the start of the movie) with a touch of a button and may use the refunded amount transferred to your Cinescape wallet at any other time (no expiry date).",
+        "answer_ar": "يتيح لك الحساب الاطلاع على سجل حجوزاتك بالكامل، ويمكنك أيضاً إلغاء حجزك (قبل بدء الفيلم بساعتين على الأقل) بضغطة زر، واستخدام المبلغ المُسترَد المُحوَّل إلى محفظة سينسكيب الخاصة بك في أي وقت آخر (دون تاريخ انتهاء)."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -558,11 +560,11 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
     {
       "id": "f3a01006-3333-4333-8333-000000000006",
       "data": {
-        "category": "Booking",
-        "question_en": "Can I book a whole theater for a birthday or private event?",
-        "question_ar": "هل يمكنني حجز قاعة كاملة لعيد ميلاد أو فعالية خاصة؟",
-        "answer_en": "Yes — you can book any theater for birthday parties or private events. Contact the call center on 180-3456 to arrange.",
-        "answer_ar": "نعم — يمكنك حجز أي قاعة لحفلات أعياد الميلاد أو الفعاليات الخاصة. اتصل بمركز الاتصال على 180-3456 للترتيب."
+        "category": "Cinescape Account & Booking",
+        "question_en": "I forgot my username and/or password. What can I do?",
+        "question_ar": "نسيت اسم المستخدم و/أو كلمة المرور. ماذا أفعل؟",
+        "answer_en": "Choose the \"forgot password\" option and enter your email address, otherwise contact 1803456 for further assitance",
+        "answer_ar": "اختر خيار «نسيت كلمة المرور» وأدخل بريدك الإلكتروني، وإلا فاتصل بالرقم 1803456 لمزيد من المساعدة"
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -570,11 +572,11 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
     {
       "id": "f3a01007-3333-4333-8333-000000000007",
       "data": {
-        "category": "Cancellation & Refunds",
-        "question_en": "Can I cancel my reservation?",
-        "question_ar": "هل يمكنني إلغاء حجزي؟",
-        "answer_en": "Yes — cancellations are accepted up to 2 hours before the show starts.",
-        "answer_ar": "نعم — يُقبل الإلغاء حتى ساعتين قبل بدء العرض."
+        "category": "Cinescape Account & Booking",
+        "question_en": "When do bookings usually open for new releases and coming soon movies?",
+        "question_ar": "متى تُفتح عادةً الحجوزات للأفلام الجديدة والأفلام القادمة؟",
+        "answer_en": "Movies are released every Thursday through the year (cinemas only close during the last 10 days of Ramadan), and bookings become available every Monday/Tuesday in the app/website/box office. In some cases, advance bookings can be available prior to the release of the movie (a week or more).",
+        "answer_ar": "تُطرح الأفلام كل يوم خميس على مدار السنة (تُغلق دور العرض فقط خلال آخر 10 أيام من رمضان)، وتُفتح الحجوزات كل اثنين/ثلاثاء في التطبيق/الموقع/شباك التذاكر. في بعض الحالات، قد تُتاح الحجوزات المسبقة قبل طرح الفيلم (بأسبوع أو أكثر)."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -582,17 +584,53 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
     {
       "id": "f3a01008-3333-4333-8333-000000000008",
       "data": {
-        "category": "Cancellation & Refunds",
-        "question_en": "How do refunds work?",
-        "question_ar": "كيف تعمل عمليات الاسترجاع؟",
-        "answer_en": "Card payments are credited as electronic balance to your Cinescape wallet — not refunded to the original card. Cinescape Club Card payments are credited back to the Club Card.",
-        "answer_ar": "تُقيَّد مدفوعات البطاقات البنكية كرصيد إلكتروني في محفظتك — ولا تُعاد إلى البطاقة الأصلية. مدفوعات بطاقة الولاء تُعاد إلى بطاقة الولاء."
+        "category": "Cinescape Account & Booking",
+        "question_en": "Can I cancel my booking?",
+        "question_ar": "هل يمكنني إلغاء حجزي؟",
+        "answer_en": "In case you booked through your account in the app/website, you may head to \"my bookings\" section and cancel the tickets, the amount will be refunded immediately to your Cinescape Wallet with no expiry date.\n\nIn case you booked using the guest sign-in feature in the app/website, you may create a Cinescape account and then contact 1803456 for further assistance in cancelling your tickets (Working hours can be found in the contact us tab).\n\nIn case you booked through the box office, you may head to the nearest box office to cancel your ticket.\n\nAll the above are accepted if done at least 2 hours prior to the start of the movie.",
+        "answer_ar": "إذا حجزت عبر حسابك في التطبيق/الموقع، يمكنك التوجّه إلى قسم «حجوزاتي» وإلغاء التذاكر، وسيتم إعادة المبلغ فوراً إلى محفظة سينسكيب الخاصة بك دون تاريخ انتهاء.\n\nإذا حجزت باستخدام خاصية الدخول كضيف في التطبيق/الموقع، يمكنك إنشاء حساب سينسكيب ثم الاتصال بالرقم 1803456 للحصول على مزيد من المساعدة في إلغاء تذاكرك (ساعات العمل موجودة في تبويب «اتصل بنا»).\n\nإذا حجزت عبر شباك التذاكر، يمكنك التوجّه إلى أقرب شباك تذاكر لإلغاء تذكرتك.\n\nكل ما سبق يُقبل إذا تم قبل بدء الفيلم بساعتين على الأقل."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
     },
     {
       "id": "f3a01009-3333-4333-8333-000000000009",
+      "data": {
+        "category": "Cinescape Account & Booking",
+        "question_en": "How to know if my booking is successful/confirmed?",
+        "question_ar": "كيف أعرف إذا كان حجزي ناجحاً/مؤكداً؟",
+        "answer_en": "A confirmation message will be displayed on your device with your booking details, and an email will be sent to your email address of the confirmation and your Booking ID & QR code.\n\nIf booked through a Cinescape account, details can be found in \"my bookings\" section of the app/website.\n\nYou may verify your booking at the cinema entrance by the QR code or a printed ticket.",
+        "answer_ar": "ستظهر رسالة تأكيد على جهازك تحتوي على تفاصيل حجزك، وسيُرسَل بريد إلكتروني إلى عنوانك بالتأكيد وبرقم الحجز ورمز QR.\n\nإذا حجزت عبر حساب سينسكيب، يمكنك العثور على التفاصيل في قسم «حجوزاتي» على التطبيق/الموقع.\n\nيمكنك التحقق من حجزك عند مدخل السينما عبر رمز QR أو تذكرة مطبوعة."
+      },
+      "status": "active",
+      "updatedAt": "2026-04-19T00:00:00.000Z"
+    },
+    {
+      "id": "f3a01010-3333-4333-8333-000000000010",
+      "data": {
+        "category": "Cinescape Account & Booking",
+        "question_en": "Can I book a whole cinema theatre for a private event?",
+        "question_ar": "هل يمكنني حجز قاعة سينما كاملة لفعالية خاصة؟",
+        "answer_en": "Private bookings are available for all theaters in Cinescape, starting from 168 KD, for further assistance you may contact 1803456 (Working hours can be found in the contact us tab).",
+        "answer_ar": "تتوفر الحجوزات الخاصة لجميع قاعات سينسكيب ابتداءً من 168 د.ك، ولمزيد من المساعدة يمكنك الاتصال بالرقم 1803456 (ساعات العمل موجودة في تبويب «اتصل بنا»)."
+      },
+      "status": "active",
+      "updatedAt": "2026-04-19T00:00:00.000Z"
+    },
+    {
+      "id": "f3a01011-3333-4333-8333-000000000011",
+      "data": {
+        "category": "Cancellation & Refunds",
+        "question_en": "How do refunds work?",
+        "question_ar": "كيف تعمل عمليات الاسترجاع؟",
+        "answer_en": "Card payments are credited as electronic balance to your Cinescape Wallet with no expiry date — not refunded to the original card. The balance can be used for any future booking.",
+        "answer_ar": "تُقيَّد مدفوعات البطاقات البنكية كرصيد إلكتروني في محفظة سينسكيب دون تاريخ انتهاء — ولا تُعاد إلى البطاقة الأصلية. يمكن استخدام الرصيد في أي حجز مستقبلي."
+      },
+      "status": "active",
+      "updatedAt": "2026-04-19T00:00:00.000Z"
+    },
+    {
+      "id": "f3a01012-3333-4333-8333-000000000012",
       "data": {
         "category": "Cancellation & Refunds",
         "question_en": "Are food orders refundable?",
@@ -604,61 +642,13 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
       "updatedAt": "2026-04-19T00:00:00.000Z"
     },
     {
-      "id": "f3a01010-3333-4333-8333-000000000010",
-      "data": {
-        "category": "Account",
-        "question_en": "I forgot my password.",
-        "question_ar": "نسيت كلمة المرور.",
-        "answer_en": "On the login page, enter your email address and choose how you'd like to retrieve your password.",
-        "answer_ar": "في صفحة تسجيل الدخول، أدخل بريدك الإلكتروني واختر طريقة استرداد كلمة المرور."
-      },
-      "status": "active",
-      "updatedAt": "2026-04-19T00:00:00.000Z"
-    },
-    {
-      "id": "f3a01011-3333-4333-8333-000000000011",
-      "data": {
-        "category": "Account",
-        "question_en": "I forgot my username AND password.",
-        "question_ar": "نسيت اسم المستخدم وكلمة المرور.",
-        "answer_en": "Contact the Call Center on 180-3456 for help retrieving them.",
-        "answer_ar": "اتصل بمركز الاتصال على 180-3456 للمساعدة في استردادهما."
-      },
-      "status": "active",
-      "updatedAt": "2026-04-19T00:00:00.000Z"
-    },
-    {
-      "id": "f3a01012-3333-4333-8333-000000000012",
-      "data": {
-        "category": "Club Card",
-        "question_en": "How do I recharge my Club Card?",
-        "question_ar": "كيف أشحن بطاقة الولاء؟",
-        "answer_en": "Buy a recharge code at any Cinescape cinema, or recharge online through the website.",
-        "answer_ar": "اشترِ رمز شحن من أي فرع لسينسكيب، أو اشحن عبر الإنترنت من خلال الموقع."
-      },
-      "status": "active",
-      "updatedAt": "2026-04-19T00:00:00.000Z"
-    },
-    {
       "id": "f3a01013-3333-4333-8333-000000000013",
-      "data": {
-        "category": "Accessibility",
-        "question_en": "Is there wheelchair access?",
-        "question_ar": "هل يتوفر وصول للكراسي المتحركة؟",
-        "answer_en": "Yes — there are wheelchair spaces at all Cinescape cinema locations.",
-        "answer_ar": "نعم — تتوفر أماكن للكراسي المتحركة في جميع فروع سينسكيب."
-      },
-      "status": "active",
-      "updatedAt": "2026-04-19T00:00:00.000Z"
-    },
-    {
-      "id": "f3a01014-3333-4333-8333-000000000014",
       "data": {
         "category": "Accessibility",
         "question_en": "Is there any benefit for wheelchair users?",
         "question_ar": "هل توجد مزايا لمستخدمي الكراسي المتحركة؟",
-        "answer_en": "Yes — wheelchair users are eligible for a lifetime free membership with Cinescape. Free entry also applies on presentation of a valid disability card from the Public Authority for the Disabled in Kuwait.",
-        "answer_ar": "نعم — يحق لمستخدمي الكراسي المتحركة الحصول على عضوية مجانية مدى الحياة مع سينسكيب. الدخول المجاني متاح أيضاً عند تقديم بطاقة إعاقة سارية من الهيئة العامة لشؤون ذوي الإعاقة."
+        "answer_en": "Customers with special needs (wheelchair users) receive free entry to the screens on presentation of a valid disability card issued by the Public Authority for the Disabled in Kuwait, provided a designated wheelchair space is available in the hall.",
+        "answer_ar": "يحصل العملاء من ذوي الاحتياجات الخاصة (مستخدمو الكراسي المتحركة) على دخول مجاني إلى الصالات عند تقديم بطاقة إعاقة سارية صادرة عن الهيئة العامة لشؤون ذوي الإعاقة بدولة الكويت، شريطة توفر مكان مخصّص للكرسي المتحرك داخل القاعة."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -766,7 +756,7 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
       "data": {
         "name": "now_showing",
         "description": "User wants to see what movies are currently playing.",
-        "ai_instructions": "Call POST /api/content/nowshowing. Return movie titles, age ratings, and runtime. If user mentions a cinema or location, follow up with cinemas + showtimes."
+        "ai_instructions": "Call POST /api/content/nowshowing. Return movie titles, MOI Law 4/2025 age ratings (G, PG 12, PG 15, R 15, R 18), and runtime. New movies release every Thursday year-round (cinemas close only during the last 10 days of Ramadan); bookings open every Monday/Tuesday. If user mentions a cinema or location, follow up with cinemas + showtimes."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -775,8 +765,8 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
       "id": "i4a01002-4444-4444-8444-000000000002",
       "data": {
         "name": "find_cinema",
-        "description": "User wants the nearest or a specific Cinescape cinema, or wants to filter by experience (4DX, IMAX, Skyline).",
-        "ai_instructions": "Call GET /api/content/cinemas?bookType=...&latitude=...&longitude=... If user mentions an experience, filter on the `exps` array of the cinema response."
+        "description": "User wants the nearest or a specific Cinescape cinema, or wants to filter by experience (Standard, ELEVEN, IMAX, Dolby Cinema, ScreenX, 4DX, 4DXScreen, VIP, Skyline).",
+        "ai_instructions": "Call GET /api/content/cinemas?bookType=...&latitude=...&longitude=... If user mentions an experience, filter on the `exps` array of the cinema response. Ticket prices per FAQ (KWD): Standard/ELEVEN 3.5 (4.0 Premium); IMAX 4.0 (4.5 Premium); Dolby Cinema 4.5; ScreenX 4.5; 4DX / 4DXScreen / VIP 8.0."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -806,7 +796,7 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
       "data": {
         "name": "cancel_booking",
         "description": "User wants to cancel a confirmed booking.",
-        "ai_instructions": "Eligibility: cancellation is allowed up to 2 hours before showtime. Refund routing: card payments → electronic balance in Cinescape wallet (NOT refunded to card). Club Card → credited back to Club Card. If under 2hrs OR food order with 'Prepare Your Order' clicked → not refundable, escalate."
+        "ai_instructions": "Eligibility: cancellation is allowed up to 2 hours before showtime. Path by channel: (a) booked through app/website account → \"My Bookings\" → cancel (amount refunded immediately to Cinescape Wallet, no expiry); (b) booked as guest in app/website → user must create an account, then contact 180-3456 for assistance; (c) booked at box office → visit the nearest box office. Refund routing: card payments → electronic balance in Cinescape Wallet, NOT refunded to the original card. If under 2hrs OR food order with 'Prepare Your Order' clicked → not refundable, escalate."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -816,7 +806,7 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
       "data": {
         "name": "refund_status",
         "description": "User asks where their refund is.",
-        "ai_instructions": "Refunds for card payments are credited as electronic balance to the customer's Cinescape wallet/loyalty card — they are NEVER refunded to the original bank card. If the customer expects a card refund, gently correct and explain they can use the wallet balance for any future booking. Escalate if the wallet balance is missing."
+        "ai_instructions": "Refunds for card payments are credited as electronic balance in the customer's Cinescape Wallet (no expiry date) — they are NEVER refunded to the original bank card. If the customer expects a card refund, gently correct and explain they can use the wallet balance for any future booking. Escalate if the wallet balance is missing."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -836,7 +826,7 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
       "data": {
         "name": "private_show",
         "description": "User wants to book a whole theater (birthday, school trip, corporate event).",
-        "ai_instructions": "Hand off to Customer Care at 180-3456. Mention private-show rules: cancellation must be 24+ hours before showtime; no outside food/drinks except birthday cakes; no candles, helium balloons, confetti, or confetti cannons; age ratings still apply."
+        "ai_instructions": "Private bookings are available for all Cinescape theaters starting from 168 KWD. Hand off to Customer Care at 180-3456 to arrange. Private-show rules: cancellation must be 24+ hours before showtime; no outside food/drinks except birthday cakes; no candles, helium balloons, confetti, or confetti cannons; age ratings still apply."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -855,8 +845,8 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
       "id": "i4a01010-4444-4444-8444-000000000010",
       "data": {
         "name": "account_recovery",
-        "description": "User can't log in.",
-        "ai_instructions": "If only password forgotten → direct to login page password-reset flow. If both username AND password forgotten → escalate to Call Center (180-3456). Never collect or echo passwords in chat."
+        "description": "User can't log in (forgot password and/or username).",
+        "ai_instructions": "Direct the user to the \"forgot password\" option on the login page and ask them to enter their registered email. If that doesn't work, escalate to the Call Center (180-3456). Never collect or echo passwords in chat."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -901,8 +891,8 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
       "data": {
         "name": "Public Authority for the Disabled (PAD) — Kuwait",
         "type": "Corporate",
-        "notes_en": "Holders of a valid PAD-issued disability card receive free entry to the cinema where designated wheelchair spaces are available. Wheelchair users are eligible for a lifetime free Cinescape membership.",
-        "notes_ar": "يحصل حاملو بطاقة الإعاقة السارية الصادرة من الهيئة العامة لشؤون ذوي الإعاقة على دخول مجاني عند توفر أماكن مخصصة للكراسي المتحركة. كما يحق لمستخدمي الكراسي المتحركة الحصول على عضوية سينسكيب مجانية مدى الحياة."
+        "notes_en": "Holders of a valid PAD-issued disability card (wheelchair users) receive free entry to screens where a designated wheelchair space is available in the hall.",
+        "notes_ar": "يحصل حاملو بطاقة الإعاقة السارية الصادرة من الهيئة العامة لشؤون ذوي الإعاقة (مستخدمو الكراسي المتحركة) على دخول مجاني إلى الصالات عند توفر مكان مخصّص للكرسي المتحرك داخل القاعة."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
@@ -1102,10 +1092,10 @@ export const ENTRIES_BY_SLUG: Record<string, FixtureEntry[]> = {
     {
       "id": "r7a01003-7777-4777-8777-000000000003",
       "data": {
-        "name": "Wheelchair lifetime free membership",
+        "name": "Free entry with PAD disability card",
         "type": "Promo",
-        "message_en": "♿ Wheelchair users are eligible for a lifetime free Cinescape membership. Free entry also applies on presentation of a valid disability card from the Public Authority for the Disabled in Kuwait, where designated wheelchair spaces are available.",
-        "message_ar": "♿ يحق لمستخدمي الكراسي المتحركة الحصول على عضوية سينسكيب مجانية مدى الحياة. كما يُتاح الدخول المجاني عند تقديم بطاقة إعاقة سارية من الهيئة العامة لشؤون ذوي الإعاقة، حيث تتوفر أماكن مخصصة."
+        "message_en": "♿ Customers with special needs (wheelchair users) receive free entry to the screens on presentation of a valid disability card issued by the Public Authority for the Disabled in Kuwait, provided a designated wheelchair space is available in the hall.",
+        "message_ar": "♿ يحصل العملاء من ذوي الاحتياجات الخاصة (مستخدمو الكراسي المتحركة) على دخول مجاني إلى الصالات عند تقديم بطاقة إعاقة سارية من الهيئة العامة لشؤون ذوي الإعاقة بدولة الكويت، شريطة توفر مكان مخصّص للكرسي المتحرك داخل القاعة."
       },
       "status": "active",
       "updatedAt": "2026-04-19T00:00:00.000Z"
