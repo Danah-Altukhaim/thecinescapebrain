@@ -9,7 +9,7 @@
  *  - marketplace catalog is readable by admin
  *  - marketplace install creates/updates modules on a tenant
  *
- * Seed dependency: `pnpm seed`; uses `future-kid` tenant, `admin@pairai.com`
+ * Seed dependency: `pnpm seed`; uses `cinescape` tenant, `admin@pairai.com`
  * (PAIR_ADMIN) and `sara@example.com` (CLIENT_EDITOR).
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
@@ -18,7 +18,7 @@ import type { FastifyInstance } from "fastify";
 import { PrismaClient } from "@prisma/client";
 import { buildApp } from "../server.js";
 
-const TENANT_SLUG = "future-kid";
+const TENANT_SLUG = "cinescape";
 const ADMIN_EMAIL = "admin@pairai.com";
 const EDITOR_EMAIL = "sara@example.com";
 const PASSWORD = "password1";
@@ -53,7 +53,7 @@ describe("admin routes", () => {
     app = await buildApp();
     await app.ready();
     const tenant = await admin.tenant.findUnique({ where: { slug: TENANT_SLUG } });
-    if (!tenant) throw new Error("seed the future-kid tenant first (pnpm seed)");
+    if (!tenant) throw new Error("seed the cinescape tenant first (pnpm seed)");
     tenantId = tenant.id;
     adminToken = await login(app, ADMIN_EMAIL);
     editorToken = await login(app, EDITOR_EMAIL);

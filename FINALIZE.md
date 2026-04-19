@@ -119,7 +119,7 @@ pnpm seed
 pnpm dev                     # API :3000, web :5173
 ```
 
-Login: `future-kid` / `sara@example.com` / `password1`.
+Login: `cinescape` / `sara@example.com` / `password1`.
 
 ## CI gates (`.github/workflows/ci.yml`)
 

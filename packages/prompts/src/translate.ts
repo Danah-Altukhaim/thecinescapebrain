@@ -28,12 +28,12 @@ export async function translateField(args: {
       system: [
         {
           type: "text",
-          text: 'You translate Future Kid marketing copy between English and Arabic. Preserve brand voice: warm, concise, family-friendly. Use the approved glossary. Return ONLY the translation and a confidence score 0.0-1.0 as JSON: {"text":"...","confidence":0.0}.',
+          text: 'You translate Cinescape (Kuwait National Cinema Company) customer-facing copy between English and Arabic. Preserve brand voice: clear, courteous, cinema-savvy. Use the approved glossary. Return ONLY the translation and a confidence score 0.0-1.0 as JSON: {"text":"...","confidence":0.0}.',
           cache_control: { type: "ephemeral" },
         },
         {
           type: "text",
-          text: "GLOSSARY: Future Kid=فيوتشر كيد, branch=فرع, promotion=عرض, ride=لعبة, bank card=بطاقة بنكية",
+          text: "GLOSSARY: Cinescape=سينسكيب, Kuwait National Cinema Company=شركة السينما الكويتية الوطنية, cinema=دار العرض, showtime=موعد العرض, seat=مقعد, booking=حجز, refund=استرجاع, electronic balance=رصيد إلكتروني, Club Card=بطاقة الولاء, 4DX=4DX, Skyline=سكايلاين, VIP=VIP",
           cache_control: { type: "ephemeral" },
         },
       ] as any,

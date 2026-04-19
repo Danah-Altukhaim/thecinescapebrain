@@ -11,14 +11,14 @@
  *  - rollback restores the prior snapshot and bumps version counter
  *  - unknown module slug returns 404
  *
- * Seed dependency: `pnpm seed` must have run; uses the `future-kid` tenant,
+ * Seed dependency: `pnpm seed` must have run; uses the `cinescape` tenant,
  * `sara@example.com` / `password1`, and the `faqs` module.
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import type { FastifyInstance } from "fastify";
 import { buildApp } from "../server.js";
 
-const TENANT = "future-kid";
+const TENANT = "cinescape";
 const EMAIL = "sara@example.com";
 const PASSWORD = "password1";
 const MODULE = "faqs";
@@ -72,10 +72,10 @@ describe("entries routes", () => {
   it("creates an entry and round-trips on read", async () => {
     const payload = {
       data: {
-        question_en: "What are the Future Kid opening hours?",
-        question_ar: "ما هي ساعات عمل فيوتشر كيد؟",
-        answer_en: "We are open 9 to 9 daily.",
-        answer_ar: "نعمل من 9 إلى 9 يوميا.",
+        question_en: "What are the Cinescape opening hours?",
+        question_ar: "ما هي ساعات عمل سينسكيب؟",
+        answer_en: "Most Cinescape locations are open 11 AM to 2 AM daily.",
+        answer_ar: "معظم فروع سينسكيب تعمل من 11 صباحاً إلى 2 صباحاً يومياً.",
         category: "hours",
       },
     };

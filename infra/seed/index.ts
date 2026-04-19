@@ -1,8 +1,8 @@
 /**
- * Seed dev fixtures: the Future Kid tenant with canonical modules, sample entries,
+ * Seed dev fixtures: the Cinescape tenant with canonical modules, sample entries,
  * and an API key.
  *
- * The `future-kid` tenant is seeded from the static snapshot at `api/_fixtures.ts`
+ * The `cinescape` tenant is seeded from the static snapshot at `api/_fixtures.ts`
  * so local Postgres ends up with the same content that the Vercel demo serves.
  *
  * Run: `pnpm seed`
@@ -61,10 +61,10 @@ async function issueApiKey(tenantId: string, slug: string) {
   console.log(`Seeded ${slug}: api_key = ${raw}`);
 }
 
-async function seedFutureKid() {
+async function seedCinescape() {
   const tenant = await prisma.tenant.upsert({
-    where: { slug: "future-kid" },
-    create: { slug: "future-kid", name: "Future Kid", timezone: "Asia/Kuwait" },
+    where: { slug: "cinescape" },
+    create: { slug: "cinescape", name: "Cinescape", timezone: "Asia/Kuwait" },
     update: {},
   });
   const { editor } = await upsertTenantUsers(tenant.id);
@@ -122,12 +122,12 @@ async function seedFutureKid() {
     }
   }
 
-  await issueApiKey(tenant.id, "future-kid");
-  console.log(`Seeded future-kid: ${MODULES.length} modules, ${entryCount} entries`);
+  await issueApiKey(tenant.id, "cinescape");
+  console.log(`Seeded cinescape: ${MODULES.length} modules, ${entryCount} entries`);
 }
 
 async function main() {
-  await seedFutureKid();
+  await seedCinescape();
   console.log("Seed complete.");
 }
 

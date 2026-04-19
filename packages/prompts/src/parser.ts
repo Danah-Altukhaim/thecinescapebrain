@@ -199,7 +199,7 @@ export async function parseUtterance(input: ParserInput): Promise<ParserResult> 
     },
     {
       type: "text",
-      text: "BRAND GLOSSARY (EN→AR): Future Kid → فيوتشر كيد; branch → فرع; promotion → عرض; ride → لعبة; bank card → بطاقة بنكية. TONE: warm, concise, family-friendly. Kuwait market context.",
+      text: "BRAND GLOSSARY (EN→AR): Cinescape → سينسكيب; Kuwait National Cinema Company → شركة السينما الكويتية الوطنية; cinema → دار العرض; showtime → موعد العرض; seat → مقعد; booking → حجز; refund → استرجاع; electronic balance → رصيد إلكتروني; Club Card → بطاقة الولاء. TONE: clear, courteous, cinema-savvy. Kuwait market context (KWD currency, MOI age ratings).",
       cache_control: { type: "ephemeral" },
     },
   ] as unknown as Anthropic.Messages.TextBlockParam[];
