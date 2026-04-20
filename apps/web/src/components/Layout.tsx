@@ -202,7 +202,7 @@ export function Layout() {
 
   return (
     <div
-      className={`min-h-screen w-full max-w-full bg-[#FBFBFD] ${isMobile ? "" : "grid transition-[grid-template-columns] duration-200 ease-out"}`}
+      className={`w-full max-w-full bg-[#FBFBFD] ${isMobile ? "min-h-screen" : "h-screen overflow-hidden grid transition-[grid-template-columns] duration-200 ease-out"}`}
       style={
         isMobile ? undefined : { gridTemplateColumns: `${collapsed ? 72 : 260}px minmax(0, 1fr)` }
       }
@@ -231,7 +231,7 @@ export function Layout() {
       )}
 
       {/* ── Main content ── */}
-      <main className="flex flex-col min-w-0 min-h-screen md:min-h-0">
+      <main className="flex flex-col min-w-0 min-h-screen md:min-h-0 md:h-screen md:overflow-hidden">
         <header className="glass-bar sticky top-0 z-10 h-14 flex items-center px-3 sm:px-6 gap-2 sm:gap-3">
           {/* Mobile hamburger */}
           {isMobile && (
