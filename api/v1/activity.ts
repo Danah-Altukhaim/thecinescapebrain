@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { authenticate } from "../_auth";
-import { withTenant } from "../_db";
+import { authenticate } from "../_auth.js";
+import { withTenant } from "../_db.js";
 
 const TITLE_KEYS = ["title", "name_en", "name", "q_en", "question_en", "flow_id"] as const;
 
