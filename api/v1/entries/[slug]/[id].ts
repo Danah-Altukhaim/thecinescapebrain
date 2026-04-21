@@ -9,7 +9,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const id = req.query.id as string;
 
   if (req.method === "GET") {
-    const entry = await withTenant(auth.tenantId, (tx: any) => tx.entry.findUnique({ where: { id } }));
+    const entry = await withTenant(auth.tenantId, (tx: any) =>
+      tx.entry.findFirst({ where: { id, tenantId: auth.tenantId } }),
+    );
     if (!entry) return res.status(404).json({ success: false, error: { message: "Not found" } });
     return res.json({ success: true, data: entry });
   }
@@ -19,7 +21,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (!data) return res.status(400).json({ success: false, error: { message: "data is required" } });
 
     const updated = await withTenant(auth.tenantId, async (tx: any) => {
-      const existing = await tx.entry.findUnique({ where: { id } });
+      const existing = await tx.entry.findFirst({ where: { id, tenantId: auth.tenantId } });
       if (!existing) return null;
 
       const lastVersion = await tx.entryVersion.findFirst({
@@ -51,7 +53,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   if (req.method === "DELETE") {
     await withTenant(auth.tenantId, async (tx: any) => {
-      const existing = await tx.entry.findUnique({ where: { id }, select: { data: true } });
+      const existing = await tx.entry.findFirst({
+        where: { id, tenantId: auth.tenantId },
+        select: { data: true },
+      });
       if (!existing) return;
       await tx.entry.delete({ where: { id } });
       await tx.auditLog.create({

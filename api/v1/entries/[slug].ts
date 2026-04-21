@@ -10,10 +10,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   if (req.method === "GET") {
     const entries = await withTenant(auth.tenantId, async (tx: any) => {
-      const mod = await tx.module.findFirst({ where: { slug } });
+      const mod = await tx.module.findFirst({ where: { slug, tenantId: auth.tenantId } });
       if (!mod) return null;
       return tx.entry.findMany({
-        where: { moduleId: mod.id },
+        where: { moduleId: mod.id, tenantId: auth.tenantId },
         orderBy: { updatedAt: "desc" },
         take: 200,
       });
@@ -29,7 +29,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (!data) return res.status(400).json({ success: false, error: { message: "data is required" } });
 
     const entry = await withTenant(auth.tenantId, async (tx: any) => {
-      const mod = await tx.module.findFirst({ where: { slug } });
+      const mod = await tx.module.findFirst({ where: { slug, tenantId: auth.tenantId } });
       if (!mod) return null;
 
       const created = await tx.entry.create({

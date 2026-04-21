@@ -14,13 +14,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const modules = await withTenant(auth.tenantId, async (tx: any) => {
     return tx.module.findMany({
-      where: { isActive: true },
+      where: { isActive: true, tenantId: auth.tenantId },
       select: {
         id: true,
         slug: true,
         label: true,
         icon: true,
-        _count: { select: { entries: true } },
+        _count: { select: { entries: { where: { tenantId: auth.tenantId } } } },
       },
       orderBy: { createdAt: "asc" },
     });

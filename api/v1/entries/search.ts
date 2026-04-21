@@ -29,6 +29,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
        JOIN modules m ON m.id = e.module_id
        LEFT JOIN users u ON u.id = e.created_by
        WHERE e.status = 'active'
+         AND e.tenant_id = $3::uuid
          AND (
            e.data::text ILIKE $1
            OR m.label ILIKE $1
@@ -38,6 +39,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
        LIMIT $2`,
       pattern,
       limit,
+      auth.tenantId,
     );
   });
 

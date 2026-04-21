@@ -29,8 +29,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const events = await withTenant(auth.tenantId, async (tx: any) => {
     const [modules, users] = await Promise.all([
-      tx.module.findMany({ select: { id: true, slug: true, label: true } }),
-      tx.user.findMany({ select: { id: true, name: true } }),
+      tx.module.findMany({
+        where: { tenantId: auth.tenantId },
+        select: { id: true, slug: true, label: true },
+      }),
+      tx.user.findMany({
+        where: { tenantId: auth.tenantId },
+        select: { id: true, name: true },
+      }),
     ]);
     const moduleById = new Map<string, any>(modules.map((m: any) => [m.id, m]));
     const moduleBySlug = new Map<string, any>(modules.map((m: any) => [m.slug, m]));
@@ -45,6 +51,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (!actionFilter || actionFilter !== "delete") {
       const versions = await tx.entryVersion.findMany({
         where: {
+          tenantId: auth.tenantId,
           entry: moduleFilterId ? { moduleId: moduleFilterId } : undefined,
         },
         orderBy: { changedAt: "desc" },
@@ -82,7 +89,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Audit log (deletes)
     if (!actionFilter || actionFilter === "delete") {
       const audits = await tx.auditLog.findMany({
-        where: { action: "delete", entityType: "entry" },
+        where: { action: "delete", entityType: "entry", tenantId: auth.tenantId },
         orderBy: { timestamp: "desc" },
         take: limit * 3,
         select: { id: true, userId: true, entityId: true, diff: true, timestamp: true },
