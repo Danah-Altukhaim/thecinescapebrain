@@ -9,7 +9,7 @@ Cinescape is Kuwait's national cinema chain. This folder contains the authoritat
 ## Folder layout
 
 ```
-cinescape/
+cinescape mind/
 ├── INDEX.md                     ← you are here
 ├── source/                      ← original files, unchanged
 │   ├── KNCC_Cinema_API_Documentation.pdf
@@ -22,7 +22,7 @@ cinescape/
     ├── terms_and_conditions.md
     ├── contact_volume.md
     ├── contact_volume.csv
-    └── faq.md                   ← STUB — see file, FAQ could not be scraped
+    └── faq.md                   ← scraped from live page 2026-04-19
 ```
 
 ## File guide
