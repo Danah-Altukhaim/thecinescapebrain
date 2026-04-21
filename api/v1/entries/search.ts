@@ -20,11 +20,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const limit = Math.min(Math.max(parseInt(req.query.limit as string, 10) || 25, 1), 50);
   const pattern = `%${q.replace(/[\\%_]/g, (c) => `\\${c}`)}%`;
 
-  const results = await withTenant(
-    auth.tenantId,
-    async (tx: any) => {
-      return tx.$queryRawUnsafe(
-        `SELECT e.id, e.module_id, m.slug AS module_slug, m.label AS module_label,
+  const results = await withTenant(auth.tenantId, async (tx: any) => {
+    return tx.$queryRawUnsafe(
+      `SELECT e.id, e.module_id, m.slug AS module_slug, m.label AS module_label,
               e.data, e.updated_at,
               u.name AS created_by_name
        FROM entries e
@@ -38,12 +36,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
          )
        ORDER BY e.updated_at DESC
        LIMIT $2`,
-        pattern,
-        limit,
-      );
-    },
-    auth.isAdmin,
-  );
+      pattern,
+      limit,
+    );
+  });
 
   return res.json({ success: true, data: results });
 }

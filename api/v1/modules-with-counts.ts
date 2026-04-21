@@ -24,7 +24,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       },
       orderBy: { createdAt: "asc" },
     });
-  }, auth.isAdmin);
+  });
 
   const data = modules.map((m: any) => ({
     id: m.id,

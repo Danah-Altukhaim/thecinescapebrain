@@ -9,7 +9,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const id = req.query.id as string;
 
   if (req.method === "GET") {
-    const entry = await withTenant(auth.tenantId, (tx: any) => tx.entry.findUnique({ where: { id } }), auth.isAdmin);
+    const entry = await withTenant(auth.tenantId, (tx: any) => tx.entry.findUnique({ where: { id } }));
     if (!entry) return res.status(404).json({ success: false, error: { message: "Not found" } });
     return res.json({ success: true, data: entry });
   }
@@ -43,7 +43,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       });
 
       return result;
-    }, auth.isAdmin);
+    });
 
     if (!updated) return res.status(404).json({ success: false, error: { message: "Not found" } });
     return res.json({ success: true, data: updated });
@@ -64,7 +64,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           diff: existing.data ?? null,
         },
       });
-    }, auth.isAdmin);
+    });
     return res.json({ success: true, data: { deleted: id } });
   }
 

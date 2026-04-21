@@ -105,7 +105,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     out.sort((a: any, b: any) => (a.timestamp < b.timestamp ? 1 : -1));
     return out.slice(0, limit);
-  }, auth.isAdmin);
+  });
 
   return res.json({ success: true, data: events });
 }
